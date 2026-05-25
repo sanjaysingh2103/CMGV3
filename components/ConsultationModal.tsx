@@ -102,7 +102,7 @@ export default function ConsultationModal({
                 </svg>
               </div>
               <h3 className="font-heading text-xl font-semibold text-cmg-text mb-2">Request Received!</h3>
-              <p className="text-cmg-slate">We'll be in touch within 1 business day to confirm your booking.</p>
+              <p className="text-cmg-slate">We&apos;ll be in touch within 1 business day to confirm your booking.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 mt-2">

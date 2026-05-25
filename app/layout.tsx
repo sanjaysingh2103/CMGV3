@@ -1,20 +1,28 @@
 import type { Metadata } from "next"
-import { Inter, Playfair_Display } from "next/font/google"
+import { Playfair_Display, DM_Sans, Cormorant_Garamond } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-dm-sans",
   display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 })
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
-  weight: ["400", "600", "700"],
+  weight: ["400", "600", "700", "900"],
+})
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 })
 
 export const metadata: Metadata = {
@@ -42,8 +50,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="font-sans antialiased min-h-screen flex flex-col bg-white text-cmg-text">
+    <html
+      lang="en"
+      className={`${dmSans.variable} ${playfair.variable} ${cormorant.variable}`}
+    >
+      <body className="font-body antialiased min-h-screen flex flex-col bg-cmg-cream text-cmg-ink">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

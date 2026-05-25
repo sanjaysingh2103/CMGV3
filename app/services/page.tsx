@@ -63,13 +63,13 @@ export default function ServicesPage() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="text-sm font-semibold text-cmg-red uppercase tracking-widest mb-3">Why Choose CMG</p>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-text mb-6">
-              Australia Is Open for the World's Best Talent
+              Australia Is Open for the World&apos;s Best Talent
             </h2>
             <p className="text-cmg-slate leading-relaxed text-lg">
-              Australia's migration program is built on selective merit — but navigating it requires expert knowledge, strategic timing, and meticulous preparation. CMG offers comprehensive migration services across every major visa category, ensuring you're matched with the right pathway and supported at every step.
+              Australia&apos;s migration program is built on selective merit — but navigating it requires expert knowledge, strategic timing, and meticulous preparation. CMG offers comprehensive migration services across every major visa category, ensuring you&apos;re matched with the right pathway and supported at every step.
             </p>
             <p className="text-cmg-slate leading-relaxed text-lg mt-4">
-              Whether you're a skilled professional targeting permanent residency, an employer looking to fill critical roles, a family seeking reunification, a student planning your study pathway, or a business investor exploring Australia's opportunities — CMG has the expertise you need.
+              Whether you&apos;re a skilled professional targeting permanent residency, an employer looking to fill critical roles, a family seeking reunification, a student planning your study pathway, or a business investor exploring Australia&apos;s opportunities — CMG has the expertise you need.
             </p>
           </div>
 

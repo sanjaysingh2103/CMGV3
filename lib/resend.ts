@@ -1,6 +1,10 @@
 import { Resend } from "resend"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+function getResend() {
+  const apiKey = process.env.RESEND_API_KEY
+  if (!apiKey) throw new Error("Missing RESEND_API_KEY environment variable")
+  return new Resend(apiKey)
+}
 
 interface ContactPayload {
   name: string
@@ -13,6 +17,7 @@ interface ContactPayload {
 }
 
 export async function sendContactNotification(data: ContactPayload) {
+  const resend = getResend()
   const { data: result, error } = await resend.emails.send({
     from: "CMG Website <noreply@commonwealthmigration.com.au>",
     to: [process.env.CONTACT_EMAIL_TO ?? "info@commonwealthmigration.com.au"],
@@ -36,6 +41,7 @@ ${data.message}
 }
 
 export async function sendAutoReply(data: ContactPayload) {
+  const resend = getResend()
   const { data: result, error } = await resend.emails.send({
     from: "Commonwealth Migration Group <noreply@commonwealthmigration.com.au>",
     to: [data.email],
@@ -55,7 +61,7 @@ In the meantime, you can explore our free immigration calculators at commonwealt
 
 Best regards,
 The CMG Team
-commonwealth migration group
+Commonwealth Migration Group
 info@commonwealthmigration.com.au
     `.trim(),
   })

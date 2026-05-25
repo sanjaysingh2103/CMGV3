@@ -3,7 +3,6 @@
 import { useState } from "react"
 import HeroBanner from "@/components/HeroBanner"
 import BlogCard from "@/components/BlogCard"
-import CTABanner from "@/components/CTABanner"
 import { blogPosts, blogCategories } from "@/lib/blog-data"
 import { cn } from "@/lib/utils"
 
@@ -33,7 +32,7 @@ export default function ResourcesPage() {
         headline="Australian Immigration Insights"
         subheadline="Expert articles, visa updates and migration guides from CMG's MARA-registered agents — helping you stay informed and make confident decisions."
         bgImage="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80"
-        gradient="from-cmg-navy/90 via-cmg-navy/60 to-transparent"
+        gradient="gradient-hero"
         height="medium"
         ctaButtons={[
           { label: "Book Free Consultation", href: "/contact", variant: "primary" },

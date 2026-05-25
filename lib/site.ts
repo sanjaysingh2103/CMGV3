@@ -80,6 +80,7 @@ export const testimonials = [
     name: "Priya S.",
     role: "Software Engineer",
     origin: "India → Melbourne",
+    visa: "Subclass 189",
   },
   {
     quote:
@@ -87,6 +88,7 @@ export const testimonials = [
     name: "James T.",
     role: "Chef",
     origin: "UK → Sydney",
+    visa: "Subclass 482",
   },
   {
     quote:
@@ -94,6 +96,7 @@ export const testimonials = [
     name: "Maria L.",
     role: "Nurse",
     origin: "Philippines → Brisbane",
+    visa: "Partner Visa",
   },
   {
     quote:
@@ -101,6 +104,7 @@ export const testimonials = [
     name: "Ahmed K.",
     role: "Engineer",
     origin: "Egypt → Perth",
+    visa: "Subclass 190",
   },
   {
     quote:
@@ -108,6 +112,7 @@ export const testimonials = [
     name: "Liu W.",
     role: "IT Specialist",
     origin: "China → Adelaide",
+    visa: "Subclass 482",
   },
   {
     quote:
@@ -115,6 +120,7 @@ export const testimonials = [
     name: "Fatima H.",
     role: "Teacher",
     origin: "Pakistan → Canberra",
+    visa: "Partner Visa",
   },
 ]
 

@@ -17,7 +17,7 @@ export default function PrivacyPage() {
           <section className="mb-10">
             <h2 className="font-heading text-2xl font-semibold text-cmg-text mb-4">1. Introduction</h2>
             <p className="text-cmg-slate leading-relaxed mb-4">
-              Commonwealth Migration Group (CMG, "we", "us", "our") is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).
+              Commonwealth Migration Group (CMG, &ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).
             </p>
           </section>
 

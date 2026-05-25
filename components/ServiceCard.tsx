@@ -12,43 +12,70 @@ interface ServiceCardProps {
   className?: string
 }
 
-const accentColors = {
-  red:  { border: "border-l-cmg-red",  icon: "bg-red-50 group-hover:bg-cmg-red",   iconText: "text-cmg-red group-hover:text-white" },
-  gold: { border: "border-l-cmg-gold", icon: "bg-amber-50 group-hover:bg-cmg-gold", iconText: "text-cmg-gold group-hover:text-white" },
-  blue: { border: "border-l-cmg-blue", icon: "bg-cmg-light-blue group-hover:bg-cmg-blue", iconText: "text-cmg-blue group-hover:text-white" },
+const iconStyles = {
+  red:  { bg: "bg-red-50 group-hover:bg-cmg-red",          text: "text-cmg-red group-hover:text-white" },
+  gold: { bg: "bg-amber-50 group-hover:bg-cmg-gold",        text: "text-cmg-gold group-hover:text-white" },
+  blue: { bg: "bg-blue-50 group-hover:bg-cmg-blue",         text: "text-cmg-blue group-hover:text-white" },
 }
 
 export default function ServiceCard({
   icon: Icon, title, description, href, variant = "accent", accentColor = "red", className,
 }: ServiceCardProps) {
-  const colors = accentColors[accentColor]
+  const colors = iconStyles[accentColor]
+  const isFeatured = variant === "featured"
 
   return (
     <Link
       href={href}
       className={cn(
-        "group block rounded-2xl p-7 bg-white border-l-4 transition-all duration-300",
-        "shadow-[0_2px_12px_rgba(13,35,87,0.06)] hover:shadow-[0_12px_40px_rgba(13,35,87,0.14)]",
-        "hover:-translate-y-1.5 border border-gray-100/80",
-        variant === "accent" && colors.border,
-        variant === "featured" && "border-l-cmg-blue bg-gradient-to-br from-cmg-light-blue to-white",
+        "group block rounded-xl p-7 transition-all duration-300",
+        /* Shadow lift on hover */
+        "shadow-[0_2px_12px_rgba(26,24,38,0.06)] hover:shadow-[0_20px_50px_rgba(26,24,38,0.13)]",
+        /* 3-D perspective tilt */
+        "[perspective:800px] hover:[transform:translateY(-6px)_rotateX(1.5deg)_rotateY(-0.8deg)]",
+        /* Card base */
+        isFeatured
+          ? "bg-gradient-to-br from-cmg-navy to-cmg-blue text-white border-0"
+          : "bg-white border border-cmg-cream-dark",
+        /* Top gold border (editorial accent) */
+        !isFeatured && "border-t-[3px] border-t-cmg-gold",
         className
       )}
     >
+      {/* Icon badge */}
       <div className={cn(
-        "inline-flex items-center justify-center w-12 h-12 rounded-xl mb-5 transition-all duration-300",
-        variant === "featured" ? "bg-cmg-blue" : colors.icon,
+        "inline-flex items-center justify-center w-11 h-11 rounded-lg mb-5 transition-all duration-300",
+        isFeatured ? "bg-white/15 group-hover:bg-white/25" : colors.bg,
       )}>
         <Icon className={cn(
-          "h-6 w-6 transition-all duration-300",
-          variant === "featured" ? "text-white" : colors.iconText,
+          "h-5 w-5 transition-all duration-300",
+          isFeatured ? "text-cmg-gold" : colors.text,
         )} />
       </div>
-      <h3 className="font-heading text-xl font-semibold text-cmg-text mb-2 group-hover:text-cmg-blue transition-colors duration-200">
+
+      {/* Title */}
+      <h3 className={cn(
+        "font-heading text-xl font-semibold mb-2.5 leading-tight transition-colors duration-200",
+        isFeatured
+          ? "text-white group-hover:text-cmg-gold"
+          : "text-cmg-ink group-hover:text-cmg-blue"
+      )}>
         {title}
       </h3>
-      <p className="text-cmg-slate leading-relaxed text-sm mb-5">{description}</p>
-      <span className="inline-flex items-center gap-1.5 text-cmg-blue font-bold text-sm group-hover:gap-2.5 transition-all duration-200">
+
+      {/* Description */}
+      <p className={cn(
+        "leading-relaxed text-sm mb-5",
+        isFeatured ? "text-white/70" : "text-cmg-slate"
+      )}>
+        {description}
+      </p>
+
+      {/* CTA link */}
+      <span className={cn(
+        "inline-flex items-center gap-1.5 font-semibold text-sm group-hover:gap-3 transition-all duration-200",
+        isFeatured ? "text-cmg-gold" : "text-cmg-gold-deep"
+      )}>
         Learn More <ArrowRight className="h-3.5 w-3.5" />
       </span>
     </Link>

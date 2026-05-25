@@ -59,13 +59,13 @@ export default function ContactFormSection() {
   }
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-20 px-4 bg-section-alt">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Form */}
-          <div>
-            <h2 className="font-heading text-3xl font-bold text-cmg-text mb-3">Book Your Free Consultation</h2>
-            <p className="text-cmg-slate mb-8">Fill in the form and we'll confirm your booking within 1 business day.</p>
+          <div className="bg-white rounded-2xl border border-cmg-cream-dark shadow-[0_2px_20px_rgba(26,24,38,0.06)] p-8">
+            <h2 className="font-heading text-3xl font-bold text-cmg-ink mb-3">Book Your Free Consultation</h2>
+            <p className="text-cmg-slate mb-8">Fill in the form and we&apos;ll confirm your booking within 1 business day.</p>
 
             {submitted ? (
               <div className="rounded-2xl bg-green-50 border border-green-200 p-8 text-center">
@@ -165,32 +165,43 @@ export default function ContactFormSection() {
 
           {/* Office details */}
           <div>
-            <h2 className="font-heading text-3xl font-bold text-cmg-text mb-3">Our Office</h2>
-            <p className="text-cmg-slate mb-8">Visit us or reach out anytime.</p>
-            <div className="space-y-5 mb-8">
+            <h2 className="font-heading text-3xl font-bold text-cmg-ink mb-3">Our Office</h2>
+            <p className="text-cmg-slate mb-8">Visit us or reach out anytime — we serve clients worldwide.</p>
+            <div className="space-y-4 mb-8">
               {[
                 { icon: MapPin, label: "Address", value: site.address },
                 { icon: Phone, label: "Phone", value: site.phone },
                 { icon: Mail, label: "Email", value: site.email },
                 { icon: Clock, label: "Hours", value: site.hours },
               ].map((item) => (
-                <div key={item.label} className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-cmg-light-blue flex items-center justify-center shrink-0">
+                <div key={item.label} className="flex items-start gap-4 p-4 rounded-xl bg-white border border-cmg-cream-dark">
+                  <div className="w-10 h-10 rounded-lg bg-cmg-light-blue flex items-center justify-center shrink-0">
                     <item.icon className="h-5 w-5 text-cmg-blue" />
                   </div>
                   <div>
-                    <span className="text-xs font-semibold text-cmg-slate uppercase tracking-wider">{item.label}</span>
-                    <p className="text-cmg-text font-medium mt-0.5">{item.value}</p>
+                    <span className="text-[10px] font-bold text-cmg-slate uppercase tracking-wider">{item.label}</span>
+                    <p className="text-cmg-ink font-medium mt-0.5 text-sm">{item.value}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="rounded-2xl bg-cmg-light-blue aspect-video flex items-center justify-center border border-cmg-blue/10">
+            <div className="rounded-xl bg-cmg-light-blue aspect-video flex items-center justify-center border border-cmg-blue/10">
               <div className="text-center text-cmg-slate">
                 <MapPin className="h-8 w-8 mx-auto mb-2 text-cmg-blue" />
                 <p className="text-sm font-medium">Map will display here</p>
                 <p className="text-xs mt-1">Add Google Maps API key to enable</p>
+              </div>
+            </div>
+
+            {/* MARA trust badge */}
+            <div className="mt-6 flex items-center gap-3 bg-white border border-cmg-cream-dark rounded-xl p-4">
+              <div className="w-10 h-10 rounded-full bg-cmg-gold flex items-center justify-center shrink-0">
+                <span className="font-bold text-sm text-cmg-navy">M</span>
+              </div>
+              <div>
+                <p className="text-xs font-bold text-cmg-ink">MARA Registered Migration Agents</p>
+                <p className="text-xs text-cmg-slate mt-0.5">All agents registered with OMARA · Fully insured</p>
               </div>
             </div>
           </div>
