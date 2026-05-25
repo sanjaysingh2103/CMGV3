@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { MapPin, Phone, Mail, Clock } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, ShieldCheck, Award, CheckCircle, Users } from "lucide-react"
 import { site, footerLinks } from "@/lib/site"
 
 const LinkedinIcon = ({ className }: { className?: string }) => (
@@ -30,6 +30,31 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
+    <>
+      {/* ── PRE-FOOTER TRUST BAND — visual separator between any dark CTA and the footer ── */}
+      <section className="trust-band py-10 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
+            {[
+              { icon: ShieldCheck, label: "MARA Authorised",     desc: "Compliant guidance" },
+              { icon: Award,       label: "97% Approval Rate",   desc: "Across all visa types" },
+              { icon: CheckCircle, label: "End-to-End Support",  desc: "Assessment to grant" },
+              { icon: Users,       label: "GCC-Focused",         desc: "Dubai-based, regional reach" },
+            ].map(({ icon: Icon, label, desc }) => (
+              <div key={label} className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-white border border-cmg-border flex items-center justify-center shrink-0 shadow-sm">
+                  <Icon className="h-5 w-5 text-cmg-blue" />
+                </div>
+                <div className="min-w-0">
+                  <p className="font-bold text-cmg-text text-sm leading-tight">{label}</p>
+                  <p className="text-cmg-slate text-xs mt-0.5">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
     <footer className="bg-cmg-navy text-white" style={{ background: "linear-gradient(180deg, #001A5E 0%, #000D3A 100%)" }}>
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 pt-16 pb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
@@ -146,5 +171,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </>
   )
 }

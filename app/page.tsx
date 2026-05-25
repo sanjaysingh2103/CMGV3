@@ -340,29 +340,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 10. TRUST BAND — visual separator between CTA & footer ───── */}
-      <section className="trust-band py-10 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
-            {[
-              { icon: ShieldCheck, label: "MARA Registered", desc: "MARN 0000000" },
-              { icon: Award,       label: "97% Approval Rate", desc: "Across all visa types" },
-              { icon: Clock,       label: "500+ Visas Granted", desc: "Since 2009" },
-              { icon: CheckCircle, label: "30+ Countries", desc: "Clients worldwide" },
-            ].map(({ icon: Icon, label, desc }) => (
-              <div key={label} className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-white border border-cmg-border flex items-center justify-center shrink-0 shadow-sm">
-                  <Icon className="h-5 w-5 text-cmg-blue" />
-                </div>
-                <div className="min-w-0">
-                  <p className="font-bold text-cmg-text text-sm leading-tight">{label}</p>
-                  <p className="text-cmg-slate text-xs mt-0.5">{desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <JsonLd
         data={{
