@@ -1,5 +1,3 @@
-"use client"
-
 import HeroBanner from "@/components/HeroBanner"
 import EligibilityCard from "@/components/EligibilityCard"
 import VisaSubclassCard from "@/components/VisaSubclassCard"
