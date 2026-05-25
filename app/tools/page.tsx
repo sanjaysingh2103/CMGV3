@@ -1,68 +1,90 @@
 import type { Metadata } from "next"
 import HeroBanner from "@/components/HeroBanner"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import PointsCalculator from "@/components/tools/PointsCalculator"
 import FeeEstimator from "@/components/tools/FeeEstimator"
 import ProcessingTimes from "@/components/tools/ProcessingTimes"
 import CTABanner from "@/components/CTABanner"
+import { Calculator, DollarSign, Clock } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Free Australian Visa Calculators — Points Test & Fees",
-  description:
-    "Estimate your skilled migration points score, visa fees, and processing times with CMG's free Australian immigration calculators.",
+  title: "Australian Visa Tools — Points Calculator, Fee Estimator & Processing Times | CMG",
+  description: "Free Australian visa tools: points test calculator, government fee estimator, and current processing times for all major visa subclasses.",
 }
 
 export default function ToolsPage() {
   return (
     <>
       <HeroBanner
-        headline="Free Australian Immigration Calculators"
-        subheadline="Use our tools to estimate your points score, visa fees, and processing times — then book a consultation to build your strategy."
-        gradient="gradient-blue-red"
+        headline="Australian Visa Tools"
+        subheadline="Free calculators to help you understand your options, estimate costs, and set realistic timelines."
+        bgImage="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920"
+        gradient="gradient-hero"
         height="medium"
       />
 
-      <section className="py-16 px-4 bg-cmg-warm-white min-h-[60vh]">
-        <div className="max-w-5xl mx-auto">
-          <Tabs defaultValue="points" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-10 h-12">
-              <TabsTrigger value="points" className="text-sm font-medium">Points Test</TabsTrigger>
-              <TabsTrigger value="fees" className="text-sm font-medium">Fee Estimator</TabsTrigger>
-              <TabsTrigger value="times" className="text-sm font-medium">Processing Times</TabsTrigger>
-            </TabsList>
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-center text-cmg-slate text-sm mb-16 max-w-2xl mx-auto">
+            These tools provide guidance only. Results depend on individual circumstances, current occupation lists, and Department processing volumes. Book a free consultation for a personalised assessment.
+          </p>
 
-            <TabsContent value="points">
-              <div className="mb-8">
-                <h2 className="font-heading text-2xl font-bold text-cmg-text mb-2">Skilled Migration Points Calculator</h2>
-                <p className="text-cmg-slate">Select the option that best describes your situation in each category to calculate your estimated points score.</p>
+          <div className="space-y-20">
+            {/* Points Calculator */}
+            <div id="points" className="scroll-mt-24">
+              <div className="flex items-start gap-4 mb-8">
+                <div className="w-12 h-12 rounded-2xl bg-cmg-blue flex items-center justify-center shrink-0">
+                  <Calculator className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h2 className="font-heading text-2xl font-bold text-cmg-text mb-1">Points Test Calculator</h2>
+                  <p className="text-cmg-slate">Estimate your skilled migration score across all categories — select one option per category.</p>
+                </div>
               </div>
-              <PointsCalculator />
-            </TabsContent>
+              <div className="border border-gray-100 rounded-2xl p-6 md:p-8 bg-cmg-warm-white">
+                <PointsCalculator />
+              </div>
+            </div>
 
-            <TabsContent value="fees">
-              <div className="mb-8">
-                <h2 className="font-heading text-2xl font-bold text-cmg-text mb-2">Visa Fee Estimator</h2>
-                <p className="text-cmg-slate">Select your visa type and the number of applicants to estimate the total government application fees.</p>
+            {/* Fee Estimator */}
+            <div id="fees" className="scroll-mt-24">
+              <div className="flex items-start gap-4 mb-8">
+                <div className="w-12 h-12 rounded-2xl bg-cmg-red flex items-center justify-center shrink-0">
+                  <DollarSign className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h2 className="font-heading text-2xl font-bold text-cmg-text mb-1">Government Fee Estimator</h2>
+                  <p className="text-cmg-slate">Select your visa and family composition to estimate government application fees.</p>
+                </div>
               </div>
-              <FeeEstimator />
-            </TabsContent>
+              <div className="border border-gray-100 rounded-2xl p-6 md:p-8 bg-cmg-warm-white">
+                <FeeEstimator />
+              </div>
+            </div>
 
-            <TabsContent value="times">
-              <div className="mb-8">
-                <h2 className="font-heading text-2xl font-bold text-cmg-text mb-2">Processing Time Guide</h2>
-                <p className="text-cmg-slate">Current indicative processing times sourced from the Department of Home Affairs.</p>
+            {/* Processing Times */}
+            <div id="times" className="scroll-mt-24">
+              <div className="flex items-start gap-4 mb-8">
+                <div className="w-12 h-12 rounded-2xl bg-cmg-gold flex items-center justify-center shrink-0">
+                  <Clock className="h-6 w-6 text-cmg-navy" />
+                </div>
+                <div>
+                  <h2 className="font-heading text-2xl font-bold text-cmg-text mb-1">Processing Times</h2>
+                  <p className="text-cmg-slate">Current processing time estimates for major visa subclasses. Filter by category.</p>
+                </div>
               </div>
-              <ProcessingTimes />
-            </TabsContent>
-          </Tabs>
+              <div className="border border-gray-100 rounded-2xl p-6 md:p-8 bg-cmg-warm-white">
+                <ProcessingTimes />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <CTABanner
-        headline="Our tools give you a starting point. A CMG agent gives you a strategy."
-        body="Book a free 30-minute consultation to discuss your individual circumstances and develop a personalised migration plan."
+        headline="Want a Professional Assessment?"
+        body="Our calculators give you an estimate — our MARA-registered agents give you a definitive answer. Book your free 30-minute consultation."
         primaryCTA={{ label: "Book Free Consultation", href: "/contact" }}
-        secondaryCTA={{ label: "Explore Services", href: "/services" }}
+        secondaryCTA={{ label: "View Services", href: "/services" }}
         variant="navy-gold"
       />
     </>
