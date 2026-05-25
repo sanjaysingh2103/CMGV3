@@ -180,6 +180,69 @@ export const trustBadges = [
   "5-Star Rated",
 ]
 
+export const visaNav = [
+  {
+    category: "Skilled Migration",
+    items: [
+      { number: "189", label: "Skilled Independent", desc: "Points-tested PR", href: "/services/skilled-migration" },
+      { number: "190", label: "Skilled Nominated", desc: "State/territory PR", href: "/services/skilled-migration" },
+      { number: "491", label: "Skilled Work Regional", desc: "Provisional → 191", href: "/services/skilled-migration" },
+      { number: "191", label: "Permanent Residence", desc: "Skilled Regional", href: "/services/skilled-migration" },
+    ],
+    featured: { label: "Most Popular", title: "Skilled Independent 189", desc: "Permanent residency for skilled professionals selected on merit. No sponsor required.", href: "/services/skilled-migration" },
+  },
+  {
+    category: "Family & Partner",
+    items: [
+      { number: "820", label: "Partner (Onshore)", desc: "820 / 801", href: "/services/family-partner" },
+      { number: "309", label: "Partner (Offshore)", desc: "309 / 100", href: "/services/family-partner" },
+      { number: "300", label: "Prospective Marriage", desc: "Fiancé(e) visa", href: "/services/family-partner" },
+      { number: "143", label: "Parent Contributory", desc: "173 / 143", href: "/services/family-partner" },
+    ],
+    featured: { label: "Most Common", title: "Partner Visa 820/801", desc: "Reunite with your Australian partner. Onshore pathway to permanent residence.", href: "/services/family-partner" },
+  },
+  {
+    category: "Study & Visit",
+    items: [
+      { number: "500", label: "Student Visa", desc: "Genuine Student", href: "/services/student" },
+      { number: "485", label: "Graduate Visa", desc: "Post-study work rights", href: "/services/student" },
+      { number: "600", label: "Visitor Visa", desc: "600 / 601 / 651", href: "/services/student" },
+      { number: "858", label: "Global Talent", desc: "National Innovation", href: "/services/skilled-migration" },
+    ],
+    featured: { label: "Career Pathway", title: "Student → Graduate → PR", desc: "Study in Australia then transition to skilled migration through the 485 and points-tested stream.", href: "/services/student" },
+  },
+]
+
+export const servicesNav = [
+  {
+    category: "Assessment & Nomination",
+    items: [
+      { label: "Skills Assessment", desc: "ANZSCO authorities", href: "/services" },
+      { label: "State Nomination", desc: "190 / 491 pathways", href: "/services" },
+      { label: "EOI Assistance", desc: "SkillSelect profile", href: "/services" },
+      { label: "Visa Documentation", desc: "Decision-ready files", href: "/services" },
+    ],
+  },
+  {
+    category: "Drafting & Appeals",
+    items: [
+      { label: "CDR for Engineers", desc: "Engineers Australia", href: "/services" },
+      { label: "Reference Letters", desc: "ANZSCO-aligned", href: "/services" },
+      { label: "Resume & SOP", desc: "ATS-ready", href: "/services" },
+      { label: "Refusals & Appeals", desc: "ART merits review", href: "/services" },
+    ],
+  },
+  {
+    category: "Coaching & Exams",
+    items: [
+      { label: "IELTS Academic", desc: "English for study", href: "/services" },
+      { label: "IELTS General", desc: "English for migration", href: "/services" },
+      { label: "PTE Academic", desc: "Computer-based", href: "/services" },
+      { label: "NAATI CCL", desc: "+5 points", href: "/services" },
+    ],
+  },
+]
+
 export const footerLinks = {
   services: [
     { label: "Skilled Migration", href: "/services/skilled-migration" },
