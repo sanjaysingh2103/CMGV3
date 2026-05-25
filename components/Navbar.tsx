@@ -40,8 +40,8 @@ function HummingbirdMark({ className }: { className?: string }) {
 function CMGLogo() {
   return (
     <Link href="/" className="flex items-center gap-3 shrink-0 group">
-      {/* Icon mark — blue square with hummingbird */}
-      <div className="w-11 h-11 rounded-xl bg-cmg-blue flex items-center justify-center shadow-sm">
+      {/* Icon mark — red square with hummingbird */}
+      <div className="w-11 h-11 rounded-xl bg-cmg-red flex items-center justify-center shadow-sm">
         <HummingbirdMark className="w-6 h-6 text-white" />
       </div>
       {/* Text mark */}
