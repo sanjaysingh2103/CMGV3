@@ -67,7 +67,7 @@ const services = [
 export default function HomePage() {
   return (
     <>
-      {/* ── 1. HERO — full photo, centred content ─────────────────────── */}
+      {/* ── 1. HERO — premium layered banner ───────────────────────── */}
       <section className="relative flex min-h-[calc(100vh-5rem)] items-center justify-center overflow-hidden">
         {/* Background photo */}
         <Image
@@ -78,31 +78,29 @@ export default function HomePage() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        {/* Dark navy overlay */}
-        <div
-          className="absolute inset-0"
-          style={{ background: "linear-gradient(135deg, rgba(0,26,94,0.78) 0%, rgba(0,48,135,0.62) 100%)" }}
-          aria-hidden
-        />
+        {/* Premium multi-layer gradient: navy + red light-leak top-right */}
+        <div className="absolute inset-0 hero-premium" aria-hidden />
         {/* Architectural grid texture */}
         <div className="absolute inset-0 hero-tex-grid pointer-events-none" aria-hidden />
+        {/* Fine grain for richness */}
+        <div className="absolute inset-0 hero-tex-noise pointer-events-none" aria-hidden />
         {/* Vignette */}
         <div
           className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 120% 100% at 50% 50%, transparent 50%, rgba(0,13,58,0.40) 100%)" }}
+          style={{ background: "radial-gradient(ellipse 120% 100% at 50% 50%, transparent 50%, rgba(0,13,58,0.45) 100%)" }}
           aria-hidden
         />
 
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto px-5 md:px-8 text-center py-24">
 
-          {/* Eyebrow with hairlines */}
+          {/* Eyebrow with flag-inspired hairlines (blue → red) */}
           <div className="flex items-center justify-center gap-3 mb-5">
-            <span className="h-px w-8 bg-white/40" />
-            <p className="eyebrow text-white/85 tracking-[0.22em]">
-              MARA Registered Migration Agents · Est. 2009
+            <span className="h-px w-10" style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.5))" }} />
+            <p className="eyebrow text-white tracking-[0.24em] font-bold">
+              MARA Registered <span className="text-cmg-red-light">·</span> Migration Agents <span className="text-cmg-red-light">·</span> Est. 2009
             </p>
-            <span className="h-px w-8 bg-white/40" />
+            <span className="h-px w-10" style={{ background: "linear-gradient(to left, transparent, rgba(255,255,255,0.5))" }} />
           </div>
 
           {/* Headline */}
@@ -166,7 +164,11 @@ export default function HomePage() {
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
-            <p className="eyebrow text-cmg-red mb-3">Our Services</p>
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="h-px w-6 bg-cmg-red" />
+              <p className="eyebrow text-cmg-red">Our Services</p>
+              <span className="h-px w-6 bg-cmg-red" />
+            </div>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-text mb-4">
               Comprehensive Australian Migration Services
             </h2>
@@ -241,7 +243,11 @@ export default function HomePage() {
       <section className="py-24 px-4 bg-section-alt">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <p className="eyebrow text-cmg-red mb-3">The Process</p>
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="h-px w-6 bg-cmg-red" />
+              <p className="eyebrow text-cmg-red">The Process</p>
+              <span className="h-px w-6 bg-cmg-red" />
+            </div>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-text mb-4">
               Your Migration Journey in 4 Steps
             </h2>
@@ -257,7 +263,11 @@ export default function HomePage() {
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
-            <p className="eyebrow text-cmg-red mb-3">Client Stories</p>
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="h-px w-6 bg-cmg-red" />
+              <p className="eyebrow text-cmg-red">Client Stories</p>
+              <span className="h-px w-6 bg-cmg-red" />
+            </div>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-text mb-4">
               What Our Clients Say
             </h2>
@@ -288,21 +298,32 @@ export default function HomePage() {
         bgClass="bg-section-alt"
       />
 
-      {/* ── 9. CTA BANNER ────────────────────────────────────────────── */}
-      <section className="bg-cmg-navy py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="eyebrow text-white/50 mb-5">Get Started Today</p>
+      {/* ── 9. CTA BANNER — premium, with red light-leak ─────────────── */}
+      <section className="relative bg-cmg-navy overflow-hidden">
+        {/* Premium deep gradient with red glow */}
+        <div className="absolute inset-0 hero-premium-deep" aria-hidden />
+        {/* Grain */}
+        <div className="absolute inset-0 hero-tex-noise pointer-events-none" aria-hidden />
+
+        <div className="relative max-w-4xl mx-auto text-center px-4 py-24 md:py-28">
+          {/* Flag-inspired divider above eyebrow */}
+          <div className="flex items-center justify-center gap-2 mb-5">
+            <span className="h-px w-12" style={{ background: "linear-gradient(to right, transparent, #003087)" }} />
+            <span className="h-1.5 w-1.5 rounded-full bg-cmg-red" />
+            <span className="h-px w-12" style={{ background: "linear-gradient(to left, transparent, #C8102E)" }} />
+          </div>
+          <p className="eyebrow text-white/60 mb-5">Get Started Today</p>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             Ready to Start Your Australian Journey?
           </h2>
-          <p className="text-white/65 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="text-white/70 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
             Book a free 30-minute consultation with one of our MARA-registered agents.
             No obligation, no jargon — just expert advice tailored to you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-cmg-red text-white font-semibold px-9 py-4 rounded-lg text-base hover:bg-red-700 transition-colors shadow-lg"
+              className="inline-flex items-center justify-center bg-cmg-red text-white font-bold px-9 py-4 rounded-lg text-base hover:bg-red-700 transition-colors shadow-[0_4px_24px_rgba(200,16,46,0.45)]"
             >
               Book Free Consultation
             </Link>
@@ -313,9 +334,33 @@ export default function HomePage() {
               <Phone className="h-4 w-4" /> Call Us Now
             </a>
           </div>
-          <p className="mt-8 text-white/35 text-sm">
-            MARA Registered · Professional Indemnity Insured · 500+ Approved Visas
+          <p className="mt-8 text-white/40 text-sm">
+            MARA Registered <span className="text-cmg-red-light">·</span> Professional Indemnity Insured <span className="text-cmg-red-light">·</span> 500+ Approved Visas
           </p>
+        </div>
+      </section>
+
+      {/* ── 10. TRUST BAND — visual separator between CTA & footer ───── */}
+      <section className="trust-band py-10 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
+            {[
+              { icon: ShieldCheck, label: "MARA Registered", desc: "MARN 0000000" },
+              { icon: Award,       label: "97% Approval Rate", desc: "Across all visa types" },
+              { icon: Clock,       label: "500+ Visas Granted", desc: "Since 2009" },
+              { icon: CheckCircle, label: "30+ Countries", desc: "Clients worldwide" },
+            ].map(({ icon: Icon, label, desc }) => (
+              <div key={label} className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-white border border-cmg-border flex items-center justify-center shrink-0 shadow-sm">
+                  <Icon className="h-5 w-5 text-cmg-blue" />
+                </div>
+                <div className="min-w-0">
+                  <p className="font-bold text-cmg-text text-sm leading-tight">{label}</p>
+                  <p className="text-cmg-slate text-xs mt-0.5">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
