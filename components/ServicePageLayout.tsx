@@ -21,7 +21,7 @@ export default function ServicePageLayout({ content }: ServicePageLayoutProps) {
         headline={content.hero.headline}
         subheadline={content.hero.subheadline}
         bgImage={content.hero.bgImage}
-        gradient="from-cmg-navy/90 via-cmg-navy/60 to-transparent"
+        gradient="gradient-hero"
         height="h-[75vh] min-h-[560px]"
         trustBadges={content.hero.trustBadges}
         ctaButtons={[
@@ -53,7 +53,7 @@ export default function ServicePageLayout({ content }: ServicePageLayoutProps) {
       </section>
 
       {/* 3. Eligibility Requirements */}
-      <section className="py-20 px-4 bg-cmg-light-blue/50">
+      <section className="py-20 px-4 bg-section-lines">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-[11px] font-bold uppercase tracking-widest text-cmg-red mb-3">Eligibility</p>
@@ -119,7 +119,7 @@ export default function ServicePageLayout({ content }: ServicePageLayoutProps) {
       </section>
 
       {/* 6. Fees & Documents */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-section-alt">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
           <div>
             <p className="text-[11px] font-bold uppercase tracking-widest text-cmg-red mb-4">Fees</p>

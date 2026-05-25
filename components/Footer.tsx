@@ -35,13 +35,18 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Col 1 — Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-cmg-red flex items-center justify-center">
-                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white">
-                  <path d="M12 2C8 2 4 6 4 10c0 3 2 5.5 5 7l3 1 3-1c3-1.5 5-4 5-7 0-4-4-8-8-8z" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-cmg-red flex items-center justify-center shadow-lg shrink-0">
+                <svg viewBox="0 0 100 88" fill="white" className="w-6 h-6">
+                  <path d="M50 30 L96 6 L80 50 Z" />
+                  <path d="M6 48 C1 38 2 26 14 26 C20 26 24 22 32 24 L50 30 L80 50 C68 44 58 50 55 62 C52 74 58 82 68 83 L60 90 C42 90 26 80 20 66 C14 54 16 46 22 44 C16 44 10 48 6 48 Z" />
+                  <circle cx="13" cy="31" r="4" fill="rgba(255,255,255,0.9)" />
                 </svg>
               </div>
-              <span className="font-heading font-bold text-xl">{site.shortName}</span>
+              <div>
+                <span className="font-heading font-bold text-xl leading-none">{site.shortName}</span>
+                <div className="text-[9px] text-white/50 tracking-[0.18em] uppercase mt-0.5">Commonwealth Migration Group</div>
+              </div>
             </div>
             <p className="text-white/70 text-sm leading-relaxed mb-4">{site.tagline}</p>
             <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-xs">{site.description}</p>

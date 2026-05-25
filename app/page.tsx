@@ -86,7 +86,7 @@ export default function HomePage() {
       <StatsBand />
 
       {/* 3 — Services Grid */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-section-alt">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-cmg-red text-xs font-bold uppercase tracking-widest mb-3">Our Services</p>
@@ -124,7 +124,7 @@ export default function HomePage() {
       />
 
       {/* 5 — Process Steps */}
-      <section className="py-20 px-4 bg-cmg-light-blue">
+      <section className="py-20 px-4 bg-section-lines">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-cmg-red text-xs font-bold uppercase tracking-widest mb-3">The Process</p>
@@ -164,7 +164,7 @@ export default function HomePage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-cmg-navy/80" />
+        <div className="absolute inset-0" style={{background:"linear-gradient(135deg, rgba(13,35,87,0.93) 0%, rgba(13,35,87,0.78) 50%, rgba(192,57,43,0.55) 100%)"}} />
         <div className="relative max-w-4xl mx-auto text-center">
           <p className="text-cmg-gold text-xs font-bold uppercase tracking-widest mb-4">Get Started Today</p>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
