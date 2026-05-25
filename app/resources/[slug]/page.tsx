@@ -2,9 +2,24 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowLeft, Clock, User, Calendar } from "lucide-react"
+import { ArrowLeft, Clock, Calendar, User } from "lucide-react"
 import { blogPosts, getBlogPost } from "@/lib/blog-data"
+import BlogCard from "@/components/BlogCard"
 import CTABanner from "@/components/CTABanner"
+import { cn } from "@/lib/utils"
+
+const categoryStyles: Record<string, string> = {
+  "Visa News": "bg-cmg-red text-white",
+  "Skilled Migration": "bg-cmg-blue text-white",
+  "Family Visas": "bg-purple-600 text-white",
+  "Student": "bg-teal-600 text-white",
+  "Business": "bg-cmg-navy text-white",
+  "Tips & Guides": "bg-cmg-gold text-cmg-navy",
+}
+
+function getAuthorInitials(name: string) {
+  return name.split(" ").map((n) => n[0]).join("").slice(0, 2).toUpperCase()
+}
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -47,7 +62,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="absolute inset-0 gradient-hero" />
           <div className="absolute inset-0 flex items-end">
             <div className="max-w-4xl mx-auto px-4 pb-12 w-full">
-              <span className="inline-block bg-cmg-blue text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">
+              <span className={cn("inline-block text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full mb-4", categoryStyles[post.category] ?? "bg-cmg-blue text-white")}>
                 {post.category}
               </span>
               <h1 className="font-heading text-3xl md:text-4xl font-bold text-white leading-tight">
@@ -110,8 +125,20 @@ export default async function BlogPostPage({ params }: Props) {
             })}
           </div>
 
+          {/* Author bio */}
+          <div className="mt-12 p-6 rounded-2xl bg-cmg-light-blue border border-cmg-blue/10 flex items-start gap-5">
+            <div className="w-14 h-14 rounded-full bg-cmg-blue flex items-center justify-center text-white text-lg font-bold shrink-0">
+              {getAuthorInitials(post.author)}
+            </div>
+            <div>
+              <p className="font-semibold text-cmg-text">{post.author}</p>
+              <p className="text-xs font-bold uppercase tracking-wide text-cmg-red mb-1">MARA Registered Migration Agent</p>
+              <p className="text-sm text-cmg-slate leading-relaxed">CMG&apos;s registered agents hold current MARA registration and specialise in Australian skilled, family and employer-sponsored visas. All advice provided is tailored, confidential and legally compliant.</p>
+            </div>
+          </div>
+
           {/* Back to blog */}
-          <div className="mt-12 pt-8 border-t border-gray-100">
+          <div className="mt-8 pt-8 border-t border-gray-100">
             <Link href="/resources" className="inline-flex items-center gap-2 text-cmg-blue font-semibold hover:gap-3 transition-all">
               <ArrowLeft className="h-4 w-4" />
               Back to all articles
@@ -121,13 +148,31 @@ export default async function BlogPostPage({ params }: Props) {
       </div>
 
       {/* Disclaimer */}
-      <div className="px-4 pb-12">
+      <div className="px-4 pb-6">
         <div className="max-w-4xl mx-auto bg-cmg-light-blue rounded-2xl p-5">
           <p className="text-xs text-cmg-slate">
             <strong>Disclaimer:</strong> This article provides general information only and does not constitute migration advice. Immigration law changes frequently. For advice tailored to your circumstances, please consult a registered migration agent.
           </p>
         </div>
       </div>
+
+      {/* Related Posts */}
+      {(() => {
+        const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3)
+        return related.length > 0 ? (
+          <section className="py-16 px-4 bg-white">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex items-center gap-4 mb-8">
+                <h2 className="font-heading text-2xl font-bold text-cmg-text whitespace-nowrap">More Articles</h2>
+                <div className="flex-1 h-px bg-gray-100" />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+                {related.map((p) => <BlogCard key={p.slug} post={p} />)}
+              </div>
+            </div>
+          </section>
+        ) : null
+      })()}
 
       <CTABanner
         headline="Have questions about your visa situation?"
