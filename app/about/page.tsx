@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import { Shield, Award, Users, TrendingUp, CheckCircle } from "lucide-react"
+import { Shield, Award, Users, TrendingUp, Sparkles, CheckCircle } from "lucide-react"
 import HeroBanner from "@/components/HeroBanner"
 import CTABanner from "@/components/CTABanner"
 import JsonLd from "@/components/JsonLd"
@@ -17,6 +17,7 @@ const valueIcons: Record<string, React.ElementType> = {
   Award,
   Users,
   TrendingUp,
+  Sparkles,
 }
 
 const jsonLd = {
@@ -56,35 +57,39 @@ export default function AboutPage() {
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="eyebrow text-cmg-red mb-3">Our Story</p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-ink mb-6">
-              Who We Are
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="h-px w-6 bg-cmg-red" />
+              <p className="eyebrow text-cmg-red">Our Story</p>
+              <span className="h-px w-6 bg-cmg-red" />
+            </div>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-text mb-6">
+              GCC&rsquo;s Trusted Australia Migration Partner
             </h2>
             <div className="space-y-4 text-cmg-slate leading-relaxed">
               <p>
-                Founded with a singular mission — to cut through immigration complexity and deliver real results — Commonwealth Migration Group has grown into one of Australia&rsquo;s most trusted migration agencies.
+                Commonwealth Migration Group (CMG) was established with a vision to provide ethical, transparent, and professional Australia migration solutions for skilled professionals and families across the GCC region — particularly from Dubai and the wider Middle East.
               </p>
               <p>
-                Our team of MARA-registered agents brings decades of combined experience across every visa category, from skilled migration and family reunions to employer sponsorship and business investment visas.
+                CMG was founded by a team of migration professionals and industry experts who identified the growing demand for genuine Australia-focused immigration guidance backed by proper compliance, strategic case management, and personalised support.
               </p>
               <p>
-                We believe that immigration should be empowering, not intimidating. That&rsquo;s why we invest in every client relationship, providing clear advice, transparent pricing, and relentless follow-through until you hold your visa in hand.
+                The idea behind CMG was to bridge the gap between aspirants and reliable migration services by offering MARA-authorised guidance, modern technology-driven processing systems, and client-centric consultation services under one platform.
               </p>
               <p>
-                The story of Commonwealth Migration Group began with a simple observation: too many skilled, deserving people were having their Australian dreams derailed by poor advice, incomplete applications, or simply not knowing where to start. Our founders — themselves immigrants who navigated Australia&rsquo;s migration system — set out to build the agency they wished had existed when they arrived.
+                With Australia continuing to attract skilled migrants globally, CMG simplifies the migration journey for applicants by providing end-to-end assistance for skilled migration, family visas, student pathways, and professional services such as skill assessments, EOI management, and visa documentation.
               </p>
             </div>
 
             {/* Key metrics */}
             <div className="grid grid-cols-3 gap-6 mt-10">
               {[
-                { value: "15+", label: "Years Experience" },
-                { value: "97%", label: "Approval Rate" },
-                { value: "30+", label: "Client Nations" },
+                { value: "GCC", label: "Specialist Focus" },
+                { value: "MARA", label: "Authorised Agents" },
+                { value: "AI", label: "Tech-Backed Workflow" },
               ].map(({ value, label }) => (
                 <div key={label} className="text-center">
-                  <div className="font-cormorant text-4xl font-light text-cmg-blue leading-none">{value}</div>
-                  <div className="text-xs text-cmg-slate mt-1 font-medium">{label}</div>
+                  <div className="font-heading text-3xl md:text-4xl font-bold text-cmg-blue leading-none">{value}</div>
+                  <div className="text-xs text-cmg-slate mt-2 font-semibold">{label}</div>
                 </div>
               ))}
             </div>
@@ -108,14 +113,65 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Vision & Mission */}
       <section className="py-24 px-4 bg-section-alt">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
+          {/* Vision */}
+          <div className="relative bg-white rounded-2xl border border-cmg-border border-t-[3px] border-t-cmg-blue p-10 shadow-card">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="h-px w-6 bg-cmg-blue" />
+              <p className="eyebrow text-cmg-blue">Our Vision</p>
+            </div>
+            <h3 className="font-heading text-2xl md:text-3xl font-bold text-cmg-text mb-5 leading-tight">
+              A benchmark for trust &amp; compliance in Australia migration
+            </h3>
+            <p className="text-cmg-slate leading-relaxed">
+              To redefine Australia migration services in the Middle East — empowering skilled professionals, students, and families with transparent guidance, ethical practices, and world-class migration solutions tailored to their long-term settlement goals in Australia.
+            </p>
+          </div>
+
+          {/* Mission */}
+          <div className="relative bg-white rounded-2xl border border-cmg-border border-t-[3px] border-t-cmg-red p-10 shadow-card">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="h-px w-6 bg-cmg-red" />
+              <p className="eyebrow text-cmg-red">Our Mission</p>
+            </div>
+            <h3 className="font-heading text-2xl md:text-3xl font-bold text-cmg-text mb-5 leading-tight">
+              Reliable, compliant, result-oriented Australia migration
+            </h3>
+            <p className="text-cmg-slate leading-relaxed mb-4">
+              We deliver MARA-authorised expertise, strategic case management, and technology-driven support systems for GCC-based aspirants. We are committed to:
+            </p>
+            <ul className="space-y-2 text-cmg-slate text-sm">
+              {[
+                "Transparent and ethical migration guidance",
+                "Simplifying complex Australia visa pathways",
+                "Personalised solutions based on each client&rsquo;s profile",
+                "End-to-end support — from assessment to visa outcome",
+                "High standards of professionalism and compliance",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2.5">
+                  <CheckCircle className="h-4 w-4 text-cmg-red shrink-0 mt-0.5" />
+                  <span dangerouslySetInnerHTML={{ __html: item }} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us — 5 differentiators */}
+      <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
-            <p className="eyebrow text-cmg-red mb-3">What Drives Us</p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-ink">Our Core Values</h2>
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="h-px w-6 bg-cmg-red" />
+              <p className="eyebrow text-cmg-red">Why Choose CMG</p>
+              <span className="h-px w-6 bg-cmg-red" />
+            </div>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-text">5 reasons clients trust us</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map((val) => {
               const Icon = valueIcons[val.icon] ?? Shield
               return (

@@ -1,16 +1,18 @@
 export const site = {
   name: "Commonwealth Migration Group",
   shortName: "CMG",
-  tagline: "Your Journey to Australia, Guided by Experts.",
+  tagline: "Australia Migration Simplified",
   description:
-    "MARA-registered migration agents helping skilled workers, families & businesses migrate to Australia.",
-  url: "https://commonwealthmigration.com.au",
-  email: "info@commonwealthmigration.com.au",
-  phone: "+61 2 XXXX XXXX",
-  address: "Level X, XX Street, Sydney NSW 2000, Australia",
-  hours: "Mon–Fri 9:00am–6:00pm AEST | Sat by appointment",
-  abn: "XX XXX XXX XXX",
-  maraNumber: "XXXXXXX",
+    "MARA-authorised Australia migration consultancy based in Dubai — supporting skilled professionals, families, and students across the GCC and Middle East.",
+  url: "https://commonwealthmigration.ae",
+  email: "support@commonwealthmigration.ae",
+  phone: "+971 50 491 6720",
+  whatsapp: "+971504916720",
+  whatsappDisplay: "+971 50 491 6720",
+  address: "306 Golden Gate, Next to Lamcy Plaza, Oud Metha, Dubai, UAE",
+  hours: "Sun–Thu 10:00am–7:00pm GST",
+  abn: "Pending registration",
+  maraNumber: "Authorised migration agents",
   social: {
     linkedin: "https://www.linkedin.com/company/commonwealthmigrationgroup",
     facebook: "https://www.facebook.com/CMGMigration",
@@ -153,28 +155,34 @@ export const team = [
 
 export const values = [
   {
-    title: "Integrity",
+    title: "Australia-Focused Expertise",
     description:
-      "We provide honest assessments, even when the news is difficult. No false promises.",
-    icon: "Shield",
-  },
-  {
-    title: "Expertise",
-    description:
-      "Our agents maintain active MARA registration and continuously update their knowledge.",
+      "CMG specialises exclusively in Australia migration pathways — focused, up-to-date, and strategic guidance across skilled, family, student, and regional visas.",
     icon: "Award",
   },
   {
-    title: "Personalisation",
+    title: "MARA-Authorised & Compliant",
     description:
-      "No two migration journeys are identical. We tailor every strategy to your circumstances.",
+      "Ethical immigration practices with strict compliance standards. Every case handled under MARA-authorised professional guidance.",
+    icon: "Shield",
+  },
+  {
+    title: "GCC-Based Support",
+    description:
+      "Based in Dubai. We understand the unique profiles of GCC residents and provide localised support tailored to applicants from UAE and the wider Middle East.",
     icon: "Users",
   },
   {
-    title: "Results",
+    title: "End-to-End Case Management",
     description:
-      "We measure our success by your visa grant. Our 97% approval rate speaks for itself.",
+      "From eligibility assessment and skills assessment through to EOI submission, documentation, and visa lodgement — complete assistance under one roof.",
     icon: "TrendingUp",
+  },
+  {
+    title: "Technology & AI-Backed Processing",
+    description:
+      "We combine human expertise with modern technology-driven workflows and AI-supported case management for better efficiency and client experience.",
+    icon: "Sparkles",
   },
 ]
 

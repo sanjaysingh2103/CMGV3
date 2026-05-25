@@ -54,7 +54,7 @@ CMG's agents can help you develop a tailored strategy based on the latest round 
     publishedAt: "2025-04-28",
     category: "Family Visas",
     readTime: "8 min read",
-    featuredImage: "https://images.unsplash.com/photo-1511895426328-dc8714191011?w=800&h=450&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&h=450&fit=crop",
     content: `Australia's partner visa program is designed to reunite couples, but the process is lengthy and requires extensive documentation. Here's what to expect.
 
 ## Stage 1 — Temporary Partner Visa (820/309)
@@ -135,7 +135,7 @@ Submit EOIs to multiple states for 190 nomination simultaneously. Different stat
     publishedAt: "2025-03-22",
     category: "Student",
     readTime: "5 min read",
-    featuredImage: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=450&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=800&h=450&fit=crop",
     content: `The Genuine Temporary Entrant (GTE) requirement is assessed for every student visa application. The Department wants to be satisfied that you intend to stay temporarily and return home after your studies.
 
 ## What the Department Looks For
