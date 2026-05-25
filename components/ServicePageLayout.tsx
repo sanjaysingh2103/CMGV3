@@ -4,7 +4,8 @@ import VisaSubclassCard from "@/components/VisaSubclassCard"
 import FeesTable from "@/components/FeesTable"
 import FAQAccordion from "@/components/FAQAccordion"
 import CTABanner from "@/components/CTABanner"
-import { CheckCircle2 } from "lucide-react"
+import JsonLd from "@/components/JsonLd"
+import { CheckCircle2, ShieldCheck, Award, FileBadge, MessageCircle } from "lucide-react"
 import type { VisaPageContent } from "@/lib/visa-content"
 
 interface ServicePageLayoutProps {
@@ -12,8 +13,24 @@ interface ServicePageLayoutProps {
 }
 
 export default function ServicePageLayout({ content }: ServicePageLayoutProps) {
+  /* FAQ schema.org structured data — boosts Google rich snippets */
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: content.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.answer,
+      },
+    })),
+  }
+
   return (
     <>
+      <JsonLd data={faqSchema} />
+
       {/* 1. Hero */}
       <HeroBanner
         headline={content.hero.headline}
@@ -29,6 +46,25 @@ export default function ServicePageLayout({ content }: ServicePageLayoutProps) {
           { label: "View Points Calculator", href: "/tools", variant: "secondary" },
         ]}
       />
+
+      {/* 1.5 — Trust strip (Why MARA matters) */}
+      <section className="bg-section-alt border-b border-cmg-border py-7 px-4">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {[
+            { icon: ShieldCheck,   label: "MARA Code of Conduct" },
+            { icon: FileBadge,     label: "Professional Indemnity Insured" },
+            { icon: MessageCircle, label: "Free 30-min Consultation" },
+            { icon: Award,         label: "97% Approval Rate" },
+          ].map(({ icon: Icon, label }) => (
+            <div key={label} className="flex items-center gap-2.5">
+              <div className="w-9 h-9 rounded-lg bg-white border border-cmg-border flex items-center justify-center shrink-0">
+                <Icon className="h-4 w-4 text-cmg-blue" />
+              </div>
+              <p className="text-[13px] font-semibold text-cmg-text leading-tight">{label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* 2. Overview + Key Facts */}
       <section className="py-20 px-4 bg-white">
