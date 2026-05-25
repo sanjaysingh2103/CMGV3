@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 interface CTAButton {
   label: string
   href: string
-  variant: "primary" | "secondary"
+  variant?: "primary" | "secondary" | "outline"
 }
 
 interface HeroBannerProps {
@@ -15,12 +15,12 @@ interface HeroBannerProps {
   bgImage?: string
   gradient?: string
   ctaButtons?: CTAButton[]
-  height?: "full" | "large" | "medium"
+  height?: "full" | "large" | "medium" | (string & {})
   trustBadges?: string[]
   children?: React.ReactNode
 }
 
-const heightClasses = {
+const heightClasses: Record<string, string> = {
   full: "min-h-screen",
   large: "min-h-[80vh]",
   medium: "min-h-[60vh]",
@@ -37,7 +37,7 @@ export default function HeroBanner({
   children,
 }: HeroBannerProps) {
   return (
-    <section className={cn("relative flex items-center overflow-hidden", heightClasses[height])}>
+    <section className={cn("relative flex items-center overflow-hidden", heightClasses[height] ?? height)}>
       {/* Background image */}
       {bgImage && (
         <Image
@@ -75,7 +75,7 @@ export default function HeroBanner({
                     "inline-flex items-center justify-center rounded-full px-8 py-4 font-semibold text-base transition-all",
                     btn.variant === "primary"
                       ? "bg-cmg-blue text-white hover:bg-cmg-blue-light shadow-lg"
-                      : "border-2 border-white text-white hover:bg-white/10"
+                      : "border-2 border-white text-white hover:bg-white/10"  // secondary or outline
                   )}
                 >
                   {btn.label}
