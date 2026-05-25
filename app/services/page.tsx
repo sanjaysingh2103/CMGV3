@@ -24,7 +24,7 @@ const services = [
   { icon: Heart, title: "Family & Partner", description: "Reunite with loved ones through Australia's family and partner visa programs.", href: "/services/family-partner" },
   { icon: GraduationCap, title: "Student Visas", description: "Study in Australia and explore post-study work rights and migration pathways.", href: "/services/student" },
   { icon: TrendingUp, title: "Business & Investor", description: "Establish or expand your business in Australia with dedicated investor visa options.", href: "/services/business-investor" },
-  { icon: MessageSquare, title: "Free Consultation", description: "Not sure which visa suits you? Start with a no-obligation 30-minute consultation.", href: "/contact", variant: "featured" as const },
+  { icon: MessageSquare, title: "Free Consultation", description: "Not sure which visa suits you? Start with a no-obligation 30-minute consultation.", href: "/contact" },
 ]
 
 const jsonLd = {
@@ -46,10 +46,12 @@ export default function ServicesPage() {
       <JsonLd data={jsonLd} />
 
       <HeroBanner
+        eyebrow="MARA-Registered · 5 Pathways · 30+ Visa Subclasses"
         headline="Comprehensive Australian Migration Services"
         subheadline="From skilled migration to family reunions — we handle every aspect of your Australian visa journey."
-        bgImage="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1920"
-        gradient="gradient-hero"
+        bgImage="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80"
+        gradient="gradient-hero-deep"
+        texture="grid"
         ctaButtons={[
           { label: "Book Free Consultation", href: "/contact", variant: "primary" },
           { label: "Check Your Points", href: "/tools", variant: "secondary" },
@@ -81,7 +83,6 @@ export default function ServicesPage() {
                 title={svc.title}
                 description={svc.description}
                 href={svc.href}
-                variant={svc.variant}
               />
             ))}
           </div>

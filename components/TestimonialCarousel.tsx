@@ -38,14 +38,14 @@ export default function TestimonialCarousel() {
       onMouseLeave={() => setPaused(false)}
     >
       {/* Desktop: 3-column grid */}
-      <div className="hidden md:grid grid-cols-3 gap-5">
+      <div className="hidden md:grid grid-cols-3 gap-6">
         {testimonials.map((t, i) => (
           <TestimonialCard key={i} testimonial={t} avatar={avatars[i % avatars.length]} />
         ))}
       </div>
 
       {/* Mobile: animated single card */}
-      <div className="md:hidden relative overflow-hidden" style={{ minHeight: 320 }}>
+      <div className="md:hidden relative overflow-hidden" style={{ minHeight: 300 }}>
         <AnimatePresence mode="wait" custom={dir}>
           <motion.div
             key={current}
@@ -72,18 +72,18 @@ export default function TestimonialCarousel() {
       <div className="flex md:hidden items-center justify-between mt-5 px-2">
         <button
           onClick={() => advance(-1)}
-          className="flex items-center justify-center w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white"
+          className="flex items-center justify-center w-9 h-9 rounded-full bg-cmg-light-blue hover:bg-cmg-border transition-colors text-cmg-blue"
           aria-label="Previous testimonial"
         >
           <ChevronLeft className="h-4 w-4" />
         </button>
 
-        <div className="flex gap-2">
+        <div className="flex gap-2 items-center">
           {testimonials.map((_, i) => (
             <button
               key={i}
               onClick={() => { setDir(i > current ? 1 : -1); setCurrent(i) }}
-              className={`transition-all duration-200 rounded-full ${i === current ? "w-5 h-2 bg-cmg-gold" : "w-2 h-2 bg-white/25 hover:bg-white/40"}`}
+              className={`transition-all duration-200 rounded-full ${i === current ? "w-5 h-2 bg-cmg-blue" : "w-2 h-2 bg-cmg-border hover:bg-cmg-slate/40"}`}
               aria-label={`Testimonial ${i + 1}`}
             />
           ))}
@@ -91,7 +91,7 @@ export default function TestimonialCarousel() {
 
         <button
           onClick={() => advance(1)}
-          className="flex items-center justify-center w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white"
+          className="flex items-center justify-center w-9 h-9 rounded-full bg-cmg-light-blue hover:bg-cmg-border transition-colors text-cmg-blue"
           aria-label="Next testimonial"
         >
           <ChevronRight className="h-4 w-4" />
@@ -109,41 +109,30 @@ function TestimonialCard({
   avatar: string
 }) {
   return (
-    <div className="relative rounded-2xl overflow-hidden h-full flex flex-col p-7 bg-white/[0.06] border border-white/10 hover:bg-white/[0.10] transition-colors duration-200 group">
-      {/* Large decorative opening quote — Cormorant Garamond */}
-      <span
-        className="absolute top-3 left-5 select-none pointer-events-none font-cormorant text-cmg-gold/20 leading-none"
-        style={{ fontSize: "7rem", lineHeight: 1, fontWeight: 300 }}
-        aria-hidden
-      >
-        &ldquo;
-      </span>
-
+    <div className="bg-white rounded-xl border border-cmg-border shadow-card h-full flex flex-col p-7 hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-200">
       {/* Stars */}
-      <div className="flex gap-0.5 mb-4 relative z-10">
+      <div className="flex gap-0.5 mb-4">
         {Array.from({ length: 5 }).map((_, i) => (
-          <Star key={i} className="h-3.5 w-3.5 fill-cmg-gold text-cmg-gold" />
+          <Star key={i} className="h-4 w-4 fill-cmg-red text-cmg-red" />
         ))}
       </div>
 
-      {/* Quote — Playfair Display italic */}
-      <p className="font-heading italic text-white/85 leading-relaxed flex-1 text-base mb-5 relative z-10">
+      {/* Quote */}
+      <p className="text-cmg-slate text-sm leading-relaxed flex-1 mb-5">
         &ldquo;{testimonial.quote}&rdquo;
       </p>
 
       {/* Author */}
-      <div className="flex items-center gap-3 pt-4 border-t border-white/10 relative z-10">
-        <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-cmg-gold/30 shrink-0">
+      <div className="flex items-center gap-3 pt-4 border-t border-cmg-border">
+        <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-cmg-border shrink-0">
           <Image src={avatar} alt={testimonial.name} fill className="object-cover" sizes="40px" />
         </div>
         <div>
-          <p className="font-semibold text-white text-sm leading-tight">{testimonial.name}</p>
-          <p className="text-xs text-white/50 mt-0.5">{testimonial.role} · {testimonial.origin}</p>
+          <p className="font-semibold text-cmg-text text-sm leading-tight">{testimonial.name}</p>
+          <p className="text-xs text-cmg-slate mt-0.5">{testimonial.role} · {testimonial.origin}</p>
         </div>
-
-        {/* Visa type badge */}
         {testimonial.visa && (
-          <span className="ml-auto text-[10px] font-semibold text-cmg-gold border border-cmg-gold/30 px-2 py-0.5 rounded-full shrink-0">
+          <span className="ml-auto text-[10px] font-semibold text-cmg-blue border border-cmg-blue/25 bg-cmg-light-blue px-2.5 py-0.5 rounded-full shrink-0">
             {testimonial.visa}
           </span>
         )}

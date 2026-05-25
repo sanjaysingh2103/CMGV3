@@ -1,37 +1,31 @@
 import type { Metadata } from "next"
-import { Playfair_Display, DM_Sans, Cormorant_Garamond } from "next/font/google"
+import { Figtree, Libre_Baskerville } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 
-const dmSans = DM_Sans({
+const figtree = Figtree({
   subsets: ["latin"],
-  variable: "--font-dm-sans",
+  variable: "--font-figtree",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 })
 
-const playfair = Playfair_Display({
+const baskerville = Libre_Baskerville({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-baskerville",
   display: "swap",
-  weight: ["400", "600", "700", "900"],
-})
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  variable: "--font-cormorant",
-  display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
 })
 
 export const metadata: Metadata = {
   title: {
     template: "%s | Commonwealth Migration Group",
-    default: "Commonwealth Migration Group — Australian Immigration Experts",
+    default: "Commonwealth Migration Group — MARA-Registered Australian Migration Agents",
   },
   description:
-    "MARA-registered migration agents helping skilled workers, families & businesses migrate to Australia. Book a free consultation today.",
+    "Expert MARA-registered migration agents helping skilled workers, families, and businesses achieve their Australian visa goals. 97% approval rate. Book a free consultation today.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://commonwealthmigration.com.au"
   ),
@@ -50,11 +44,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${dmSans.variable} ${playfair.variable} ${cormorant.variable}`}
-    >
-      <body className="font-body antialiased min-h-screen flex flex-col bg-cmg-cream text-cmg-ink">
+    <html lang="en" className={`${figtree.variable} ${baskerville.variable}`}>
+      <body className="font-body antialiased min-h-screen flex flex-col bg-white text-cmg-text">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

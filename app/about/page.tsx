@@ -39,10 +39,12 @@ export default function AboutPage() {
 
       {/* Hero */}
       <HeroBanner
+        eyebrow="MARA-Registered · Sydney-Based · Est. 2009"
         headline="Experts Who Make Australia Possible"
         subheadline="Commonwealth Migration Group is a team of MARA-registered agents passionate about connecting people with Australia's extraordinary opportunities."
-        bgImage="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920"
-        gradient="gradient-hero"
+        bgImage="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80"
+        gradient="gradient-hero-blue"
+        texture="dots"
         ctaButtons={[
           { label: "Book Free Consultation", href: "/contact", variant: "primary" },
           { label: "Meet Our Team", href: "#team", variant: "secondary" },
@@ -51,7 +53,7 @@ export default function AboutPage() {
       />
 
       {/* Our Story */}
-      <section className="py-24 px-4 bg-cmg-cream">
+      <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="eyebrow text-cmg-red mb-3">Our Story</p>
@@ -134,7 +136,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section id="team" className="py-24 px-4 bg-cmg-cream">
+      <section id="team" className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
             <p className="eyebrow text-cmg-red mb-3">Our People</p>
@@ -179,7 +181,7 @@ export default function AboutPage() {
       </section>
 
       {/* MARA Registration */}
-      <section className="py-24 px-4 bg-section-lines">
+      <section className="py-24 px-4 bg-section-alt">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="eyebrow text-cmg-red mb-3">Your Protection</p>

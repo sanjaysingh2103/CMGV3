@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { useState, useRef, useCallback } from "react"
 import { Menu, ChevronDown, Phone, X } from "lucide-react"
-import { useScrolled } from "@/hooks/useScrolled"
 import { visaNav, servicesNav } from "@/lib/site"
 import { site } from "@/lib/site"
 import ConsultationModal from "./ConsultationModal"
@@ -38,28 +37,19 @@ function HummingbirdMark({ className }: { className?: string }) {
 }
 
 /* ─── CMG wordmark logo ────────────────────────────────────────────────── */
-function CMGLogo({ scrolled }: { scrolled: boolean }) {
+function CMGLogo() {
   return (
     <Link href="/" className="flex items-center gap-3 shrink-0 group">
-      {/* Icon mark */}
-      <div className="relative w-10 h-10 shrink-0">
-        <div className={cn(
-          "w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300",
-          scrolled ? "bg-cmg-red shadow-md" : "bg-white/15 backdrop-blur-sm border border-white/25"
-        )}>
-          <HummingbirdMark className="w-6 h-6 text-white" />
-        </div>
+      {/* Icon mark — blue square with hummingbird */}
+      <div className="w-11 h-11 rounded-xl bg-cmg-blue flex items-center justify-center shadow-sm">
+        <HummingbirdMark className="w-6 h-6 text-white" />
       </div>
       {/* Text mark */}
       <div className="flex flex-col leading-none">
-        <span className={cn(
-          "font-heading font-bold text-2xl tracking-tight leading-none transition-colors",
-          scrolled ? "text-cmg-blue" : "text-white"
-        )}>CMG</span>
-        <span className={cn(
-          "text-[8px] font-semibold tracking-[0.18em] uppercase leading-none mt-1 transition-colors",
-          scrolled ? "text-cmg-slate" : "text-white/65"
-        )}>Commonwealth Migration Group</span>
+        <span className="font-heading font-bold text-2xl tracking-tight text-cmg-blue leading-none">CMG</span>
+        <span className="text-[8.5px] font-bold tracking-[0.18em] uppercase text-cmg-slate leading-none mt-1.5">
+          Commonwealth Migration Group
+        </span>
       </div>
     </Link>
   )
@@ -84,12 +74,11 @@ function DropdownPanel({ children, className }: { children: React.ReactNode; cla
 }
 
 export default function Navbar() {
-  const scrolled = useScrolled(20)
   const [visaOpen, setVisaOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
-  /* ── Debounced close timers (fixes "too sensitive" gap issue) ────────── */
+  /* Debounced close timers */
   const visaTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const servicesTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
@@ -108,30 +97,15 @@ export default function Navbar() {
     servicesTimer.current = setTimeout(() => setServicesOpen(false), 180)
   }, [])
 
-  const navLinkClass = cn(
-    "px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200",
-    scrolled
-      ? "text-cmg-text hover:text-cmg-blue hover:bg-cmg-light-blue"
-      : "text-white/90 hover:text-white hover:bg-white/12"
-  )
-  const dropdownBtnClass = cn(
-    "flex items-center gap-1 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200",
-    scrolled
-      ? "text-cmg-text hover:text-cmg-blue hover:bg-cmg-light-blue"
-      : "text-white/90 hover:text-white hover:bg-white/12"
-  )
+  const navLinkClass = "px-4 py-2.5 rounded-md text-[15px] font-bold text-cmg-text hover:text-cmg-blue hover:bg-cmg-light-blue transition-all duration-150"
+  const dropdownBtnClass = "flex items-center gap-1 px-4 py-2.5 rounded-md text-[15px] font-bold text-cmg-text hover:text-cmg-blue hover:bg-cmg-light-blue transition-all duration-150"
 
   return (
-    <header className={cn(
-      "fixed top-0 inset-x-0 z-50 transition-all duration-300",
-      scrolled
-        ? "bg-white/97 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.06),0_4px_20px_rgba(13,35,87,0.07)]"
-        : "bg-transparent"
-    )}>
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
-        <div className="flex items-center justify-between h-16 md:h-20">
+    <header className="sticky top-0 inset-x-0 z-50 bg-white border-b-2 border-cmg-border shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+        <div className="flex items-center justify-between h-18 lg:h-20">
 
-          <CMGLogo scrolled={scrolled} />
+          <CMGLogo />
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-0.5">
@@ -246,26 +220,20 @@ export default function Navbar() {
           </nav>
 
           {/* Right: phone + CTA */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-5">
             <a
               href={`tel:${site.phone}`}
-              className={cn(
-                "flex items-center gap-1.5 text-sm font-medium transition-colors",
-                scrolled ? "text-cmg-slate hover:text-cmg-blue" : "text-white/80 hover:text-white"
-              )}
+              className="flex items-center gap-1.5 text-[13px] font-bold text-cmg-slate hover:text-cmg-blue transition-colors"
             >
               <Phone className="h-3.5 w-3.5" />{site.phone}
             </a>
-            <ConsultationModal triggerClassName="rounded-full bg-cmg-red text-white font-semibold px-5 py-2.5 text-sm hover:bg-cmg-red-light transition-all shadow-md hover:shadow-lg hover:-translate-y-px" />
+            <ConsultationModal triggerClassName="rounded-md bg-cmg-red text-white font-bold px-5 py-2.5 text-sm hover:bg-red-700 transition-colors shadow-md" />
           </div>
 
           {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(true)}
-            className={cn(
-              "lg:hidden p-2 rounded-xl transition-colors",
-              scrolled ? "text-cmg-text hover:bg-gray-100" : "text-white hover:bg-white/10"
-            )}
+            className="lg:hidden p-2.5 rounded-md text-cmg-text hover:bg-cmg-light-blue transition-colors"
             aria-label="Open menu"
           >
             <Menu className="h-6 w-6" />

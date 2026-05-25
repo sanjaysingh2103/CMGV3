@@ -30,7 +30,7 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="gradient-footer text-white">
+    <footer className="bg-cmg-navy text-white" style={{ background: "linear-gradient(180deg, #001A5E 0%, #000D3A 100%)" }}>
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 pt-16 pb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Col 1 — Brand */}

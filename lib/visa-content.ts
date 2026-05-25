@@ -41,6 +41,9 @@ export interface VisaPageContent {
     subheadline: string
     bgImage: string
     trustBadges: string[]
+    eyebrow?: string
+    gradient?: string
+    texture?: "diagonal" | "dots" | "grid" | "noise"
   }
   overview: {
     intro: string
@@ -66,10 +69,13 @@ export const visaContent: Record<string, VisaPageContent> = {
   "skilled-migration": {
     slug: "skilled-migration",
     hero: {
+      eyebrow: "Skilled Independent · Nominated · Regional",
       headline: "Skilled Migration Visas — 189, 190 & 491",
       subheadline: "Australia's points-based skilled migration program invites qualified professionals to live and work permanently. CMG specialists guide you from skills assessment to visa grant.",
-      bgImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1920&q=80",
+      bgImage: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&q=80",
       trustBadges: ["MARA Registered Agents", "500+ Skilled Visas Granted", "97% Success Rate"],
+      gradient: "gradient-hero-blue",
+      texture: "grid",
     },
     overview: {
       intro: "The Skilled Independent (subclass 189), Skilled Nominated (subclass 190) and Skilled Work Regional (subclass 491) visas form Australia's core points-based migration pathway. You submit an Expression of Interest (EOI) through SkillSelect, and the Department of Home Affairs issues invitations to the highest-scoring candidates in periodic rounds. A passing score of 65 points is required to submit an EOI, but invitation scores are typically 85–105 points depending on the visa subclass and occupation. The pathway concludes with Subclass 191 Permanent Residence for those who have held a 491 visa and met regional living and working requirements for three years.",
@@ -183,10 +189,13 @@ export const visaContent: Record<string, VisaPageContent> = {
   "employer-sponsored": {
     slug: "employer-sponsored",
     hero: {
+      eyebrow: "TSS 482 · ENS 186 · Labour Agreement",
       headline: "Employer Sponsored Visas — 482 & 186",
       subheadline: "When an Australian employer needs your skills, the employer-sponsored pathway offers a direct route to work and permanent residency. CMG supports both employers and applicants through every stage.",
-      bgImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80",
+      bgImage: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1920&q=80",
       trustBadges: ["MARA Registered Agents", "Employer & Applicant Support", "97% Success Rate"],
+      gradient: "gradient-hero-deep",
+      texture: "dots",
     },
     overview: {
       intro: "Australia's employer-sponsored program allows approved employers to sponsor skilled overseas workers when they cannot find suitable Australian staff. The Temporary Skill Shortage visa (subclass 482) provides a temporary work pathway of 2–4 years, while the Employer Nomination Scheme (subclass 186) offers direct permanent residency. Both require the employer to be an approved sponsor, the position to be a genuine full-time role, and the worker to meet skills, English and health requirements. Labour Market Testing (LMT) — advertising the position to local workers first — is mandatory for most 482 applications.",
@@ -299,10 +308,13 @@ export const visaContent: Record<string, VisaPageContent> = {
   "family-partner": {
     slug: "family-partner",
     hero: {
+      eyebrow: "Partner · Child · Parent · Remaining Relative",
       headline: "Family & Partner Visas — 820, 309 & 143",
       subheadline: "Reunite with your loved ones in Australia. CMG guides partners, children, and parents through Australia's family visa pathways with care and expertise.",
-      bgImage: "https://images.unsplash.com/photo-1511895426328-dc8714191011?w=1920&q=80",
+      bgImage: "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1920&q=80",
       trustBadges: ["MARA Registered Agents", "Family Reunion Specialists", "97% Success Rate"],
+      gradient: "gradient-hero-red",
+      texture: "diagonal",
     },
     overview: {
       intro: "Australia's Family Stream allows Australian citizens, permanent residents and eligible New Zealand citizens to sponsor their partners, children and parents for visas. The partner visa pathway has two stages — a temporary visa that leads to permanent residency once the relationship is proven genuine and ongoing. Partner visas require evidence across four categories: financial, household, social and commitment. Processing times can be lengthy (12–36 months for partner visas) and documentation requirements are detailed, making specialist assistance essential to avoid delays and requests for further information.",
@@ -414,10 +426,13 @@ export const visaContent: Record<string, VisaPageContent> = {
   "student": {
     slug: "student",
     hero: {
+      eyebrow: "Subclass 500 · 485 Graduate · Genuine Student",
       headline: "Student & Graduate Visas — 500 & 485",
       subheadline: "Study at a world-class Australian institution and build a pathway to permanent residency. CMG helps international students navigate enrolment, visa applications and post-study work rights.",
       bgImage: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&q=80",
       trustBadges: ["MARA Registered Agents", "Student & Graduate Specialists", "97% Success Rate"],
+      gradient: "gradient-hero-warm",
+      texture: "noise",
     },
     overview: {
       intro: "The Student visa (subclass 500) allows international students to study full-time in a Temporary Entrant Education (TES) or registered course in Australia. The Genuine Student (GS) requirement replaced the Genuine Temporary Entrant (GTE) requirement in November 2023 — students must demonstrate genuine intent to study and comply with visa conditions. Upon graduation, eligible students can apply for the Temporary Graduate visa (subclass 485) to work in Australia for 2–4 years, building valuable Australian work experience that may count toward a skilled visa.",
@@ -529,10 +544,13 @@ export const visaContent: Record<string, VisaPageContent> = {
   "business-investor": {
     slug: "business-investor",
     hero: {
+      eyebrow: "Subclass 188 · 888 · 132 Business Talent",
       headline: "Business & Investor Visas — 188 & 888",
       subheadline: "Australia welcomes business owners and investors who bring capital, entrepreneurship and global expertise. CMG helps high-net-worth individuals navigate the Business Innovation and Investment Program.",
-      bgImage: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80",
+      bgImage: "https://images.unsplash.com/photo-1545503028-c01a8a3c9924?w=1920&q=80",
       trustBadges: ["MARA Registered Agents", "Business Migration Specialists", "97% Success Rate"],
+      gradient: "gradient-hero-deep",
+      texture: "grid",
     },
     overview: {
       intro: "The Business Innovation and Investment Program (BIIP) is a state-nominated, points-tested migration pathway for business owners, investors and entrepreneurs. It operates through a two-stage process: a provisional visa (subclass 188) followed by a permanent visa (subclass 888 or 132). Applicants must submit an Expression of Interest (EOI) through SkillSelect and receive a state/territory nomination before being invited to apply. The program has multiple streams designed for different applicant profiles — from established business owners to significant investors placing millions in Australian-complying investments.",

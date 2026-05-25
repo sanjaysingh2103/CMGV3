@@ -63,17 +63,19 @@ export default function ContactPage() {
     <>
       {/* Hero */}
       <HeroBanner
+        eyebrow="Sydney · Online · Available Worldwide"
         headline="Let's Start Your Australian Journey"
         subheadline="Book a free 30-minute consultation with a MARA-registered CMG agent. Available online worldwide — no obligation."
-        bgImage="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1920"
-        gradient="gradient-hero"
+        bgImage="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=1920&q=80"
+        gradient="gradient-hero-blue"
+        texture="dots"
         height="medium"
         ctaButtons={[]}
         trustBadges={["Free 30-min Consultation", "MARA Registered", "Available Worldwide"]}
       />
 
       {/* Contact option cards */}
-      <section className="py-20 px-4 bg-cmg-cream">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
             {contactOptions.map((opt) => (
@@ -114,7 +116,7 @@ export default function ContactPage() {
       <ContactFormSection />
 
       {/* FAQ */}
-      <section className="py-20 px-4 bg-cmg-cream">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <p className="eyebrow text-cmg-red mb-3">FAQ</p>

@@ -24,30 +24,31 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  /* ── CMG Brand Colors ──────────────────────────────────────── */
-  --color-cmg-blue:       #1B3D8F;
-  --color-cmg-blue-light: #2D5BC4;
-  --color-cmg-red:        #C0392B;
-  --color-cmg-red-light:  #E74C3C;
-  --color-cmg-navy:       #0D2357;
-  --color-cmg-gold:       #D4A843;
-  --color-cmg-gold-deep:  #B8892A;
-  --color-cmg-gold-light: #F0D898;
-  --color-cmg-cream:      #FAF8F3;
-  --color-cmg-cream-dark: #F2EDE3;
-  --color-cmg-ink:        #1A1826;
-  --color-cmg-slate:      #5A6478;
-  --color-cmg-warm-white: #F8F9FC;
-  --color-cmg-light-blue: #F0F4FF;
-  --color-cmg-text:       #1A1826;
+  /* ── CMG Brand Colours — Australian flag inspired ────────────── */
+  --color-cmg-blue:       #003087;
+  --color-cmg-blue-light: #1A4BAA;
+  --color-cmg-navy:       #001A5E;
+  --color-cmg-red:        #C8102E;
+  --color-cmg-red-light:  #E51F3F;
+  --color-cmg-gold:       #B8890A;
+  --color-cmg-gold-light: #F0E0B0;
+  --color-cmg-gold-deep:  #996A00;
+  --color-cmg-text:       #1A2744;
+  --color-cmg-ink:        #1A2744;
+  --color-cmg-slate:      #4B5975;
+  --color-cmg-light:      #EEF3FB;
+  --color-cmg-light-blue: #EEF3FB;
+  --color-cmg-cream:      #F5F8FF;
+  --color-cmg-cream-dark: #E8EDF8;
+  --color-cmg-border:     #D5DEF0;
+  --color-cmg-warm-white: #F8FAFC;
 
-  /* ── Typography ────────────────────────────────────────────── */
-  --font-sans:       var(--font-dm-sans);
-  --font-body:       var(--font-dm-sans);
-  --font-heading:    var(--font-playfair);
-  --font-cormorant:  var(--font-cormorant);
+  /* ── Typography ─────────────────────────────────────────────── */
+  --font-sans:    var(--font-figtree);
+  --font-body:    var(--font-figtree);
+  --font-heading: var(--font-baskerville);
 
-  /* ── Radius ────────────────────────────────────────────────── */
+  /* ── Radius ─────────────────────────────────────────────────── */
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
@@ -61,7 +62,7 @@
     --card-foreground: oklch(0.145 0 0);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.38 0.14 260);
+    --primary: oklch(0.27 0.16 255);
     --primary-foreground: oklch(1 0 0);
     --secondary: oklch(0.97 0 0);
     --secondary-foreground: oklch(0.205 0 0);
@@ -72,7 +73,7 @@
     --destructive: oklch(0.577 0.245 27.325);
     --border: oklch(0.922 0 0);
     --input: oklch(0.922 0 0);
-    --ring: oklch(0.38 0.14 260);
+    --ring: oklch(0.27 0.16 255);
     --radius: 0.625rem;
   }
 
@@ -81,10 +82,10 @@
   }
 
   body {
-    @apply bg-cmg-cream text-cmg-ink;
-    font-family: var(--font-dm-sans, 'DM Sans', system-ui, sans-serif);
+    @apply bg-white text-cmg-text;
+    font-family: var(--font-figtree, 'Figtree', system-ui, sans-serif);
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -94,277 +95,214 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-playfair, 'Playfair Display', Georgia, serif);
-    line-height: 1.2;
-    color: #1A1826;
+    font-family: var(--font-baskerville, 'Libre Baskerville', Georgia, serif);
+    line-height: 1.25;
+    color: #1A2744;
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════
    HERO OVERLAYS
-═══════════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════ */
 
-/* Strong left authority scrim — ensures text always legible */
+/* Full centered dark overlay — for photo heroes */
 .gradient-hero {
-  background:
-    linear-gradient(
-      to right,
-      rgba(13, 35, 87, 0.97) 0%,
-      rgba(13, 35, 87, 0.90) 25%,
-      rgba(13, 35, 87, 0.65) 50%,
-      rgba(13, 35, 87, 0.20) 75%,
-      transparent 100%
-    ),
-    linear-gradient(
-      to top,
-      rgba(13, 35, 87, 0.70) 0%,
-      transparent 40%
-    );
-}
-
-/* Full-cover scrim for pages where entire hero needs overlay */
-.gradient-hero-full {
   background: linear-gradient(
-    160deg,
-    rgba(13, 35, 87, 0.92) 0%,
-    rgba(13, 35, 87, 0.80) 45%,
-    rgba(13, 35, 87, 0.55) 100%
+    to bottom,
+    rgba(0, 26, 94, 0.58) 0%,
+    rgba(0, 26, 94, 0.65) 50%,
+    rgba(0, 26, 94, 0.75) 100%
   );
 }
 
-/* Gradient variants for solid sections */
-.gradient-blue-red {
-  background: linear-gradient(135deg, #0d2357 0%, #1b3d8f 55%, #c0392b 100%);
+/* Stronger overlay for taller sections */
+.gradient-hero-full {
+  background: rgba(0, 26, 94, 0.70);
 }
 
+/* Section gradients */
 .gradient-navy-gold {
-  background: linear-gradient(135deg, #0d2357 0%, #1b3d8f 65%, #b8892a 100%);
+  background: linear-gradient(160deg, #001A5E 0%, #003087 100%);
 }
 
 .gradient-footer {
-  background: linear-gradient(175deg, #0d2357 0%, #07112b 100%);
+  background: linear-gradient(180deg, #001A5E 0%, #000D3A 100%);
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   PREMIUM SECTION BACKGROUNDS
-═══════════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════
+   HERO COLOUR VARIANTS — for visual variety per page
+═══════════════════════════════════════════════════ */
 
-/* Warm cream — the site's default page background */
-.bg-cream {
-  background-color: #FAF8F3;
+/* Blue-dominant (default but punchier) */
+.gradient-hero-blue {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 26, 94, 0.78) 0%,
+    rgba(0, 48, 135, 0.62) 100%
+  );
 }
 
-/* Cream with subtle vignette warmth */
-.bg-section-cream {
-  background-color: #FAF8F3;
+/* Red-tinted (for partner/family or action-oriented pages) */
+.gradient-hero-red {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 26, 94, 0.82) 0%,
+    rgba(0, 26, 94, 0.55) 55%,
+    rgba(200, 16, 46, 0.45) 100%
+  );
+}
+
+/* Deep navy — for premium/business pages */
+.gradient-hero-deep {
+  background: linear-gradient(
+    175deg,
+    rgba(0, 13, 58, 0.85) 0%,
+    rgba(0, 26, 94, 0.70) 100%
+  );
+}
+
+/* Warm navy → gold (for student/education) */
+.gradient-hero-warm {
+  background: linear-gradient(
+    155deg,
+    rgba(0, 26, 94, 0.75) 0%,
+    rgba(0, 26, 94, 0.60) 50%,
+    rgba(184, 137, 10, 0.30) 100%
+  );
+}
+
+/* Editorial — soft fade for hero, lighter feel */
+.gradient-hero-soft {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 26, 94, 0.45) 0%,
+    rgba(0, 26, 94, 0.60) 60%,
+    rgba(0, 26, 94, 0.75) 100%
+  );
+}
+
+/* ═══════════════════════════════════════════════════
+   HERO TEXTURE OVERLAYS — premium feel
+═══════════════════════════════════════════════════ */
+
+/* Subtle diagonal weave */
+.hero-tex-diagonal {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 12px,
+    rgba(255, 255, 255, 0.025) 12px,
+    rgba(255, 255, 255, 0.025) 13px
+  );
+}
+
+/* Dot grid pattern */
+.hero-tex-dots {
+  background-image: radial-gradient(
+    circle at 1.5px 1.5px,
+    rgba(255, 255, 255, 0.08) 1px,
+    transparent 0
+  );
+  background-size: 28px 28px;
+}
+
+/* Architectural grid */
+.hero-tex-grid {
   background-image:
-    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(184,137,42,0.06) 0%, transparent 65%);
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
 }
 
-/* Cool blue-tinted section (alternating rhythm) */
+/* Fine film grain (SVG noise) */
+.hero-tex-noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity: 0.08;
+  mix-blend-mode: overlay;
+}
+
+/* ═══════════════════════════════════════════════════
+   SECTION BACKGROUNDS
+═══════════════════════════════════════════════════ */
+
+/* Light blue-grey alternating section */
 .bg-section-alt {
-  background-color: #F2EDE3;
-  background-image:
-    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(27,61,143,0.06) 0%, transparent 65%);
+  background-color: #EEF3FB;
 }
 
-/* Subtle diagonal line texture */
+/* Lightest near-white section */
 .bg-section-lines {
-  background-color: #FAF8F3;
-  background-image:
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 42px,
-      rgba(184, 137, 42, 0.04) 42px,
-      rgba(184, 137, 42, 0.04) 43px
-    );
+  background-color: #F5F8FF;
 }
 
-/* White for contrast panels */
-.bg-panel-white {
-  background-color: #FFFFFF;
-  background-image:
-    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(27,61,143,0.03) 0%, transparent 70%);
-}
+/* ═══════════════════════════════════════════════════
+   TYPOGRAPHY UTILITIES
+═══════════════════════════════════════════════════ */
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   GRAIN TEXTURE (for dark / navy sections)
-═══════════════════════════════════════════════════════════════════════════ */
-
-/* Apply alongside dark bg — adds film-grain depth without DOM nodes */
-.grain-dark::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.045;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23grain)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  border-radius: inherit;
-}
-
-/* ═══════════════════════════════════════════════════════════════════════════
-   DIAGONAL SECTION TRANSITIONS
-═══════════════════════════════════════════════════════════════════════════ */
-
-/* Top diagonal cut — section starts with angled top edge */
-.diagonal-top {
-  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 100%);
-  margin-top: -3rem;
-  padding-top: 5rem;
-}
-
-/* Bottom diagonal cut — section ends with angled bottom edge */
-.diagonal-bottom {
-  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-  padding-bottom: 5rem;
-  margin-bottom: -3rem;
-}
-
-/* Both cuts for floating-slab look */
-.diagonal-both {
-  clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0 100%);
-  padding-block: 5rem;
-  margin-block: -3rem;
-}
-
-/* ═══════════════════════════════════════════════════════════════════════════
-   EDITORIAL TYPOGRAPHY
-═══════════════════════════════════════════════════════════════════════════ */
-
-/* Cormorant Garamond editorial numerals — large, thin-stroke */
-.editorial-number {
-  font-family: var(--font-cormorant, 'Cormorant Garamond', Georgia, serif);
-  font-weight: 300;
-  letter-spacing: -0.02em;
-  line-height: 1;
-  font-variant-numeric: lining-nums;
-}
-
-/* Pull-quote style — large italic Playfair */
-.pull-quote {
-  font-family: var(--font-playfair, 'Playfair Display', Georgia, serif);
-  font-style: italic;
-  line-height: 1.35;
-}
-
-/* Gold label / eyebrow text */
 .eyebrow {
-  font-family: var(--font-dm-sans, 'DM Sans', sans-serif);
+  font-family: var(--font-figtree, 'Figtree', sans-serif);
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════
    SHADOW UTILITIES
-═══════════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════ */
 
-.shadow-card    { box-shadow: 0 2px 12px rgba(13, 35, 87, 0.06), 0 4px 24px rgba(13, 35, 87, 0.05); }
-.shadow-hover   { box-shadow: 0 8px 32px rgba(13, 35, 87, 0.14), 0 2px 8px rgba(13, 35, 87, 0.08); }
-.shadow-hero    { box-shadow: 0 24px 80px rgba(13, 35, 87, 0.35); }
-.shadow-premium { box-shadow: 0 4px 6px -1px rgba(13,35,87,0.06), 0 16px 48px -4px rgba(13,35,87,0.12); }
-.shadow-gold    { box-shadow: 0 4px 24px rgba(184,137,42,0.20), 0 1px 4px rgba(184,137,42,0.12); }
+.shadow-card    { box-shadow: 0 1px 3px rgba(0,48,135,0.05), 0 4px 14px rgba(0,48,135,0.07); }
+.shadow-hover   { box-shadow: 0 4px 14px rgba(0,48,135,0.10), 0 12px 28px rgba(0,48,135,0.10); }
+.shadow-hero    { box-shadow: 0 24px 60px rgba(0,26,94,0.30); }
+.shadow-premium { box-shadow: 0 2px 8px rgba(0,48,135,0.06), 0 12px 40px rgba(0,48,135,0.10); }
+.shadow-gold    { box-shadow: 0 4px 20px rgba(184,137,10,0.15); }
+.shadow-blue    { box-shadow: 0 4px 20px rgba(0,48,135,0.28); }
 
-/* ═══════════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════
    TEXT SHADOW — hero legibility
-═══════════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════ */
 
 .text-shadow-hero {
-  text-shadow: 0 2px 20px rgba(13, 35, 87, 0.50), 0 1px 6px rgba(0,0,0,0.30);
+  text-shadow: 0 2px 16px rgba(0,26,94,0.45), 0 1px 4px rgba(0,0,0,0.20);
 }
 
 .text-shadow-sm {
-  text-shadow: 0 1px 8px rgba(13, 35, 87, 0.40);
+  text-shadow: 0 1px 6px rgba(0,26,94,0.35);
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   PREMIUM CARD STYLES
-═══════════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE HELPERS
+═══════════════════════════════════════════════════ */
 
-/* Top gold border — editorial accent */
-.card-top-gold {
-  border-top: 2px solid #D4A843;
-  border-radius: 0.75rem;
-  background: #FFFFFF;
-}
-
-/* Gradient border via pseudo-element */
-.card-gradient-border {
-  position: relative;
-  background: white;
-  border-radius: 1rem;
-}
-.card-gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(135deg, rgba(27,61,143,0.15) 0%, rgba(184,137,42,0.25) 100%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
-/* 3D Perspective tilt card — add CSS vars via JS or Tailwind group */
-.card-3d {
-  transform-style: preserve-3d;
-  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
-  will-change: transform;
-}
-
-/* ═══════════════════════════════════════════════════════════════════════════
-   GOLD ACCENT DIVIDER
-═══════════════════════════════════════════════════════════════════════════ */
-
-.divider-gold {
-  height: 2px;
-  background: linear-gradient(to right, transparent, #D4A843 25%, #D4A843 75%, transparent);
-  border: none;
-  margin-block: 0;
-}
-
-/* ═══════════════════════════════════════════════════════════════════════════
-   MOBILE-FIRST RESPONSIVE HELPERS
-═══════════════════════════════════════════════════════════════════════════ */
-
-/* Ensure images never cause horizontal overflow */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* Prevent tap highlight on touch devices */
 a, button {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Better touch target sizing on mobile */
 @media (max-width: 768px) {
   a, button {
     min-height: 44px;
-    min-width: 44px;
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   SCROLLBAR (premium thin style)
-═══════════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════
+   SCROLLBAR
+═══════════════════════════════════════════════════ */
 
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(184,137,42,0.25); border-radius: 999px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(184,137,42,0.45); }
+::-webkit-scrollbar-thumb { background: rgba(0,48,135,0.18); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,48,135,0.32); }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   SELECTION COLOR
-═══════════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════
+   SELECTION
+═══════════════════════════════════════════════════ */
 
 ::selection {
-  background: rgba(212, 168, 67, 0.22);
-  color: #0D2357;
+  background: rgba(0, 48, 135, 0.13);
+  color: #001A5E;
 }

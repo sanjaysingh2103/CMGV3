@@ -29,10 +29,12 @@ export default function ResourcesPage() {
   return (
     <>
       <HeroBanner
+        eyebrow="Articles · Visa Updates · Migration Guides"
         headline="Australian Immigration Insights"
         subheadline="Expert articles, visa updates and migration guides from CMG's MARA-registered agents — helping you stay informed and make confident decisions."
-        bgImage="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80"
-        gradient="gradient-hero"
+        bgImage="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=1920&q=80"
+        gradient="gradient-hero-warm"
+        texture="noise"
         height="medium"
         ctaButtons={[
           { label: "Book Free Consultation", href: "/contact", variant: "primary" },

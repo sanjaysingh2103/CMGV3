@@ -15,10 +15,12 @@ export default function ToolsPage() {
   return (
     <>
       <HeroBanner
+        eyebrow="Points Calculator · Fee Estimator · Processing Times"
         headline="Australian Visa Tools"
         subheadline="Free calculators to help you understand your options, estimate costs, and set realistic timelines."
-        bgImage="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920"
-        gradient="gradient-hero"
+        bgImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80"
+        gradient="gradient-hero-deep"
+        texture="grid"
         height="medium"
       />
 
