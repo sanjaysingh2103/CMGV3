@@ -1,103 +1,207 @@
-import Image from "next/image";
+import type { Metadata } from "next"
+import Link from "next/link"
+import {
+  Briefcase,
+  Building2,
+  Heart,
+  GraduationCap,
+  TrendingUp,
+  MessageSquare,
+} from "lucide-react"
+import HeroBanner from "@/components/HeroBanner"
+import TrustBar from "@/components/TrustBar"
+import ServiceCard from "@/components/ServiceCard"
+import ProcessSteps from "@/components/ProcessSteps"
+import StatCounter from "@/components/StatCounter"
+import TestimonialCarousel from "@/components/TestimonialCarousel"
+import CTABanner from "@/components/CTABanner"
+import JsonLd from "@/components/JsonLd"
+import { stats, processSteps } from "@/lib/site"
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Commonwealth Migration Group — Australian Immigration Experts",
+  description:
+    "MARA-registered migration agents helping skilled workers, families & businesses migrate to Australia. Book a free consultation today.",
+}
+
+const services = [
+  { icon: Briefcase, title: "Skilled Migration", description: "Points-tested pathways to permanent residency — subclass 189, 190, and 491.", href: "/services/skilled-migration" },
+  { icon: Building2, title: "Employer Sponsored", description: "Connect with Australian employers through TSS 482 and ENS 186 visa pathways.", href: "/services/employer-sponsored" },
+  { icon: Heart, title: "Family & Partner", description: "Reunite with loved ones through Australia's family and partner visa programs.", href: "/services/family-partner" },
+  { icon: GraduationCap, title: "Student Visas", description: "Study in Australia and explore post-study work rights and migration pathways.", href: "/services/student" },
+  { icon: TrendingUp, title: "Business & Investor", description: "Establish or expand your business in Australia with dedicated investor visa options.", href: "/services/business-investor" },
+  { icon: MessageSquare, title: "Free Consultation", description: "Not sure which visa suits you? Start with a no-obligation 30-minute consultation.", href: "/contact", variant: "featured" as const },
+]
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  name: "Commonwealth Migration Group",
+  description: "MARA-registered Australian immigration and migration agents.",
+  url: "https://commonwealthmigration.com.au",
+  telephone: "+61-2-XXXX-XXXX",
+  email: "info@commonwealthmigration.com.au",
+  address: { "@type": "PostalAddress", addressCountry: "AU" },
+  priceRange: "$$",
+  areaServed: "Worldwide",
+  sameAs: [
+    "https://www.linkedin.com/company/commonwealthmigrationgroup",
+    "https://www.facebook.com/CMGMigration",
+  ],
+}
+
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <JsonLd data={jsonLd} />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Section 1 — Hero */}
+      <HeroBanner
+        headline="Your Path to Australia Starts Here"
+        subheadline="Expert migration agents helping skilled workers, families, and businesses achieve their Australian dream. Registered. Trusted. Results-driven."
+        bgImage="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920"
+        gradient="gradient-hero"
+        ctaButtons={[
+          { label: "Book a Free Consultation", href: "/contact", variant: "primary" },
+          { label: "Explore Visa Options", href: "/services", variant: "secondary" },
+        ]}
+        height="full"
+      />
+
+      {/* Section 2 — Trust bar */}
+      <TrustBar />
+
+      {/* Section 3 — Services grid */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-sm font-semibold text-cmg-red uppercase tracking-widest mb-3">Our Services</p>
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-cmg-text mb-6">
+              Comprehensive Australian Migration Services
+            </h2>
+            <p className="text-cmg-slate text-lg max-w-3xl mx-auto leading-relaxed">
+              From skilled migration to family reunions — we handle every aspect of your Australian visa journey.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((svc) => (
+              <ServiceCard
+                key={svc.href}
+                icon={svc.icon}
+                title={svc.title}
+                description={svc.description}
+                href={svc.href}
+                variant={svc.variant}
+              />
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </section>
+
+      {/* Section 4 — How it works */}
+      <section className="py-20 px-4 bg-cmg-light-blue">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold text-cmg-red uppercase tracking-widest mb-3">The Process</p>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-text">
+              Your Migration Journey in 4 Steps
+            </h2>
+          </div>
+          <ProcessSteps steps={processSteps} />
+        </div>
+      </section>
+
+      {/* Section 5 — Stats */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-sm font-semibold text-cmg-red uppercase tracking-widest mb-3">Our Track Record</p>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-text">
+              Trusted by Migrants Worldwide
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat) => (
+              <StatCounter
+                key={stat.label}
+                value={stat.value}
+                suffix={stat.suffix}
+                label={stat.label}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why choose CMG */}
+      <section className="py-20 px-4 bg-cmg-light-blue">
+        <div className="max-w-7xl mx-auto lg:grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="text-sm font-semibold text-cmg-red uppercase tracking-widest mb-3">Why CMG</p>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-text mb-6">
+              Why Choose CMG?
+            </h2>
+            <div className="space-y-4 text-cmg-slate leading-relaxed">
+              <p>
+                At Commonwealth Migration Group, we understand that every migration journey is unique. Our team of MARA-registered agents brings deep expertise across Australia's complex visa landscape — from points-tested skilled migration to family reunions, employer sponsorship, student pathways, and high-value business investment visas.
+              </p>
+              <p>
+                When you choose Commonwealth Migration Group, you're choosing MARA-registered expertise, transparent pricing, and a genuine commitment to your success. We don't outsource your case to junior staff. You work directly with experienced migration agents who know the Department of Home Affairs inside out — and know how to build a compelling, complete visa application.
+              </p>
+            </div>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full bg-cmg-blue text-white font-semibold px-8 py-4 hover:bg-cmg-blue-light transition-colors"
+              >
+                Book Free Consultation
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center justify-center rounded-full border-2 border-cmg-blue text-cmg-blue font-semibold px-8 py-4 hover:bg-cmg-blue/5 transition-colors"
+              >
+                About CMG
+              </Link>
+            </div>
+          </div>
+          <div className="mt-12 lg:mt-0 grid grid-cols-2 gap-4">
+            {[
+              { number: "500+", label: "Visas Approved" },
+              { number: "97%", label: "Success Rate" },
+              { number: "15+", label: "Years Experience" },
+              { number: "30+", label: "Countries Served" },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="rounded-2xl bg-white shadow-card p-6 text-center hover:shadow-hover transition-shadow"
+              >
+                <div className="font-heading text-4xl font-bold text-cmg-blue mb-2">{item.number}</div>
+                <div className="text-cmg-slate text-sm font-medium">{item.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6 — Testimonials */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-sm font-semibold text-cmg-red uppercase tracking-widest mb-3">Client Stories</p>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-text">What Our Clients Say</h2>
+          </div>
+          <TestimonialCarousel />
+        </div>
+      </section>
+
+      {/* Section 7 — CTA */}
+      <CTABanner
+        headline="Ready to Start Your Australian Journey?"
+        body="Book a free 30-minute consultation with one of our MARA-registered agents. No obligation, no jargon — just expert advice tailored to you."
+        primaryCTA={{ label: "Book Free Consultation", href: "/contact" }}
+        secondaryCTA={{ label: "Call Us Now", href: "tel:+61200000000" }}
+        variant="navy-gold"
+      />
+    </>
+  )
 }

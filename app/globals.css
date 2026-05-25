@@ -1,26 +1,119 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* shadcn design tokens */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* CMG brand color tokens */
+  --color-cmg-blue:       #1B3D8F;
+  --color-cmg-blue-light: #2D5BC4;
+  --color-cmg-red:        #C0392B;
+  --color-cmg-red-light:  #E74C3C;
+  --color-cmg-navy:       #0D2357;
+  --color-cmg-gold:       #D4A843;
+  --color-cmg-warm-white: #F8F9FC;
+  --color-cmg-slate:      #64748B;
+  --color-cmg-light-blue: #F0F4FF;
+  --color-cmg-text:       #1A1A2E;
+
+  /* shadcn radius + font tokens */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.38 0.14 260);
+    --primary-foreground: oklch(1 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.38 0.14 260);
+    --radius: 0.625rem;
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair, Georgia, serif);
+    line-height: 1.2;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ─── CMG Gradient helpers ─────────────────────────────────────────────── */
+
+.gradient-hero {
+  background: linear-gradient(
+    135deg,
+    rgba(13, 35, 87, 0.92) 0%,
+    rgba(27, 61, 143, 0.75) 50%,
+    rgba(192, 57, 43, 0.3) 100%
+  );
 }
+
+.gradient-blue-red {
+  background: linear-gradient(135deg, #1b3d8f 0%, #2d5bc4 60%, #c0392b 100%);
+}
+
+.gradient-navy-gold {
+  background: linear-gradient(135deg, #0d2357 0%, #1b3d8f 70%, #d4a843 100%);
+}
+
+.gradient-footer {
+  background: linear-gradient(180deg, #0d2357 0%, #080f2a 100%);
+}
+
+/* ─── Shadow utilities ──────────────────────────────────────────────────── */
+
+.shadow-card  { box-shadow: 0 4px  24px rgba(27, 61, 143, 0.08); }
+.shadow-hover { box-shadow: 0 12px 40px rgba(27, 61, 143, 0.18); }
+.shadow-hero  { box-shadow: 0 24px 80px rgba(13, 35, 87,  0.35); }
