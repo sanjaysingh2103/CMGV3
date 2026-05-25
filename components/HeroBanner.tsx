@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { ShieldCheck } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 interface CTAButton {
@@ -15,6 +16,7 @@ interface HeroBannerProps {
   gradient?: string
   ctaButtons?: CTAButton[]
   height?: "full" | "large" | "medium"
+  trustBadges?: string[]
   children?: React.ReactNode
 }
 
@@ -31,6 +33,7 @@ export default function HeroBanner({
   gradient = "gradient-hero",
   ctaButtons = [],
   height = "large",
+  trustBadges,
   children,
 }: HeroBannerProps) {
   return (
@@ -77,6 +80,19 @@ export default function HeroBanner({
                 >
                   {btn.label}
                 </Link>
+              ))}
+            </div>
+          )}
+          {trustBadges && trustBadges.length > 0 && (
+            <div className="flex flex-wrap gap-3 mt-8">
+              {trustBadges.map((badge) => (
+                <span
+                  key={badge}
+                  className="inline-flex items-center gap-1.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/25 px-4 py-1.5 text-sm font-medium text-white"
+                >
+                  <ShieldCheck className="h-3.5 w-3.5 text-cmg-gold shrink-0" />
+                  {badge}
+                </span>
               ))}
             </div>
           )}

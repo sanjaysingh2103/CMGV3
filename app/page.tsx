@@ -1,206 +1,207 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import {
-  Briefcase,
-  Building2,
-  Heart,
-  GraduationCap,
-  TrendingUp,
-  MessageSquare,
+  Briefcase, Users, GraduationCap, Building2, Star, CheckCircle,
 } from "lucide-react"
 import HeroBanner from "@/components/HeroBanner"
-import TrustBar from "@/components/TrustBar"
+import StatsBand from "@/components/StatsBand"
 import ServiceCard from "@/components/ServiceCard"
+import ImageTextRow from "@/components/ImageTextRow"
 import ProcessSteps from "@/components/ProcessSteps"
-import StatCounter from "@/components/StatCounter"
 import TestimonialCarousel from "@/components/TestimonialCarousel"
-import CTABanner from "@/components/CTABanner"
+import TrustBar from "@/components/TrustBar"
 import JsonLd from "@/components/JsonLd"
-import { stats, processSteps } from "@/lib/site"
+import { processSteps } from "@/lib/site"
 
 export const metadata: Metadata = {
-  title: "Commonwealth Migration Group — Australian Immigration Experts",
+  title: "Australian Migration Agents — Commonwealth Migration Group",
   description:
-    "MARA-registered migration agents helping skilled workers, families & businesses migrate to Australia. Book a free consultation today.",
+    "MARA-registered migration agents helping skilled workers, families and businesses move to Australia. Book a free consultation today.",
 }
 
 const services = [
-  { icon: Briefcase, title: "Skilled Migration", description: "Points-tested pathways to permanent residency — subclass 189, 190, and 491.", href: "/services/skilled-migration" },
-  { icon: Building2, title: "Employer Sponsored", description: "Connect with Australian employers through TSS 482 and ENS 186 visa pathways.", href: "/services/employer-sponsored" },
-  { icon: Heart, title: "Family & Partner", description: "Reunite with loved ones through Australia's family and partner visa programs.", href: "/services/family-partner" },
-  { icon: GraduationCap, title: "Student Visas", description: "Study in Australia and explore post-study work rights and migration pathways.", href: "/services/student" },
-  { icon: TrendingUp, title: "Business & Investor", description: "Establish or expand your business in Australia with dedicated investor visa options.", href: "/services/business-investor" },
-  { icon: MessageSquare, title: "Free Consultation", description: "Not sure which visa suits you? Start with a no-obligation 30-minute consultation.", href: "/contact", variant: "featured" as const },
+  {
+    icon: Briefcase,
+    title: "Skilled Migration",
+    description: "Points-tested pathways to permanent residency — subclass 189, 190 and 491. We maximise your score and manage your EOI.",
+    href: "/services/skilled-migration",
+    accentColor: "red" as const,
+  },
+  {
+    icon: Building2,
+    title: "Employer Sponsored",
+    description: "Connect with Australian employers through TSS 482 and ENS 186 visa pathways. From nomination to grant.",
+    href: "/services/employer-sponsored",
+    accentColor: "blue" as const,
+  },
+  {
+    icon: Users,
+    title: "Family & Partner",
+    description: "Reunite with loved ones through Australia's partner, child and parent visa programs — onshore and offshore.",
+    href: "/services/family-partner",
+    accentColor: "gold" as const,
+  },
+  {
+    icon: GraduationCap,
+    title: "Student Visas",
+    description: "Study in Australia on subclass 500 and transition to work rights and permanent residency through the 485 graduate visa.",
+    href: "/services/student",
+    accentColor: "red" as const,
+  },
+  {
+    icon: Star,
+    title: "Business & Investor",
+    description: "Establish or expand your business in Australia through the 188, 888 and 132 business and investor visa streams.",
+    href: "/services/business-investor",
+    accentColor: "blue" as const,
+  },
+  {
+    icon: CheckCircle,
+    title: "Free Consultation",
+    description: "Not sure which visa suits you? Start with a no-obligation 30-minute consultation with a MARA-registered agent.",
+    href: "/contact",
+    accentColor: "gold" as const,
+  },
 ]
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  name: "Commonwealth Migration Group",
-  description: "MARA-registered Australian immigration and migration agents.",
-  url: "https://commonwealthmigration.com.au",
-  telephone: "+61-2-XXXX-XXXX",
-  email: "info@commonwealthmigration.com.au",
-  address: { "@type": "PostalAddress", addressCountry: "AU" },
-  priceRange: "$$",
-  areaServed: "Worldwide",
-  sameAs: [
-    "https://www.linkedin.com/company/commonwealthmigrationgroup",
-    "https://www.facebook.com/CMGMigration",
-  ],
-}
 
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={jsonLd} />
-
-      {/* Section 1 — Hero */}
+      {/* 1 — Hero */}
       <HeroBanner
         headline="Your Path to Australia Starts Here"
-        subheadline="Expert migration agents helping skilled workers, families, and businesses achieve their Australian dream. Registered. Trusted. Results-driven."
+        subheadline="Expert MARA-registered migration agents helping skilled workers, families, and businesses achieve their Australian dream."
         bgImage="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920"
         gradient="gradient-hero"
+        height="full"
         ctaButtons={[
           { label: "Book a Free Consultation", href: "/contact", variant: "primary" },
           { label: "Explore Visa Options", href: "/services", variant: "secondary" },
         ]}
-        height="full"
+        trustBadges={["MARA Registered", "500+ Visas Approved", "97% Success Rate"]}
       />
 
-      {/* Section 2 — Trust bar */}
-      <TrustBar />
+      {/* 2 — Stats Band */}
+      <StatsBand />
 
-      {/* Section 3 — Services grid */}
+      {/* 3 — Services Grid */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-sm font-semibold text-cmg-red uppercase tracking-widest mb-3">Our Services</p>
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-cmg-text mb-6">
+          <div className="text-center mb-12">
+            <p className="text-cmg-red text-xs font-bold uppercase tracking-widest mb-3">Our Services</p>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-text mb-4">
               Comprehensive Australian Migration Services
             </h2>
-            <p className="text-cmg-slate text-lg max-w-3xl mx-auto leading-relaxed">
+            <p className="text-cmg-slate max-w-2xl mx-auto leading-relaxed">
               From skilled migration to family reunions — we handle every aspect of your Australian visa journey.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((svc) => (
-              <ServiceCard
-                key={svc.href}
-                icon={svc.icon}
-                title={svc.title}
-                description={svc.description}
-                href={svc.href}
-                variant={svc.variant}
-              />
+              <ServiceCard key={svc.href} {...svc} variant="accent" />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Section 4 — How it works */}
+      {/* 4 — Image-Text: Why MARA */}
+      <ImageTextRow
+        imageSrc="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=900"
+        imageAlt="Professional migration team at CMG"
+        eyebrow="Why Choose CMG"
+        heading="Why MARA Registration Matters"
+        body="Not all migration advice is created equal. Only MARA-registered agents are legally authorised to provide immigration assistance in Australia — and are held accountable by the Office of the Migration Agents Registration Authority."
+        bullets={[
+          "Legally authorised to provide immigration assistance under the Migration Act 1958",
+          "Accountable to OMARA's Code of Conduct — protecting you from negligent advice",
+          "Access to the Department of Home Affairs' systems and priority processing queues",
+          "Professional indemnity insurance required — your application is protected",
+        ]}
+        ctaLabel="About CMG"
+        ctaHref="/about"
+        imageLeft={true}
+      />
+
+      {/* 5 — Process Steps */}
       <section className="py-20 px-4 bg-cmg-light-blue">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-cmg-red uppercase tracking-widest mb-3">The Process</p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-text">
+          <div className="text-center mb-14">
+            <p className="text-cmg-red text-xs font-bold uppercase tracking-widest mb-3">The Process</p>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-text mb-4">
               Your Migration Journey in 4 Steps
             </h2>
+            <p className="text-cmg-slate max-w-xl mx-auto">
+              A clear, transparent process from first consultation to visa grant and beyond.
+            </p>
           </div>
           <ProcessSteps steps={processSteps} />
         </div>
       </section>
 
-      {/* Section 5 — Stats */}
-      <section className="py-20 px-4 bg-white">
+      {/* 6 — Testimonials (dark navy) */}
+      <section className="py-20 px-4 bg-cmg-navy">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-sm font-semibold text-cmg-red uppercase tracking-widest mb-3">Our Track Record</p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-text">
-              Trusted by Migrants Worldwide
+          <div className="text-center mb-12">
+            <p className="text-cmg-gold text-xs font-bold uppercase tracking-widest mb-3">Client Stories</p>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
+              What Our Clients Say
             </h2>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat) => (
-              <StatCounter
-                key={stat.label}
-                value={stat.value}
-                suffix={stat.suffix}
-                label={stat.label}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why choose CMG */}
-      <section className="py-20 px-4 bg-cmg-light-blue">
-        <div className="max-w-7xl mx-auto lg:grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <p className="text-sm font-semibold text-cmg-red uppercase tracking-widest mb-3">Why CMG</p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-text mb-6">
-              Why Choose CMG?
-            </h2>
-            <div className="space-y-4 text-cmg-slate leading-relaxed">
-              <p>
-                At Commonwealth Migration Group, we understand that every migration journey is unique. Our team of MARA-registered agents brings deep expertise across Australia's complex visa landscape — from points-tested skilled migration to family reunions, employer sponsorship, student pathways, and high-value business investment visas.
-              </p>
-              <p>
-                When you choose Commonwealth Migration Group, you're choosing MARA-registered expertise, transparent pricing, and a genuine commitment to your success. We don't outsource your case to junior staff. You work directly with experienced migration agents who know the Department of Home Affairs inside out — and know how to build a compelling, complete visa application.
-              </p>
-            </div>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-cmg-blue text-white font-semibold px-8 py-4 hover:bg-cmg-blue-light transition-colors"
-              >
-                Book Free Consultation
-              </Link>
-              <Link
-                href="/about"
-                className="inline-flex items-center justify-center rounded-full border-2 border-cmg-blue text-cmg-blue font-semibold px-8 py-4 hover:bg-cmg-blue/5 transition-colors"
-              >
-                About CMG
-              </Link>
-            </div>
-          </div>
-          <div className="mt-12 lg:mt-0 grid grid-cols-2 gap-4">
-            {[
-              { number: "500+", label: "Visas Approved" },
-              { number: "97%", label: "Success Rate" },
-              { number: "15+", label: "Years Experience" },
-              { number: "30+", label: "Countries Served" },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="rounded-2xl bg-white shadow-card p-6 text-center hover:shadow-hover transition-shadow"
-              >
-                <div className="font-heading text-4xl font-bold text-cmg-blue mb-2">{item.number}</div>
-                <div className="text-cmg-slate text-sm font-medium">{item.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section 6 — Testimonials */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-sm font-semibold text-cmg-red uppercase tracking-widest mb-3">Client Stories</p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-text">What Our Clients Say</h2>
+            <p className="text-white/60 max-w-xl mx-auto">
+              Real outcomes for real people — from 30+ countries to Australian residency.
+            </p>
           </div>
           <TestimonialCarousel />
         </div>
       </section>
 
-      {/* Section 7 — CTA */}
-      <CTABanner
-        headline="Ready to Start Your Australian Journey?"
-        body="Book a free 30-minute consultation with one of our MARA-registered agents. No obligation, no jargon — just expert advice tailored to you."
-        primaryCTA={{ label: "Book Free Consultation", href: "/contact" }}
-        secondaryCTA={{ label: "Call Us Now", href: "tel:+61200000000" }}
-        variant="navy-gold"
+      {/* 7 — CTA Banner with city photo */}
+      <div className="relative py-24 px-4 overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920"
+          alt="Sydney Opera House"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-cmg-navy/80" />
+        <div className="relative max-w-4xl mx-auto text-center">
+          <p className="text-cmg-gold text-xs font-bold uppercase tracking-widest mb-4">Get Started Today</p>
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Ready to Start Your Australian Journey?
+          </h2>
+          <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-2xl mx-auto">
+            Book a free 30-minute consultation with one of our MARA-registered agents.
+            No obligation, no jargon — just expert advice tailored to you.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-white text-cmg-blue font-semibold px-8 py-4 text-base hover:bg-cmg-warm-white transition-colors shadow-lg">
+              Book Free Consultation
+            </Link>
+            <Link href="tel:+612XXXXXXXX" className="inline-flex items-center justify-center rounded-full border-2 border-white text-white font-semibold px-8 py-4 text-base hover:bg-white/10 transition-colors">
+              Call Us Now
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "Commonwealth Migration Group",
+          description: "MARA-registered migration agents in Sydney, Australia",
+          url: "https://commonwealthmigration.com.au",
+          telephone: "+61 2 XXXX XXXX",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Level X, XX Street",
+            addressLocality: "Sydney",
+            addressRegion: "NSW",
+            postalCode: "2000",
+            addressCountry: "AU",
+          },
+        }}
       />
     </>
   )
