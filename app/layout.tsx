@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import WhatsAppButton from "@/components/WhatsAppButton"
 import ChatBot from "@/components/ChatBot"
+import StickyMobileCTA from "@/components/StickyMobileCTA"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -61,6 +62,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <StickyMobileCTA />
         <WhatsAppButton />
         <ChatBot />
         <Analytics />
