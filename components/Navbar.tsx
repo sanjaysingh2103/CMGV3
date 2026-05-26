@@ -9,48 +9,17 @@ import ConsultationModal from "./ConsultationModal"
 import { cn } from "@/lib/utils"
 import { Sheet, SheetContent } from "@/components/ui/sheet"
 
-/* ─── Hummingbird logo SVG ─────────────────────────────────────────────── */
-function HummingbirdMark({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 100 88" fill="currentColor" className={className} xmlns="http://www.w3.org/2000/svg">
-      {/* Wing - blade sweeping upper-right */}
-      <path d="M50 30 L96 6 L80 50 Z" />
-      {/* Body - large C-curve from beak to tail */}
-      <path d="
-        M6 48
-        C1 38 2 26 14 26
-        C20 26 24 22 32 24
-        L50 30
-        L80 50
-        C68 44 58 50 55 62
-        C52 74 58 82 68 83
-        L60 90
-        C42 90 26 80 20 66
-        C14 54 16 46 22 44
-        C16 44 10 48 6 48
-        Z
-      " />
-      {/* Eye */}
-      <circle cx="13" cy="31" r="4" fill="white" />
-    </svg>
-  )
-}
-
-/* ─── CMG wordmark logo ────────────────────────────────────────────────── */
+/* ─── Official CMG logo (vectored from client PDF) ──────────────────────── */
 function CMGLogo() {
   return (
-    <Link href="/" className="flex items-center gap-3 shrink-0 group">
-      {/* Icon mark - red square with hummingbird */}
-      <div className="w-11 h-11 rounded-xl bg-cmg-red flex items-center justify-center shadow-sm">
-        <HummingbirdMark className="w-6 h-6 text-white" />
-      </div>
-      {/* Text mark */}
-      <div className="flex flex-col leading-none">
-        <span className="font-heading font-bold text-2xl tracking-tight text-cmg-blue leading-none">CMG</span>
-        <span className="text-[8.5px] font-bold tracking-[0.18em] uppercase text-cmg-slate leading-none mt-1.5">
-          Commonwealth Migration Group
-        </span>
-      </div>
+    <Link href="/" className="flex items-center shrink-0" aria-label="Commonwealth Migration Group home">
+      {/* Use plain <img> so the SVG's natural aspect ratio is preserved */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/logo/cmg-logo.svg"
+        alt="Commonwealth Migration Group"
+        style={{ height: 52, width: "auto" }}
+      />
     </Link>
   )
 }
@@ -258,15 +227,12 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
     <div className="flex flex-col h-full bg-white">
       {/* Header */}
       <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-cmg-red flex items-center justify-center shadow-md">
-            <HummingbirdMark className="w-5 h-5 text-white" />
-          </div>
-          <div>
-            <div className="font-heading font-bold text-lg text-cmg-blue leading-none">CMG</div>
-            <div className="text-[8px] text-cmg-slate tracking-[0.16em] uppercase mt-0.5">Commonwealth Migration Group</div>
-          </div>
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logo/cmg-logo.svg"
+          alt="Commonwealth Migration Group"
+          style={{ height: 40, width: "auto" }}
+        />
         <button
           onClick={onClose}
           className="p-1.5 rounded-lg text-cmg-slate hover:bg-gray-100 transition-colors"

@@ -61,19 +61,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Col 1 - Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-cmg-red flex items-center justify-center shadow-lg shrink-0">
-                <svg viewBox="0 0 100 88" fill="white" className="w-6 h-6">
-                  <path d="M50 30 L96 6 L80 50 Z" />
-                  <path d="M6 48 C1 38 2 26 14 26 C20 26 24 22 32 24 L50 30 L80 50 C68 44 58 50 55 62 C52 74 58 82 68 83 L60 90 C42 90 26 80 20 66 C14 54 16 46 22 44 C16 44 10 48 6 48 Z" />
-                  <circle cx="13" cy="31" r="4" fill="rgba(255,255,255,0.9)" />
-                </svg>
-              </div>
-              <div>
-                <span className="font-heading font-bold text-xl leading-none">{site.shortName}</span>
-                <div className="text-[9px] text-white/50 tracking-[0.18em] uppercase mt-0.5">Commonwealth Migration Group</div>
-              </div>
-            </div>
+            {/* Logo on dark background - inverted to white via CSS filter */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo/cmg-logo.svg"
+              alt="Commonwealth Migration Group"
+              className="mb-5"
+              style={{ height: 60, width: "auto", filter: "brightness(0) invert(1)" }}
+            />
             <p className="text-white/70 text-sm leading-relaxed mb-4">{site.tagline}</p>
             <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-xs">{site.description}</p>
             <div className="flex gap-3">

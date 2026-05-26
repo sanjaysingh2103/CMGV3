@@ -11,7 +11,7 @@ export const organisationSchema = {
   name: site.name,
   alternateName: site.shortName,
   url: SITE_URL,
-  logo: `${SITE_URL}/api/og?title=CMG&subtitle=${encodeURIComponent(site.tagline)}`,
+  logo: `${SITE_URL}/logo/cmg-logo.png`,
   description: site.description,
   email: site.email,
   telephone: site.phone,

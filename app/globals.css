@@ -25,11 +25,11 @@
   --color-ring: var(--ring);
 
   /* ── CMG Brand Colours — Australian flag inspired ────────────── */
-  --color-cmg-blue:       #003087;
+  --color-cmg-blue:       #003399;
   --color-cmg-blue-light: #1A4BAA;
   --color-cmg-navy:       #001A5E;
-  --color-cmg-red:        #C8102E;
-  --color-cmg-red-light:  #E51F3F;
+  --color-cmg-red:        #D52B1E;
+  --color-cmg-red-light:  #E54A40;
   --color-cmg-gold:       #B8890A;
   --color-cmg-gold-light: #F0E0B0;
   --color-cmg-gold-deep:  #996A00;

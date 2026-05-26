@@ -10,11 +10,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'cmg-blue':       '#003087',
+        'cmg-blue':       '#003399',
         'cmg-blue-light': '#1A4BAA',
         'cmg-navy':       '#001A5E',
-        'cmg-red':        '#C8102E',
-        'cmg-red-light':  '#E51F3F',
+        'cmg-red':        '#D52B1E',
+        'cmg-red-light':  '#E54A40',
         'cmg-gold':       '#B8890A',
         'cmg-gold-deep':  '#996A00',
         'cmg-gold-light': '#F0E0B0',

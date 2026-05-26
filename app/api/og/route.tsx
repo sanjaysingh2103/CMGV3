@@ -20,7 +20,7 @@ export async function GET(req: NextRequest) {
           justifyContent: "space-between",
           padding: "80px",
           position: "relative",
-          background: "linear-gradient(135deg, #001A5E 0%, #003087 55%, #001A5E 100%)",
+          background: "linear-gradient(135deg, #001A5E 0%, #003399 55%, #001A5E 100%)",
           fontFamily: "system-ui, sans-serif",
         }}
       >
@@ -32,7 +32,7 @@ export async function GET(req: NextRequest) {
             right: 0,
             width: "640px",
             height: "480px",
-            background: "radial-gradient(ellipse at top right, rgba(200,16,46,0.30) 0%, transparent 60%)",
+            background: "radial-gradient(ellipse at top right, rgba(213,43,30,0.30) 0%, transparent 60%)",
           }}
         />
         {/* Subtle grid texture */}
@@ -54,11 +54,11 @@ export async function GET(req: NextRequest) {
               width: "72px",
               height: "72px",
               borderRadius: "16px",
-              background: "#C8102E",
+              background: "#D52B1E",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              boxShadow: "0 4px 24px rgba(200,16,46,0.45)",
+              boxShadow: "0 4px 24px rgba(213,43,30,0.45)",
             }}
           >
             <svg viewBox="0 0 100 88" width="44" height="44" fill="white">
@@ -90,7 +90,7 @@ export async function GET(req: NextRequest) {
         <div style={{ display: "flex", flexDirection: "column", position: "relative", maxWidth: "1000px" }}>
           {/* Eyebrow with red bars */}
           <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "24px" }}>
-            <div style={{ width: "44px", height: "2px", background: "#C8102E" }} />
+            <div style={{ width: "44px", height: "2px", background: "#D52B1E" }} />
             <span
               style={{
                 fontSize: "16px",
