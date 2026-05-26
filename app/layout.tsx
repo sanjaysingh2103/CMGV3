@@ -24,17 +24,25 @@ const baskerville = Libre_Baskerville({
 export const metadata: Metadata = {
   title: {
     template: "%s | Commonwealth Migration Group",
-    default: "Commonwealth Migration Group — MARA-Registered Australian Migration Agents",
+    default: "Commonwealth Migration Group — Dubai-Based Australia Migration Agents",
   },
   description:
-    "Expert MARA-registered migration agents helping skilled workers, families, and businesses achieve their Australian visa goals. 97% approval rate. Book a free consultation today.",
+    "MARA-authorised Australia migration consultancy based in Dubai. Supporting skilled professionals, families & students across the GCC. Book a free consultation today.",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://commonwealthmigration.com.au"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://commonwealthmigration.ae"
   ),
   openGraph: {
     type: "website",
-    locale: "en_AU",
+    locale: "en_US",
     siteName: "Commonwealth Migration Group",
+    images: [
+      {
+        url: "/api/og?title=Commonwealth+Migration+Group&subtitle=Australia+Migration+Simplified&eyebrow=MARA-Authorised+%C2%B7+Dubai-Based",
+        width: 1200,
+        height: 630,
+        alt: "Commonwealth Migration Group — Australia Migration Simplified",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

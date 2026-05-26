@@ -11,6 +11,7 @@ import ImageTextRow from "@/components/ImageTextRow"
 import ProcessSteps from "@/components/ProcessSteps"
 import TestimonialCarousel from "@/components/TestimonialCarousel"
 import JsonLd from "@/components/JsonLd"
+import { organisationSchema, localBusinessSchema } from "@/lib/structured-data"
 import { processSteps } from "@/lib/site"
 
 export const metadata: Metadata = {
@@ -341,24 +342,8 @@ export default function HomePage() {
       </section>
 
 
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          name: "Commonwealth Migration Group",
-          description: "MARA-registered migration agents in Sydney, Australia",
-          url: "https://commonwealthmigration.com.au",
-          telephone: "+61 2 9999 9999",
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: "Level 10, 20 Bond Street",
-            addressLocality: "Sydney",
-            addressRegion: "NSW",
-            postalCode: "2000",
-            addressCountry: "AU",
-          },
-        }}
-      />
+      <JsonLd data={organisationSchema} />
+      <JsonLd data={localBusinessSchema} />
     </>
   )
 }
