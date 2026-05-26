@@ -13,31 +13,21 @@ export default function NewsletterSignup({ variant = "boxed", className }: Props
   const [email, setEmail] = useState("")
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
 
-  async function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     if (!email.includes("@")) {
       setStatus("error")
       return
     }
-    setStatus("loading")
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: "Newsletter signup",
-          email,
-          visaType: "Newsletter",
-          message: `New newsletter signup from website: ${email}`,
-        }),
-      })
-      if (!res.ok) throw new Error()
-      setStatus("success")
-      setEmail("")
-    } catch {
-      setStatus("error")
-    }
+    /* No backend - open user's mail client to send their subscribe request to CMG.
+       The email lands in support@commonwealthmigration.ae directly. */
+    const subject = encodeURIComponent("Newsletter signup - Australia Migration Weekly")
+    const body = encodeURIComponent(
+      `Hi CMG team,\n\nPlease add me to the Australia Migration Weekly newsletter.\n\nEmail: ${email}\n\nThanks!`,
+    )
+    window.location.href = `mailto:support@commonwealthmigration.ae?subject=${subject}&body=${body}`
+    setStatus("success")
+    setEmail("")
   }
 
   if (variant === "footer") {
@@ -64,7 +54,7 @@ export default function NewsletterSignup({ variant = "boxed", className }: Props
         </div>
         {status === "success" && (
           <p className="text-xs text-green-400 flex items-center gap-1 mt-2">
-            <CheckCircle2 className="h-3 w-3" /> Subscribed - check your inbox
+            <CheckCircle2 className="h-3 w-3" /> Email opened - hit send to confirm
           </p>
         )}
         {status === "error" && (
@@ -151,7 +141,7 @@ export default function NewsletterSignup({ variant = "boxed", className }: Props
         </form>
         {status === "success" && (
           <p className="text-xs text-green-600 flex items-center justify-center gap-1 mt-3">
-            <CheckCircle2 className="h-3 w-3" /> You&apos;re in! Check your inbox for confirmation.
+            <CheckCircle2 className="h-3 w-3" /> Email opened - hit send in your mail client to confirm.
           </p>
         )}
         {status === "error" && (

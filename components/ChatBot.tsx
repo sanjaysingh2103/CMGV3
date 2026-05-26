@@ -1,9 +1,10 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
-import { MessageCircle, X, Send, CheckCircle2 } from "lucide-react"
+import { MessageCircle, X, Send, CheckCircle2, Mail } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { site } from "@/lib/site"
+import { mailtoLink, whatsappLink } from "@/lib/lead-links"
 
 /* ─── Hummingbird mark (matches navbar logo) ───────────────────────────── */
 function HummingbirdMark({ className }: { className?: string }) {
@@ -130,11 +131,11 @@ const FLOW: Record<Stage, BotStep> = {
     next: "done",
   },
   done: {
-    prompt: (data) => `Thank you ${data.name?.split(" ")[0] ?? ""}! ✅ Our migration specialist will reach you at ${data.email} within 30 minutes. Anything else?`,
+    prompt: (data) => `Thanks ${data.name?.split(" ")[0] ?? ""}! 👇 Choose how you'd like to send your details to our team. Both arrive directly with CMG.`,
     chips: [
-      { label: "Chat on WhatsApp now", value: "whatsapp" },
+      { label: "📧 Send via Email", value: "email" },
+      { label: "💬 Send via WhatsApp", value: "whatsapp" },
       { label: "Browse services", value: "services" },
-      { label: "I'll wait, thanks", value: "wait" },
     ],
     next: "done",
   },
@@ -204,48 +205,54 @@ export default function ChatBot() {
     }, 500)
   }
 
-  async function submitLead(payload: Record<string, string>) {
-    try {
-      const message = [
-        `Source: Website chatbot`,
-        `Visa interest: ${payload.visaType ?? "Not specified"}`,
-        `Age: ${payload.age ?? "Not specified"}`,
-        `Qualification: ${payload.qualification ?? "Not specified"}`,
-        `English: ${payload.english ?? "Not specified"}`,
-        `Experience: ${payload.experience ?? "Not specified"}`,
-      ].join("\n")
-
-      await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: payload.name,
-          email: payload.email,
-          phone: payload.phone,
-          visaType: payload.visaType ?? "General enquiry",
-          message,
-        }),
-      })
+  /**
+   * No backend - the chatbot collects info then hands off to mailto: or WhatsApp
+   * at the very end. The "submitting" stage just shows a brief "saving" animation
+   * before showing the two send-option buttons.
+   */
+  function submitLead(payload: Record<string, string>) {
+    setTimeout(() => {
       setSubmitted(true)
       setStage("done")
-      setTimeout(() => {
-        setMessages((prev) => [...prev, { role: "bot", text: FLOW.done.prompt(payload) }])
-      }, 800)
-    } catch {
-      setMessages((prev) => [
-        ...prev,
-        { role: "bot", text: "Sorry, something went wrong saving your details. Please email support@commonwealthmigration.ae directly." },
-      ])
+      setMessages((prev) => [...prev, { role: "bot", text: FLOW.done.prompt(payload) }])
+    }, 600)
+  }
+
+  /* Build payload for the final mailto/WhatsApp handoff */
+  function buildLeadPayload() {
+    return {
+      source: "Website chatbot (Maya)",
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      visaType: data.visaType,
+      extra: {
+        Age: data.age,
+        Qualification: data.qualification,
+        English: data.english,
+        Experience: data.experience,
+      },
     }
   }
 
   function handleDoneChip(value: string) {
+    const payload = buildLeadPayload()
     if (value === "whatsapp") {
-      window.open(`https://wa.me/${site.whatsapp.replace(/\D/g, "")}`, "_blank")
+      window.open(whatsappLink(payload), "_blank")
+      setMessages((prev) => [
+        ...prev,
+        { role: "user", text: "Send via WhatsApp" },
+        { role: "bot", text: "🚀 Opening WhatsApp - hit send to deliver your details. Speak soon!" },
+      ])
+    } else if (value === "email") {
+      window.location.href = mailtoLink(payload)
+      setMessages((prev) => [
+        ...prev,
+        { role: "user", text: "Send via Email" },
+        { role: "bot", text: "📧 Opening your email - hit send to deliver your details. Speak soon!" },
+      ])
     } else if (value === "services") {
       window.location.href = "/services"
-    } else {
-      setMessages((prev) => [...prev, { role: "user", text: "I'll wait, thanks" }, { role: "bot", text: "Perfect. Speak soon! 🇦🇺" }])
     }
   }
 
