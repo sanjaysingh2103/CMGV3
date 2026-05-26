@@ -7,9 +7,17 @@ import JsonLd from "@/components/JsonLd"
 import { team, values } from "@/lib/site"
 
 export const metadata: Metadata = {
-  title: "About CMG — MARA-Registered Australian Migration Agents",
+  title: "About CMG — Dubai-Based Australia Migration Specialists",
   description:
-    "Meet the expert team at Commonwealth Migration Group. MARA-registered agents with 15+ years experience across all Australian visa types.",
+    "Meet the team at Commonwealth Migration Group — MARA-authorised migration consultancy based in Dubai, serving the GCC and Middle East with Australia-focused expertise.",
+  openGraph: {
+    title: "About CMG — Dubai-Based Australia Migration Specialists",
+    description: "MARA-authorised consultancy connecting GCC professionals with their Australian future.",
+    images: [{
+      url: "/api/og?title=About+CMG&subtitle=Dubai-Based+Australia+Migration+Specialists&eyebrow=MARA-Authorised+%C2%B7+Est.+2009",
+      width: 1200, height: 630,
+    }],
+  },
 }
 
 const valueIcons: Record<string, React.ElementType> = {

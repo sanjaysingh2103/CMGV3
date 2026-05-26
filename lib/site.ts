@@ -264,12 +264,14 @@ export const footerLinks = {
     { label: "Family & Partner", href: "/services/family-partner" },
     { label: "Student Visas", href: "/services/student" },
     { label: "Business & Investor", href: "/services/business-investor" },
+    { label: "Compare Visas", href: "/compare" },
   ],
   company: [
     { label: "About Us", href: "/about" },
     { label: "Resources", href: "/resources" },
     { label: "Tools", href: "/tools" },
-    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Glossary", href: "/glossary" },
+    { label: "By Country", href: "/from" },
   ],
   contact: [
     { label: "Book Consultation", href: "/contact" },

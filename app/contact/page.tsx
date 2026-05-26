@@ -6,9 +6,17 @@ import ContactFormSection from "@/components/ContactFormSection"
 import { site } from "@/lib/site"
 
 export const metadata: Metadata = {
-  title: "Book a Free Consultation — Commonwealth Migration Group",
+  title: "Book Free Consultation — Commonwealth Migration Group Dubai",
   description:
-    "Book a free 30-minute consultation with a MARA-registered CMG migration agent. Online consultations available worldwide.",
+    "Book a free 30-minute consultation with a MARA-authorised CMG migration agent. Dubai office, online consultations across the GCC and globally.",
+  openGraph: {
+    title: "Book a Free Consultation — CMG Dubai",
+    description: "Free 30-min consultation with a MARA-authorised migration agent.",
+    images: [{
+      url: "/api/og?title=Free+Consultation&subtitle=30+minutes+with+a+MARA-authorised+CMG+agent&eyebrow=Book+Now+%C2%B7+No+Obligation",
+      width: 1200, height: 630,
+    }],
+  },
 }
 
 const faqs = [
