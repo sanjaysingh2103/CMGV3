@@ -4,7 +4,7 @@ import { visaContent } from "@/lib/visa-content"
 import JsonLd from "@/components/JsonLd"
 
 export const metadata: Metadata = {
-  title: "Employer Sponsored Visas Australia — 482 TSS & 186 ENS | CMG",
+  title: "Employer Sponsored Visas Australia - 482 TSS & 186 ENS | CMG",
   description: "Employer-sponsored work visas for skilled professionals and the businesses that need them. CMG handles the full 482 and 186 ENS process for employers and applicants.",
 }
 

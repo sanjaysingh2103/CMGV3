@@ -21,7 +21,7 @@ export async function sendContactNotification(data: ContactPayload) {
   const { data: result, error } = await resend.emails.send({
     from: "CMG Website <noreply@commonwealthmigration.com.au>",
     to: [process.env.CONTACT_EMAIL_TO ?? "info@commonwealthmigration.com.au"],
-    subject: `New Consultation Request — ${data.visaType} — ${data.name}`,
+    subject: `New Consultation Request - ${data.visaType} - ${data.name}`,
     text: `
 New consultation request received from the CMG website.
 
@@ -45,7 +45,7 @@ export async function sendAutoReply(data: ContactPayload) {
   const { data: result, error } = await resend.emails.send({
     from: "Commonwealth Migration Group <noreply@commonwealthmigration.com.au>",
     to: [data.email],
-    subject: "We've received your consultation request — CMG",
+    subject: "We've received your consultation request - CMG",
     text: `
 Hi ${data.name},
 

@@ -6,11 +6,11 @@ import ContactFormSection from "@/components/ContactFormSection"
 import { site } from "@/lib/site"
 
 export const metadata: Metadata = {
-  title: "Book Free Consultation — Commonwealth Migration Group Dubai",
+  title: "Book Free Consultation - Commonwealth Migration Group Dubai",
   description:
     "Book a free 30-minute consultation with a MARA-authorised CMG migration agent. Dubai office, online consultations across the GCC and globally.",
   openGraph: {
-    title: "Book a Free Consultation — CMG Dubai",
+    title: "Book a Free Consultation - CMG Dubai",
     description: "Free 30-min consultation with a MARA-authorised migration agent.",
     images: [{
       url: "/api/og?title=Free+Consultation&subtitle=30+minutes+with+a+MARA-authorised+CMG+agent&eyebrow=Book+Now+%C2%B7+No+Obligation",
@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     question: "What does CMG charge for migration services?",
-    answer: "Our fees vary by visa type and complexity. After your free consultation, we provide a written quote with no hidden costs. We believe in complete fee transparency — you'll know exactly what you're paying before any work begins.",
+    answer: "Our fees vary by visa type and complexity. After your free consultation, we provide a written quote with no hidden costs. We believe in complete fee transparency - you'll know exactly what you're paying before any work begins.",
   },
 ]
 
@@ -73,7 +73,7 @@ export default function ContactPage() {
       <HeroBanner
         eyebrow="Sydney · Online · Available Worldwide"
         headline="Let's Start Your Australian Journey"
-        subheadline="Book a free 30-minute consultation with a MARA-registered CMG agent. Available online worldwide — no obligation."
+        subheadline="Book a free 30-minute consultation with a MARA-registered CMG agent. Available online worldwide - no obligation."
         bgImage="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=1920&q=80"
         gradient="gradient-hero-blue"
         texture="dots"

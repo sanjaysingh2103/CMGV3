@@ -4,8 +4,7 @@ import "./globals.css"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import WhatsAppButton from "@/components/WhatsAppButton"
-import ChatBot from "@/components/ChatBot"
-import StickyMobileCTA from "@/components/StickyMobileCTA"
+import FloatingActions from "@/components/FloatingActions"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -27,7 +26,7 @@ const baskerville = Libre_Baskerville({
 export const metadata: Metadata = {
   title: {
     template: "%s | Commonwealth Migration Group",
-    default: "Commonwealth Migration Group — Dubai-Based Australia Migration Agents",
+    default: "Commonwealth Migration Group - Dubai-Based Australia Migration Agents",
   },
   description:
     "MARA-authorised Australia migration consultancy based in Dubai. Supporting skilled professionals, families & students across the GCC. Book a free consultation today.",
@@ -43,7 +42,7 @@ export const metadata: Metadata = {
         url: "/api/og?title=Commonwealth+Migration+Group&subtitle=Australia+Migration+Simplified&eyebrow=MARA-Authorised+%C2%B7+Dubai-Based",
         width: 1200,
         height: 630,
-        alt: "Commonwealth Migration Group — Australia Migration Simplified",
+        alt: "Commonwealth Migration Group - Australia Migration Simplified",
       },
     ],
   },
@@ -62,9 +61,8 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
-        <StickyMobileCTA />
         <WhatsAppButton />
-        <ChatBot />
+        <FloatingActions />
         <Analytics />
         <SpeedInsights />
       </body>

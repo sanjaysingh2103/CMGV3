@@ -121,7 +121,7 @@ const FLOW: Record<Stage, BotStep> = {
     next: "phone",
   },
   phone: {
-    prompt: () => "Last one — your WhatsApp or phone number (with country code)?",
+    prompt: () => "Last one - your WhatsApp or phone number (with country code)?",
     input: { type: "tel", placeholder: "+971 50 491 6720", field: "phone" },
     next: "submitting",
   },
@@ -264,7 +264,7 @@ export default function ChatBot() {
     <>
       {/* Tease bubble */}
       {tease && !open && (
-        <div className="fixed bottom-24 right-5 sm:right-24 z-40 max-w-[260px] bg-white border border-cmg-border rounded-2xl shadow-card-hover p-4 animate-in fade-in slide-in-from-bottom-2 duration-300">
+        <div className="fixed bottom-32 right-5 z-40 max-w-[260px] bg-white border border-cmg-border rounded-2xl shadow-card-hover p-4 animate-in fade-in slide-in-from-bottom-2 duration-300">
           <button
             onClick={() => setTease(false)}
             className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-cmg-text text-white flex items-center justify-center text-xs"
@@ -273,7 +273,7 @@ export default function ChatBot() {
             ×
           </button>
           <p className="text-sm text-cmg-text font-semibold leading-snug mb-2">
-            👋 Hi! I&apos;m Maya — your CMG assistant.
+            👋 Hi! I&apos;m Maya - your CMG assistant.
           </p>
           <p className="text-xs text-cmg-slate leading-snug mb-3">
             Quick eligibility check? Takes under a minute.
@@ -287,19 +287,28 @@ export default function ChatBot() {
         </div>
       )}
 
-      {/* Floating button */}
+      {/* Floating button - side-by-side with WhatsApp, prominent with pulsing ring + label */}
       {!open && (
         <button
           onClick={() => setOpen(true)}
           aria-label="Open chat with Maya"
-          className="fixed bottom-20 right-5 z-50 w-14 h-14 rounded-full bg-cmg-blue hover:bg-cmg-navy text-white shadow-[0_8px_28px_rgba(0,48,135,0.45)] flex items-center justify-center transition-all hover:scale-105"
+          className="group fixed bottom-5 right-[96px] z-50 flex flex-col items-center"
         >
-          <MessageCircle className="h-6 w-6" />
-          {unread > 0 && (
-            <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-cmg-red text-white text-[10px] font-bold flex items-center justify-center border-2 border-white">
-              {unread}
-            </span>
-          )}
+          {/* Pulsing ring */}
+          <span className="absolute top-0 right-0 w-16 h-16 rounded-full bg-cmg-blue opacity-50 animate-ping" aria-hidden />
+          {/* Main button */}
+          <span className="relative flex items-center justify-center bg-cmg-blue hover:bg-cmg-navy text-white rounded-full shadow-[0_10px_32px_rgba(0,48,135,0.55)] w-16 h-16 transition-all group-hover:scale-110">
+            <MessageCircle className="h-7 w-7" />
+            {unread > 0 && (
+              <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-cmg-red text-white text-[10px] font-bold flex items-center justify-center border-2 border-white">
+                {unread}
+              </span>
+            )}
+          </span>
+          {/* Label */}
+          <span className="mt-1.5 text-[10px] font-bold text-cmg-text tracking-wider uppercase bg-white/95 backdrop-blur-sm rounded-full px-2.5 py-1 shadow-md whitespace-nowrap">
+            Chat with Maya
+          </span>
         </button>
       )}
 
@@ -312,7 +321,7 @@ export default function ChatBot() {
               <HummingbirdMark className="w-6 h-6 text-white" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="font-bold text-[15px] leading-tight">Maya — CMG Assistant</p>
+              <p className="font-bold text-[15px] leading-tight">Maya - CMG Assistant</p>
               <p className="text-xs text-white/70 flex items-center gap-1.5 mt-0.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
                 Online · Replies instantly

@@ -4,7 +4,7 @@ import JsonLd from "@/components/JsonLd"
 import { glossary, type GlossaryTerm } from "@/lib/glossary"
 
 export const metadata: Metadata = {
-  title: "Australian Immigration Glossary — Visa Terms Explained",
+  title: "Australian Immigration Glossary - Visa Terms Explained",
   description:
     "Plain-English definitions of every Australian immigration term: MARA, SkillSelect, MLTSSL, ANZSCO, EOI, ITA, points test, bridging visas and 40+ more. Updated for 2026.",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "Australia migration vocabulary",
   ],
   openGraph: {
-    title: "Australian Immigration Glossary — Visa Terms Explained",
+    title: "Australian Immigration Glossary - Visa Terms Explained",
     description: "Plain-English definitions of 50+ Australian immigration terms.",
     images: [
       {
@@ -65,7 +65,7 @@ export default function GlossaryPage() {
     terms: glossary.filter((t) => t.category === cat).sort((a, b) => a.term.localeCompare(b.term)),
   })).filter((g) => g.terms.length > 0)
 
-  /* DefinedTerm structured data — helps Google understand glossary */
+  /* DefinedTerm structured data - helps Google understand glossary */
   const schema = {
     "@context": "https://schema.org",
     "@type": "DefinedTermSet",
@@ -86,7 +86,7 @@ export default function GlossaryPage() {
       <HeroBanner
         eyebrow="Glossary · 50+ terms explained"
         headline="Australian Immigration Glossary"
-        subheadline="Every visa term, acronym, and process step — explained in plain English. From MARA to MLTSSL, from EOI to AHPRA."
+        subheadline="Every visa term, acronym, and process step - explained in plain English. From MARA to MLTSSL, from EOI to AHPRA."
         bgImage="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=1920&q=80"
         gradient="gradient-hero-blue"
         texture="dots"
@@ -176,7 +176,7 @@ export default function GlossaryPage() {
           </div>
           <p className="eyebrow text-white/60 mb-4">Still confused?</p>
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
-            Talk to a MARA-authorised agent — free.
+            Talk to a MARA-authorised agent - free.
           </h2>
           <p className="text-white/65 leading-relaxed mb-8 max-w-xl mx-auto">
             A 30-minute consultation will clarify which terms actually apply to your situation

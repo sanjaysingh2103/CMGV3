@@ -49,7 +49,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-700"
               sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
+              loading="lazy"
             />
           </div>
           <div className="p-8 lg:p-10 flex flex-col justify-center">

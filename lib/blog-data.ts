@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
 
 ## Key Changes for Skilled Migrants
 
-The total migration cap has been set at 185,000 places, with the Skills stream accounting for 132,200. Within the Skills stream, the employer-sponsored component has increased to 44,000 — reflecting the continued demand for overseas workers to fill critical shortages.
+The total migration cap has been set at 185,000 places, with the Skills stream accounting for 132,200. Within the Skills stream, the employer-sponsored component has increased to 44,000 - reflecting the continued demand for overseas workers to fill critical shortages.
 
 ### Points-Tested Visas
 
@@ -57,7 +57,7 @@ CMG's agents can help you develop a tailored strategy based on the latest round 
     featuredImage: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&h=450&fit=crop",
     content: `Australia's partner visa program is designed to reunite couples, but the process is lengthy and requires extensive documentation. Here's what to expect.
 
-## Stage 1 — Temporary Partner Visa (820/309)
+## Stage 1 - Temporary Partner Visa (820/309)
 
 Once you lodge your application (820 if onshore, 309 if offshore), you'll receive a bridging visa allowing you to remain in Australia (or enter on the 309). Processing currently takes 12–24 months.
 
@@ -70,7 +70,7 @@ The Department of Home Affairs will assess your application based on four catego
 3. **Social aspects**: Joint social activities, recognition by family and friends
 4. **Commitment**: Future plans, communication records, history of relationship
 
-## Stage 2 — Permanent Partner Visa (801/100)
+## Stage 2 - Permanent Partner Visa (801/100)
 
 After holding the temporary visa for approximately two years (or in some cases immediately if the relationship has existed for 3+ years), you'll be assessed for the permanent stage.
 
@@ -151,10 +151,10 @@ Visa officers assess GTE based on:
 
 Many GTE statements fail because they are:
 
-1. Too short — a paragraph is not sufficient
-2. Generic — using a template that doesn't reflect your specific situation
-3. Contradictory — the stated career goal doesn't align with the chosen course
-4. Vague about return — failing to articulate genuine reasons to return home
+1. Too short - a paragraph is not sufficient
+2. Generic - using a template that doesn't reflect your specific situation
+3. Contradictory - the stated career goal doesn't align with the chosen course
+4. Vague about return - failing to articulate genuine reasons to return home
 
 ## A Strong GTE Statement
 

@@ -152,7 +152,7 @@ export default async function CountryFromPage({
               Why migrants from {data.countryShort} choose Australia
             </h2>
             <p className="text-cmg-slate text-lg leading-relaxed">
-              Real reasons {data.demonym} families make the move — and what makes
+              Real reasons {data.demonym} families make the move - and what makes
               Australia stand apart from Canada, the UK and the US.
             </p>
           </div>
@@ -266,7 +266,7 @@ export default async function CountryFromPage({
             </h2>
             <p className="text-white/70 text-lg leading-relaxed">
               These are the ANZSCO occupations CMG sees most frequently from{" "}
-              {data.demonym} applicants — each linked to its skills assessment
+              {data.demonym} applicants - each linked to its skills assessment
               authority and preferred visa pathway.
             </p>
           </div>
@@ -293,7 +293,7 @@ export default async function CountryFromPage({
           <p className="text-white/50 text-xs text-center mt-8 max-w-2xl mx-auto">
             ANZSCO codes from the Australian and New Zealand Standard Classification
             of Occupations. Eligibility depends on the current Core Skills Occupation
-            List — CMG will confirm at consultation.
+            List - CMG will confirm at consultation.
           </p>
         </div>
       </section>
@@ -307,7 +307,7 @@ export default async function CountryFromPage({
               {data.demonym} applicants we&rsquo;ve helped
             </h2>
             <p className="text-cmg-slate text-base leading-relaxed">
-              Names initialised and details lightly anonymised — every story is real.
+              Names initialised and details lightly anonymised - every story is real.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
@@ -354,7 +354,7 @@ export default async function CountryFromPage({
               Frequently asked questions from {data.countryShort}
             </h2>
             <p className="text-cmg-slate text-base leading-relaxed">
-              The questions {data.demonym} applicants most commonly ask CMG —
+              The questions {data.demonym} applicants most commonly ask CMG -
               answered by our MARA-registered agents.
             </p>
           </div>
@@ -383,7 +383,7 @@ export default async function CountryFromPage({
         </div>
       </section>
 
-      {/* 10. CTA — premium navy with red light-leak --------------- */}
+      {/* 10. CTA - premium navy with red light-leak --------------- */}
       <section className="hero-premium-deep relative py-24 px-4 overflow-hidden">
         <div className="absolute inset-0 hero-tex-grid pointer-events-none" aria-hidden />
         <div className="max-w-4xl mx-auto text-center relative z-10">

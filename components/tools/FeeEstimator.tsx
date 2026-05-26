@@ -40,7 +40,7 @@ export default function FeeEstimator() {
   return (
     <div className="space-y-8">
       <div>
-        <p className="font-semibold text-cmg-text mb-1">Step 1 — Select visa type</p>
+        <p className="font-semibold text-cmg-text mb-1">Step 1 - Select visa type</p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-3">
           {visaTypes.map((v) => (
             <button key={v.id} onClick={() => setSelectedId(v.id)} className={cn("p-4 rounded-xl border text-left transition-all", selectedId === v.id ? "border-cmg-blue bg-cmg-blue text-white shadow-card" : "border-gray-100 bg-white hover:border-cmg-blue/30 hover:bg-cmg-light-blue")}>
@@ -54,7 +54,7 @@ export default function FeeEstimator() {
       {visa && (
         <>
           <div>
-            <p className="font-semibold text-cmg-text mb-3">Step 2 — Family members</p>
+            <p className="font-semibold text-cmg-text mb-3">Step 2 - Family members</p>
             <div className="bg-cmg-light-blue rounded-2xl p-5 space-y-4">
               <div className="flex items-center justify-between">
                 <div>
@@ -74,7 +74,7 @@ export default function FeeEstimator() {
           </div>
 
           <div>
-            <p className="font-semibold text-cmg-text mb-4">Step 3 — Cost breakdown</p>
+            <p className="font-semibold text-cmg-text mb-4">Step 3 - Cost breakdown</p>
             <div className="rounded-2xl border border-gray-100 overflow-hidden shadow-card">
               <table className="w-full text-sm">
                 <thead>
@@ -85,7 +85,7 @@ export default function FeeEstimator() {
                 </thead>
                 <tbody>
                   <tr className="bg-white border-t border-gray-100">
-                    <td className="px-5 py-3 font-medium text-cmg-text">Subclass {visa.subclass} — Primary</td>
+                    <td className="px-5 py-3 font-medium text-cmg-text">Subclass {visa.subclass} - Primary</td>
                     <td className="px-5 py-3 text-right text-cmg-blue font-semibold">${visa.primaryFee.toLocaleString()}</td>
                   </tr>
                   {adults > 0 && (

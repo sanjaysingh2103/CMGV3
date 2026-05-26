@@ -1,7 +1,7 @@
-# CMG2 Design & Content Upgrade — Spec
+# CMG2 Design & Content Upgrade - Spec
 
 **Date:** 2026-05-25  
-**Approach:** B — Page-by-page, highest impact first  
+**Approach:** B - Page-by-page, highest impact first  
 **Design language:** Keep warm feel (gradients, Playfair Display), lift quality with better sections, real images, accent cards
 
 ---
@@ -9,11 +9,11 @@
 ## Goals
 
 1. Elevate visual quality from "template" to "premium immigration firm"
-2. Add depth to every page — real researched content, eligibility tables, fee tables, step-by-step processes
-3. Introduce image variety — people (professionals, families), Australian cities (Sydney, Melbourne, Brisbane)
+2. Add depth to every page - real researched content, eligibility tables, fee tables, step-by-step processes
+3. Introduce image variety - people (professionals, families), Australian cities (Sydney, Melbourne, Brisbane)
 4. Cards with left-border or top-border accents in CMG Red or CMG Gold
-5. Dark sections (navy) for visual contrast — especially testimonials and CTAs
-6. Fix tools page UX — step-by-step calculator, filterable processing times
+5. Dark sections (navy) for visual contrast - especially testimonials and CTAs
+6. Fix tools page UX - step-by-step calculator, filterable processing times
 7. Upgrade navbar mega-menu to match reference design (visa subclasses by category)
 
 ---
@@ -45,7 +45,7 @@ White card, 4px left border in CMG Red or CMG Gold, subtle shadow, hover lifts. 
 Full-width section, 2-col: one side is a real Unsplash photo (person or city), other side has heading + body + bullets + CTA button. Alternates photo left/right across pages.
 
 ### Stats Band
-Dark navy band, no cards — just large bold numbers in CMG Gold with white labels beneath. `500+ Visas · 97% Success · 15 Years · 30 Countries`.
+Dark navy band, no cards - just large bold numbers in CMG Gold with white labels beneath. `500+ Visas · 97% Success · 15 Years · 30 Countries`.
 
 ### Step Card
 Numbered circle (CMG Blue filled), step title, description. Steps connected by a dotted line on desktop. Used in process sections.
@@ -55,15 +55,15 @@ Styled `<table>` with CMG Blue header row, alternating row backgrounds (`white` 
 
 ---
 
-## Page 1 — Navbar Mega-Menu
+## Page 1 - Navbar Mega-Menu
 
-**Visas dropdown** — 3 columns + featured panel:
-- Column 1 — Skilled Migration: 189 Skilled Independent, 190 Skilled Nominated, 491 Skilled Regional, 191 Permanent Residence
-- Column 2 — Family & Partner: 820/801 Partner (Onshore), 309/100 Partner (Offshore), 300 Prospective Marriage, 143 Parent Contributory
-- Column 3 — Study & Visit: 500 Student, 485 Graduate, 600 Visitor, 858 Global Talent
-- Featured panel (right): "Most Popular" — 189 Skilled Independent with short blurb + "Learn More →"
+**Visas dropdown** - 3 columns + featured panel:
+- Column 1 - Skilled Migration: 189 Skilled Independent, 190 Skilled Nominated, 491 Skilled Regional, 191 Permanent Residence
+- Column 2 - Family & Partner: 820/801 Partner (Onshore), 309/100 Partner (Offshore), 300 Prospective Marriage, 143 Parent Contributory
+- Column 3 - Study & Visit: 500 Student, 485 Graduate, 600 Visitor, 858 Global Talent
+- Featured panel (right): "Most Popular" - 189 Skilled Independent with short blurb + "Learn More →"
 
-**Services dropdown** — 3 columns + featured:
+**Services dropdown** - 3 columns + featured:
 - Assessment & Nomination: Skills Assessment, State Nomination, EOI Assistance, Visa Documentation
 - Drafting & Appeals: CDR for Engineers, Reference Letters, Resume & SOP, Refusals & Appeals
 - Coaching & Exams: IELTS Academic, IELTS General, PTE Academic, NAATI CCL
@@ -74,7 +74,7 @@ Styled `<table>` with CMG Blue header row, alternating row backgrounds (`white` 
 
 ---
 
-## Page 2 — Homepage
+## Page 2 - Homepage
 
 ### Section 1: Hero
 - Full-bleed background: Sydney Harbour photo (`photo-1506905925346-21bda4d32df4`)
@@ -82,7 +82,7 @@ Styled `<table>` with CMG Blue header row, alternating row backgrounds (`white` 
 - Headline: "Your Path to Australia Starts Here" (Playfair Display, 64px)
 - Subheadline: current text
 - CTAs: "Book a Free Consultation" (CMG Blue filled pill) + "Explore Visa Options" (white outline pill)
-- Below headline: inline trust badges — MARA Registered · 500+ Visas · 97% Success Rate
+- Below headline: inline trust badges - MARA Registered · 500+ Visas · 97% Success Rate
 
 ### Section 2: Stats Band
 - Dark navy background
@@ -119,7 +119,7 @@ Styled `<table>` with CMG Blue header row, alternating row backgrounds (`white` 
 
 ---
 
-## Page 3 — Service Pages (shared template, applied to all 5)
+## Page 3 - Service Pages (shared template, applied to all 5)
 
 ### Skilled Migration (189/190/491)
 ### Employer Sponsored (482/186)
@@ -129,15 +129,15 @@ Styled `<table>` with CMG Blue header row, alternating row backgrounds (`white` 
 
 **Section structure per page:**
 
-1. **Hero** — page-specific photo, headline, subheadline, two CTAs
-2. **Overview** — 2-col: intro paragraph (left) + key facts sidebar card (right): processing time range, cost estimate, outcome, visa type (temporary/permanent)
-3. **Eligibility Requirements** — 2-3 col grid of accent cards, each card: icon + requirement name + detail (e.g. "Age Under 45", "English: Competent / IELTS 6.0", "Skills Assessment: Required")
-4. **Visa Subclasses** — 3-col accent cards, each: subclass number badge + name + key difference + "Learn More" link
-5. **Step-by-Step Process** — numbered step cards (5–7 steps), each with icon + title + 2-line description
-6. **Fees & Timeline** — styled table: item | government fee | notes; plus processing time bar chart (visual)
-7. **Required Documents** — 2-col checklist with checkmark icons
-8. **FAQ** — FAQAccordion, 6–8 questions per visa type (real questions)
-9. **CTA** — dark banner
+1. **Hero** - page-specific photo, headline, subheadline, two CTAs
+2. **Overview** - 2-col: intro paragraph (left) + key facts sidebar card (right): processing time range, cost estimate, outcome, visa type (temporary/permanent)
+3. **Eligibility Requirements** - 2-3 col grid of accent cards, each card: icon + requirement name + detail (e.g. "Age Under 45", "English: Competent / IELTS 6.0", "Skills Assessment: Required")
+4. **Visa Subclasses** - 3-col accent cards, each: subclass number badge + name + key difference + "Learn More" link
+5. **Step-by-Step Process** - numbered step cards (5–7 steps), each with icon + title + 2-line description
+6. **Fees & Timeline** - styled table: item | government fee | notes; plus processing time bar chart (visual)
+7. **Required Documents** - 2-col checklist with checkmark icons
+8. **FAQ** - FAQAccordion, 6–8 questions per visa type (real questions)
+9. **CTA** - dark banner
 
 **Research content per page:**
 
@@ -159,9 +159,9 @@ Styled `<table>` with CMG Blue header row, alternating row backgrounds (`white` 
 **Family & Partner:**
 - 820/801 (onshore) vs 309/100 (offshore)
 - Sponsorship requirements: Australian citizen/PR, aged 18+, financial capacity
-- Relationship evidence: 4 categories — financial, household, social, commitment
+- Relationship evidence: 4 categories - financial, household, social, commitment
 - Processing: 820 = 12-24 months currently; 309 offshore = 24-36 months
-- Parent 143: Contributory — AUD $47,825 primary applicant (one of most expensive visas)
+- Parent 143: Contributory - AUD $47,825 primary applicant (one of most expensive visas)
 
 **Student:**
 - 500: GTE requirement, must maintain enrolment + 80% attendance
@@ -174,11 +174,11 @@ Styled `<table>` with CMG Blue header row, alternating row backgrounds (`white` 
 - 188B: Investor ($1.5M investment in State/Territory bonds for 4 years)
 - 188C: Significant Investor ($5M in complying investments for 4 years)
 - 888: Permanent after meeting stream requirements
-- 132: Business Talent — direct PR, $400k asset, $300k turnover OR significant venture capital
+- 132: Business Talent - direct PR, $400k asset, $300k turnover OR significant venture capital
 
 ---
 
-## Page 4 — Tools Page
+## Page 4 - Tools Page
 
 ### Points Calculator (redesigned)
 - Step-by-step accordion: one category at a time (Age → English → Overseas Experience → etc.)
@@ -190,7 +190,7 @@ Styled `<table>` with CMG Blue header row, alternating row backgrounds (`white` 
 ### Fee Estimator (redesigned)
 - Step 1: Choose visa type (large clickable cards with visa name + subclass)
 - Step 2: Family composition inputs (adults, children)
-- Step 3: Itemised breakdown table — Government application fee · Biometrics · Health exam · Skills assessment · IELTS × members · CMG service fee (POA)
+- Step 3: Itemised breakdown table - Government application fee · Biometrics · Health exam · Skills assessment · IELTS × members · CMG service fee (POA)
 - Grand total with disclaimer
 
 ### Processing Times (redesigned)
@@ -200,7 +200,7 @@ Styled `<table>` with CMG Blue header row, alternating row backgrounds (`white` 
 
 ---
 
-## Page 5 — Resources / Blog
+## Page 5 - Resources / Blog
 
 - **Featured post** at top: large card spanning full width, left = photo, right = category + title + excerpt + "Read More →"
 - **Category filter pills**: All · Skilled Migration · Employer Sponsored · Family & Partner · Student · Business
@@ -228,7 +228,7 @@ Styled `<table>` with CMG Blue header row, alternating row backgrounds (`white` 
 ## Implementation Order (Approach B)
 
 1. Navbar mega-menu (affects all pages immediately)
-2. Homepage — all 7 upgraded sections
+2. Homepage - all 7 upgraded sections
 3. Skilled Migration page (establishes service page template)
 4. Roll template to other 4 service pages with unique content
 5. Tools page redesign

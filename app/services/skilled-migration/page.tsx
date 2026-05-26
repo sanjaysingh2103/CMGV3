@@ -4,7 +4,7 @@ import { visaContent } from "@/lib/visa-content"
 import JsonLd from "@/components/JsonLd"
 
 export const metadata: Metadata = {
-  title: "Skilled Migration Australia — 189, 190 & 491 Visa Experts | CMG",
+  title: "Skilled Migration Australia - 189, 190 & 491 Visa Experts | CMG",
   description: "Maximise your SkillSelect points score and secure your Australian skilled visa invitation. CMG specialists in subclass 189, 190 and 491 visas.",
 }
 

@@ -9,7 +9,7 @@ import JsonLd from "@/components/JsonLd"
 import { countries, countrySlugs } from "@/lib/countries"
 
 export const metadata: Metadata = {
-  title: "Migrate to Australia from Your Country — CMG Country Guides",
+  title: "Migrate to Australia from Your Country - CMG Country Guides",
   description:
     "Country-specific Australian migration guides for GCC, Middle East and South Asia. UAE, India, Pakistan, Philippines, Egypt, Saudi Arabia.",
   alternates: { canonical: "/from" },

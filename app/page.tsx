@@ -9,13 +9,17 @@ import StatsBand from "@/components/StatsBand"
 import ServiceCard from "@/components/ServiceCard"
 import ImageTextRow from "@/components/ImageTextRow"
 import ProcessSteps from "@/components/ProcessSteps"
-import TestimonialCarousel from "@/components/TestimonialCarousel"
+import dynamic from "next/dynamic"
+const TestimonialCarousel = dynamic(() => import("@/components/TestimonialCarousel"), {
+  ssr: true,
+  loading: () => <div className="min-h-[320px]" aria-hidden />,
+})
 import JsonLd from "@/components/JsonLd"
 import { organisationSchema, localBusinessSchema } from "@/lib/structured-data"
 import { processSteps } from "@/lib/site"
 
 export const metadata: Metadata = {
-  title: "Australian Migration Agents — Commonwealth Migration Group",
+  title: "Australian Migration Agents - Commonwealth Migration Group",
   description:
     "MARA-registered migration agents helping skilled workers, families and businesses move to Australia. Book a free consultation today.",
 }
@@ -24,7 +28,7 @@ const services = [
   {
     icon: Briefcase,
     title: "Skilled Migration",
-    description: "Points-tested pathways to permanent residency — subclass 189, 190 and 491. We maximise your score and manage your EOI.",
+    description: "Points-tested pathways to permanent residency - subclass 189, 190 and 491. We maximise your score and manage your EOI.",
     href: "/services/skilled-migration",
     accentColor: "blue" as const,
   },
@@ -38,7 +42,7 @@ const services = [
   {
     icon: Users,
     title: "Family & Partner",
-    description: "Reunite with loved ones through Australia's partner, child and parent visa programs — onshore and offshore.",
+    description: "Reunite with loved ones through Australia's partner, child and parent visa programs - onshore and offshore.",
     href: "/services/family-partner",
     accentColor: "blue" as const,
   },
@@ -68,7 +72,7 @@ const services = [
 export default function HomePage() {
   return (
     <>
-      {/* ── 1. HERO — premium layered banner ───────────────────────── */}
+      {/* ── 1. HERO - premium layered banner ───────────────────────── */}
       <section className="relative flex min-h-[calc(100vh-5rem)] items-center justify-center overflow-hidden">
         {/* Background photo */}
         <Image
@@ -114,7 +118,7 @@ export default function HomePage() {
 
           <p className="text-white/80 text-base md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
             Expert MARA-registered migration agents helping skilled workers,
-            families, and businesses achieve their Australian dream — with a 97% visa approval rate.
+            families, and businesses achieve their Australian dream - with a 97% visa approval rate.
           </p>
 
           {/* CTAs */}
@@ -174,7 +178,7 @@ export default function HomePage() {
               Comprehensive Australian Migration Services
             </h2>
             <p className="text-cmg-slate max-w-2xl mx-auto leading-relaxed">
-              From skilled migration to family reunions — we handle every aspect of
+              From skilled migration to family reunions - we handle every aspect of
               your Australian visa journey with precision and care.
             </p>
           </div>
@@ -194,18 +198,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 4. WHY CMG — image + text ────────────────────────────────── */}
+      {/* ── 4. WHY CMG - image + text ────────────────────────────────── */}
       <ImageTextRow
         imageSrc="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=900"
         imageAlt="Professional migration team at CMG"
         eyebrow="Why Choose CMG"
         heading="Why MARA Registration Matters"
-        body="Not all migration advice is created equal. Only MARA-registered agents are legally authorised to provide immigration assistance in Australia — and are held accountable by the Office of the Migration Agents Registration Authority."
+        body="Not all migration advice is created equal. Only MARA-registered agents are legally authorised to provide immigration assistance in Australia - and are held accountable by the Office of the Migration Agents Registration Authority."
         bullets={[
           "Legally authorised under the Migration Act 1958",
-          "Accountable to OMARA's Code of Conduct — protecting you from negligent advice",
+          "Accountable to OMARA's Code of Conduct - protecting you from negligent advice",
           "Access to Department of Home Affairs systems and priority queues",
-          "Professional indemnity insurance — your application is protected",
+          "Professional indemnity insurance - your application is protected",
         ]}
         ctaLabel="Learn About Our Team"
         ctaHref="/about"
@@ -253,7 +257,7 @@ export default function HomePage() {
               Your Migration Journey in 4 Steps
             </h2>
             <p className="text-cmg-slate max-w-xl mx-auto">
-              A clear, transparent process — from first consultation to visa grant and life in Australia.
+              A clear, transparent process - from first consultation to visa grant and life in Australia.
             </p>
           </div>
           <ProcessSteps steps={processSteps} />
@@ -273,25 +277,25 @@ export default function HomePage() {
               What Our Clients Say
             </h2>
             <p className="text-cmg-slate max-w-xl mx-auto">
-              Real outcomes for real people — from 30+ countries to Australian permanent residency.
+              Real outcomes for real people - from 30+ countries to Australian permanent residency.
             </p>
           </div>
           <TestimonialCarousel />
         </div>
       </section>
 
-      {/* ── 8. EXPERT GUIDANCE — image + text ────────────────────────── */}
+      {/* ── 8. EXPERT GUIDANCE - image + text ────────────────────────── */}
       <ImageTextRow
         imageSrc="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=900"
         imageAlt="Professional consultation with CMG migration agent"
         eyebrow="Our Approach"
         heading="Expert Guidance, Real Outcomes"
-        body="Our MARA-registered agents combine deep legal knowledge with genuine care for every client. We don't just lodge applications — we build strategies, prepare you for every stage, and stand beside you until your visa is in hand."
+        body="Our MARA-registered agents combine deep legal knowledge with genuine care for every client. We don't just lodge applications - we build strategies, prepare you for every stage, and stand beside you until your visa is in hand."
         bullets={[
           "Free 30-minute assessment to understand your specific pathway",
           "Dedicated case manager assigned to your file from day one",
           "Real-time case tracking and proactive communication",
-          "Post-visa support — skills assessment, state nomination, and more",
+          "Post-visa support - skills assessment, state nomination, and more",
         ]}
         ctaLabel="Book Your Free Consultation"
         ctaHref="/contact"
@@ -299,7 +303,7 @@ export default function HomePage() {
         bgClass="bg-section-alt"
       />
 
-      {/* ── 9. CTA BANNER — premium, with red light-leak ─────────────── */}
+      {/* ── 9. CTA BANNER - premium, with red light-leak ─────────────── */}
       <section className="relative bg-cmg-navy overflow-hidden">
         {/* Premium deep gradient with red glow */}
         <div className="absolute inset-0 hero-premium-deep" aria-hidden />
@@ -319,7 +323,7 @@ export default function HomePage() {
           </h2>
           <p className="text-white/70 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
             Book a free 30-minute consultation with one of our MARA-registered agents.
-            No obligation, no jargon — just expert advice tailored to you.
+            No obligation, no jargon - just expert advice tailored to you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

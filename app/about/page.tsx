@@ -7,11 +7,11 @@ import JsonLd from "@/components/JsonLd"
 import { team, values } from "@/lib/site"
 
 export const metadata: Metadata = {
-  title: "About CMG — Dubai-Based Australia Migration Specialists",
+  title: "About CMG - Dubai-Based Australia Migration Specialists",
   description:
-    "Meet the team at Commonwealth Migration Group — MARA-authorised migration consultancy based in Dubai, serving the GCC and Middle East with Australia-focused expertise.",
+    "Meet the team at Commonwealth Migration Group - MARA-authorised migration consultancy based in Dubai, serving the GCC and Middle East with Australia-focused expertise.",
   openGraph: {
-    title: "About CMG — Dubai-Based Australia Migration Specialists",
+    title: "About CMG - Dubai-Based Australia Migration Specialists",
     description: "MARA-authorised consultancy connecting GCC professionals with their Australian future.",
     images: [{
       url: "/api/og?title=About+CMG&subtitle=Dubai-Based+Australia+Migration+Specialists&eyebrow=MARA-Authorised+%C2%B7+Est.+2009",
@@ -75,7 +75,7 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-cmg-slate leading-relaxed">
               <p>
-                Commonwealth Migration Group (CMG) was established with a vision to provide ethical, transparent, and professional Australia migration solutions for skilled professionals and families across the GCC region — particularly from Dubai and the wider Middle East.
+                Commonwealth Migration Group (CMG) was established with a vision to provide ethical, transparent, and professional Australia migration solutions for skilled professionals and families across the GCC region - particularly from Dubai and the wider Middle East.
               </p>
               <p>
                 CMG was founded by a team of migration professionals and industry experts who identified the growing demand for genuine Australia-focused immigration guidance backed by proper compliance, strategic case management, and personalised support.
@@ -134,7 +134,7 @@ export default function AboutPage() {
               A benchmark for trust &amp; compliance in Australia migration
             </h3>
             <p className="text-cmg-slate leading-relaxed">
-              To redefine Australia migration services in the Middle East — empowering skilled professionals, students, and families with transparent guidance, ethical practices, and world-class migration solutions tailored to their long-term settlement goals in Australia.
+              To redefine Australia migration services in the Middle East - empowering skilled professionals, students, and families with transparent guidance, ethical practices, and world-class migration solutions tailored to their long-term settlement goals in Australia.
             </p>
           </div>
 
@@ -155,7 +155,7 @@ export default function AboutPage() {
                 "Transparent and ethical migration guidance",
                 "Simplifying complex Australia visa pathways",
                 "Personalised solutions based on each client&rsquo;s profile",
-                "End-to-end support — from assessment to visa outcome",
+                "End-to-end support - from assessment to visa outcome",
                 "High standards of professionalism and compliance",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2.5">
@@ -168,7 +168,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why Choose Us — 5 differentiators */}
+      {/* Why Choose Us - 5 differentiators */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">

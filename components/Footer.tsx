@@ -32,7 +32,7 @@ export default function Footer() {
 
   return (
     <>
-      {/* ── PRE-FOOTER TRUST BAND — visual separator between any dark CTA and the footer ── */}
+      {/* ── PRE-FOOTER TRUST BAND - visual separator between any dark CTA and the footer ── */}
       <section className="trust-band py-10 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
@@ -59,7 +59,7 @@ export default function Footer() {
     <footer className="bg-cmg-navy text-white" style={{ background: "linear-gradient(180deg, #001A5E 0%, #000D3A 100%)" }}>
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 pt-16 pb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Col 1 — Brand */}
+          {/* Col 1 - Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-xl bg-cmg-red flex items-center justify-center shadow-lg shrink-0">
@@ -97,7 +97,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2 — Services */}
+          {/* Col 2 - Services */}
           <div>
             <h4 className="font-heading font-semibold text-base mb-4">Services</h4>
             <ul className="space-y-2.5">
@@ -111,7 +111,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3 — Company */}
+          {/* Col 3 - Company */}
           <div>
             <h4 className="font-heading font-semibold text-base mb-4">Company</h4>
             <ul className="space-y-2.5">
@@ -125,7 +125,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4 — Contact */}
+          {/* Col 4 - Contact */}
           <div>
             <h4 className="font-heading font-semibold text-base mb-4">Contact</h4>
             <ul className="space-y-3">

@@ -239,7 +239,7 @@ export default async function ComparisonPage({ params }: Props) {
         </div>
       </section>
 
-      {/* 4. CHOICE CARDS — "Choose X if…" */}
+      {/* 4. CHOICE CARDS - "Choose X if…" */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -338,7 +338,7 @@ export default async function ComparisonPage({ params }: Props) {
               Common Mistakes When Choosing
             </h2>
             <p className="text-cmg-slate mt-4">
-              The pitfalls we see week after week — costly, avoidable, often invisible until grant is delayed or refused.
+              The pitfalls we see week after week - costly, avoidable, often invisible until grant is delayed or refused.
             </p>
           </div>
 
@@ -362,7 +362,7 @@ export default async function ComparisonPage({ params }: Props) {
           <div className="text-center mb-12">
             <p className="eyebrow text-cmg-red mb-3">FAQ</p>
             <h2 className="font-heading text-3xl lg:text-4xl font-bold text-cmg-text">
-              {cmp.visaA} vs {cmp.visaB} — Frequently Asked Questions
+              {cmp.visaA} vs {cmp.visaB} - Frequently Asked Questions
             </h2>
           </div>
           <div className="bg-white rounded-2xl border border-cmg-border shadow-card p-6 md:p-8">
@@ -371,7 +371,7 @@ export default async function ComparisonPage({ params }: Props) {
         </div>
       </section>
 
-      {/* 8. CTA — premium navy with red light leak */}
+      {/* 8. CTA - premium navy with red light leak */}
       <section className="relative overflow-hidden py-20 px-4 hero-premium-deep">
         <div className="relative max-w-4xl mx-auto text-center z-10">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 mb-6">
@@ -382,7 +382,7 @@ export default async function ComparisonPage({ params }: Props) {
             Still unsure between {cmp.visaA} and {cmp.visaB}?
           </h2>
           <p className="text-white/75 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-            One 30-minute consultation can save months of planning down the wrong pathway. Our MARA-registered agents will assess your points, occupation list status and state nomination prospects — for free.
+            One 30-minute consultation can save months of planning down the wrong pathway. Our MARA-registered agents will assess your points, occupation list status and state nomination prospects - for free.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

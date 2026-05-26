@@ -5,7 +5,7 @@
  * top-of-funnel SEO targeting searches like "migrate to Australia from India".
  *
  * Content is intentionally detail-rich (real ANZSCO codes, real attestation
- * authorities, realistic processing nuances) — these pages compete for high
+ * authorities, realistic processing nuances) - these pages compete for high
  * organic search volume and benefit from substantive, expert content.
  */
 
@@ -45,6 +45,7 @@ export interface CountryTestimonial {
 export interface CountryFaq {
   question: string
   answer: string
+  category?: string
 }
 
 export interface CountryContent {
@@ -71,7 +72,7 @@ export interface CountryContent {
   }
   /* Country snapshot strip (4 icon cards) */
   snapshot: CountrySnapshot[]
-  /* "Why migrants from X choose Australia" — 4–6 reasons */
+  /* "Why migrants from X choose Australia" - 4–6 reasons */
   whyAustralia: CountryReason[]
   /* Top visa pathways (3–4 cards, link to existing service pages) */
   pathways: CountryPathway[]
@@ -93,7 +94,7 @@ export interface CountryContent {
 
 export const countries: Record<string, CountryContent> = {
   /* ============================================================== */
-  /* UAE — CMG's home market                                         */
+  /* UAE - CMG's home market                                         */
   /* ============================================================== */
   uae: {
     slug: "uae",
@@ -103,7 +104,7 @@ export const countries: Record<string, CountryContent> = {
     demonym: "UAE resident",
     cardBlurb:
       "CMG's home market. Dubai-based agents who understand expat life, MOFA attestation and the realities of leaving the GCC for Sydney, Melbourne or Brisbane.",
-    metaTitle: "Migrate to Australia from UAE — Dubai's CMG Migration Agents",
+    metaTitle: "Migrate to Australia from UAE - Dubai's CMG Migration Agents",
     metaDescription:
       "MARA-registered Dubai migration agents helping UAE residents secure Australian PR, skilled, family and employer-sponsored visas. Free consultation.",
     keywords: [
@@ -119,7 +120,7 @@ export const countries: Record<string, CountryContent> = {
       eyebrow: "From UAE to Australia",
       headline: "Migrate to Australia from the UAE",
       subheadline:
-        "From Dubai's skyline to Sydney Harbour — CMG is the only MARA-registered consultancy headquartered in the UAE. We've guided hundreds of Emirati residents through subclass 189, 190, 482 and 186 visa pathways, with deep knowledge of MOFA attestation, UAE police clearance and how to convert GCC work experience into Australian skilled points.",
+        "From Dubai's skyline to Sydney Harbour - CMG is the only MARA-registered consultancy headquartered in the UAE. We've guided hundreds of Emirati residents through subclass 189, 190, 482 and 186 visa pathways, with deep knowledge of MOFA attestation, UAE police clearance and how to convert GCC work experience into Australian skilled points.",
       bgImage:
         "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80",
       gradient: "gradient-hero-deep",
@@ -147,11 +148,11 @@ export const countries: Record<string, CountryContent> = {
     whyAustralia: [
       {
         title: "A clear pathway to citizenship",
-        body: "The UAE does not offer permanent residency or citizenship to expats — even after 30 years. Australia grants permanent residency from day one on subclass 189/190, and full citizenship after just 4 years of residence.",
+        body: "The UAE does not offer permanent residency or citizenship to expats - even after 30 years. Australia grants permanent residency from day one on subclass 189/190, and full citizenship after just 4 years of residence.",
       },
       {
         title: "Family roots and a real home",
-        body: "Your children can grow up Australian — not on rolling 3-year residency permits. Free public schooling, world-class universities (G8) and Medicare for the whole family.",
+        body: "Your children can grow up Australian - not on rolling 3-year residency permits. Free public schooling, world-class universities (G8) and Medicare for the whole family.",
       },
       {
         title: "Earnings that translate well",
@@ -159,11 +160,11 @@ export const countries: Record<string, CountryContent> = {
       },
       {
         title: "A large, established GCC community",
-        body: "Sydney's Lakemba and Auburn, Melbourne's Dandenong and Brisbane's Sunnybank host thriving Arab, South Asian and Filipino communities — the cultural transition from Dubai is one of the easiest in the world.",
+        body: "Sydney's Lakemba and Auburn, Melbourne's Dandenong and Brisbane's Sunnybank host thriving Arab, South Asian and Filipino communities - the cultural transition from Dubai is one of the easiest in the world.",
       },
       {
         title: "Climate and lifestyle balance",
-        body: "Beaches, parks, hiking, surf — all without 50°C summers. Sydney and Perth offer a coastal lifestyle that mirrors what many residents already enjoy in the UAE, but with cooler weather and outdoor evenings year-round.",
+        body: "Beaches, parks, hiking, surf - all without 50°C summers. Sydney and Perth offer a coastal lifestyle that mirrors what many residents already enjoy in the UAE, but with cooler weather and outdoor evenings year-round.",
       },
       {
         title: "Strong investor and entrepreneur pathway",
@@ -176,7 +177,7 @@ export const countries: Record<string, CountryContent> = {
         name: "Skilled Independent",
         href: "/services/skilled-migration",
         whyPopular:
-          "The single most popular pathway for UAE-based engineers, accountants and IT professionals. No state restriction — live anywhere from Sydney to Perth.",
+          "The single most popular pathway for UAE-based engineers, accountants and IT professionals. No state restriction - live anywhere from Sydney to Perth.",
       },
       {
         number: "190",
@@ -219,10 +220,10 @@ export const countries: Record<string, CountryContent> = {
       {
         title: "IELTS / PTE test centres",
         detail:
-          "IELTS is delivered at the British Council (Knowledge Village, Dubai), IDP Education (DIFC) and Abu Dhabi locations. PTE Academic operates at Pearson VUE in Dubai Internet City and Abu Dhabi. Slots fill 3–4 weeks ahead — book early.",
+          "IELTS is delivered at the British Council (Knowledge Village, Dubai), IDP Education (DIFC) and Abu Dhabi locations. PTE Academic operates at Pearson VUE in Dubai Internet City and Abu Dhabi. Slots fill 3–4 weeks ahead - book early.",
       },
       {
-        title: "Employment evidence — the salary certificate trap",
+        title: "Employment evidence - the salary certificate trap",
         detail:
           "UAE salary certificates and labour contracts from MoHRE are not enough on their own. Australian case officers expect detailed reference letters on company letterhead, signed by HR, stating duties, hours per week, start/end dates and full salary breakdown. We help structure these to ANZSCO standards.",
       },
@@ -253,7 +254,7 @@ export const countries: Record<string, CountryContent> = {
         occupation: "Senior Software Engineer",
         city: "Dubai",
         visa: "189",
-        body: "Lived in Dubai for 9 years before CMG. They walked me through ACS, IELTS Academic, MOFA attestation and EOI — the whole thing took 14 months from skills assessment to visa grant. My final points score was 95.",
+        body: "Lived in Dubai for 9 years before CMG. They walked me through ACS, IELTS Academic, MOFA attestation and EOI - the whole thing took 14 months from skills assessment to visa grant. My final points score was 95.",
         timeline: "Skills assessment to grant: 14 months",
       },
       {
@@ -270,42 +271,50 @@ export const countries: Record<string, CountryContent> = {
       {
         question: "Can I count my UAE work experience toward Australian skilled migration points?",
         answer:
-          "Yes — overseas work experience earns up to 15 points (5 points for 3 years, 10 for 5 years, 15 for 8+ years) provided it's in your nominated ANZSCO occupation and supported by detailed reference letters on company letterhead. CMG specifically structures UAE reference letters and salary certificates so they meet the documentation standards of ACS, Engineers Australia, CPA Australia and VETASSESS.",
+          "Yes - overseas work experience earns up to 15 points (5 points for 3 years, 10 for 5 years, 15 for 8+ years) provided it's in your nominated ANZSCO occupation and supported by detailed reference letters on company letterhead. CMG specifically structures UAE reference letters and salary certificates so they meet the documentation standards of ACS, Engineers Australia, CPA Australia and VETASSESS.",
+        category: "Eligibility & Skills",
       },
       {
         question: "What documents need MOFA attestation for an Australian visa application from the UAE?",
         answer:
           "Educational degrees and transcripts, marriage certificates issued in the UAE, employment letters, salary certificates, and any commercial documents (for business visa applicants). The chain is: home-country attestation → UAE embassy in home country → UAE MoFAIC in Dubai or Abu Dhabi. Documents from your home country that have not transited through the UAE typically need Apostille or HRD attestation in that country instead.",
+        category: "Documents",
       },
       {
         question: "Do I have to leave my UAE job before applying for Australian PR?",
         answer:
           "No. The 189, 190 and 491 visa applications are all lodged online via ImmiAccount and you continue working in the UAE throughout processing (typically 6–18 months). You only need to make the move once your visa is granted, and most subclasses allow 12 months from grant to enter Australia for the first time (the 'initial entry date').",
+        category: "General",
       },
       {
         question: "Is my engineering degree from outside the UAE recognised in Australia?",
         answer:
-          "Engineers Australia recognises accredited engineering degrees from the Washington Accord countries (USA, UK, India, Pakistan, etc.) and assesses others via the Competency Demonstration Report (CDR) pathway. Indian and Pakistani engineering graduates working in the UAE typically pursue a CDR — three career episodes plus a summary statement. CMG provides full CDR mentoring as part of our skilled migration service.",
+          "Engineers Australia recognises accredited engineering degrees from the Washington Accord countries (USA, UK, India, Pakistan, etc.) and assesses others via the Competency Demonstration Report (CDR) pathway. Indian and Pakistani engineering graduates working in the UAE typically pursue a CDR - three career episodes plus a summary statement. CMG provides full CDR mentoring as part of our skilled migration service.",
+        category: "Eligibility & Skills",
       },
       {
         question: "How do I get my UAE police clearance for an Australian visa?",
         answer:
           "Apply through the ICP smart services app or visit a GDRFA service centre. You'll need your Emirates ID and a passport-size photo. The certificate (Good Conduct Certificate) is issued in 1–3 working days, costs AED 100, and is valid for 3 months. Apply close to your expected visa decision date to avoid expiry. We coordinate the timing precisely.",
+        category: "Documents",
       },
       {
         question: "Can my UAE-born children migrate to Australia with me?",
         answer:
           "Yes. Dependent children (under 18, or 18–22 if financially dependent) are included as secondary applicants on the same skilled or employer-sponsored visa. Their UAE birth certificates need MoFAIC attestation and a certified English translation if originally in Arabic. CMG arranges NAATI-certified translations in Dubai.",
+        category: "Family & Dependents",
       },
       {
         question: "Do Dubai-based business owners qualify for Australian investor visas?",
         answer:
-          "Many UAE-based business owners — particularly those with mainland LLCs or established free zone companies — qualify for the BIIP streams (188A Business Innovation, 188C Significant Investor) or the upcoming National Innovation visa. Audited financials, immigration cards and UAE shareholder documents are routinely accepted by Australian state nomination panels. CMG works closely with Dubai accountants to prepare nomination submissions.",
+          "Many UAE-based business owners - particularly those with mainland LLCs or established free zone companies - qualify for the BIIP streams (188A Business Innovation, 188C Significant Investor) or the upcoming National Innovation visa. Audited financials, immigration cards and UAE shareholder documents are routinely accepted by Australian state nomination panels. CMG works closely with Dubai accountants to prepare nomination submissions.",
+        category: "General",
       },
       {
         question: "Is CMG actually based in Dubai, or does it just have an address?",
         answer:
-          "CMG operates a full office in Dubai with MARA-registered agents available for in-person consultations. We're not a virtual presence — clients walk into our office, hand over original documents, and meet face-to-face. This is unusual: most agencies servicing the UAE are headquartered in Australia and rely on phone calls.",
+          "CMG operates a full office in Dubai with MARA-registered agents available for in-person consultations. We're not a virtual presence - clients walk into our office, hand over original documents, and meet face-to-face. This is unusual: most agencies servicing the UAE are headquartered in Australia and rely on phone calls.",
+        category: "General",
       },
     ],
     cta: {
@@ -315,7 +324,7 @@ export const countries: Record<string, CountryContent> = {
   },
 
   /* ============================================================== */
-  /* INDIA — largest applicant pool globally                          */
+  /* INDIA - largest applicant pool globally                          */
   /* ============================================================== */
   india: {
     slug: "india",
@@ -325,7 +334,7 @@ export const countries: Record<string, CountryContent> = {
     demonym: "Indian",
     cardBlurb:
       "Australia's largest skilled migration source country. CMG handles HRD attestation, ECA-compliant CDRs, AHPRA bridging programs and India-specific PCC issues every week.",
-    metaTitle: "Migrate to Australia from India — MARA Agents | CMG",
+    metaTitle: "Migrate to Australia from India - MARA Agents | CMG",
     metaDescription:
       "Indian nationals secure Australian PR, skilled and student visas with CMG's MARA-registered agents. CDR, ACS, AHPRA & HRD attestation guidance.",
     keywords: [
@@ -341,7 +350,7 @@ export const countries: Record<string, CountryContent> = {
       eyebrow: "From India to Australia",
       headline: "Migrate to Australia from India",
       subheadline:
-        "Indian nationals are now the single largest source of skilled migration to Australia — overtaking the UK. CMG guides engineers, IT professionals, accountants and nurses from Bangalore, Hyderabad, Mumbai and Delhi through subclass 189, 190 and 482 visas. We know exactly what ACS, Engineers Australia and AHPRA expect from Indian qualifications.",
+        "Indian nationals are now the single largest source of skilled migration to Australia - overtaking the UK. CMG guides engineers, IT professionals, accountants and nurses from Bangalore, Hyderabad, Mumbai and Delhi through subclass 189, 190 and 482 visas. We know exactly what ACS, Engineers Australia and AHPRA expect from Indian qualifications.",
       bgImage:
         "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1920&q=80",
       gradient: "gradient-hero-warm",
@@ -373,23 +382,23 @@ export const countries: Record<string, CountryContent> = {
       },
       {
         title: "Earnings 2.5–4× Indian software salaries",
-        body: "A mid-level software engineer in Bangalore earns ₹18–25 LPA. The equivalent role in Sydney pays AUD $110,000–$140,000 (₹60–80 LPA) — and that includes 11% superannuation, 4 weeks paid leave and Medicare.",
+        body: "A mid-level software engineer in Bangalore earns ₹18–25 LPA. The equivalent role in Sydney pays AUD $110,000–$140,000 (₹60–80 LPA) - and that includes 11% superannuation, 4 weeks paid leave and Medicare.",
       },
       {
         title: "A massive, established Indian community",
         body: "Australia now has 970,000+ people of Indian origin. Sydney's Parramatta, Melbourne's Tarneit and Wyndham Vale, and Perth's Canning Vale have full Indian grocery, temples (BAPS, ISKCON, Murugan), Telugu/Tamil/Hindi schools and Bollywood cinemas.",
       },
       {
-        title: "World-class universities — without the US debt",
-        body: "Eight of the world's top 100 universities are Australian (Melbourne, Sydney, ANU, UNSW, Monash, UQ, UWA, Adelaide). Indian students get post-study work rights of 2–4 years on subclass 485 — a direct route to PR via 190/491.",
+        title: "World-class universities - without the US debt",
+        body: "Eight of the world's top 100 universities are Australian (Melbourne, Sydney, ANU, UNSW, Monash, UQ, UWA, Adelaide). Indian students get post-study work rights of 2–4 years on subclass 485 - a direct route to PR via 190/491.",
       },
       {
-        title: "Medicare — universal healthcare from day one",
+        title: "Medicare - universal healthcare from day one",
         body: "Australian PRs and citizens receive Medicare covering GP visits, public hospital admission, surgery and most diagnostics. No surprise medical bills, no parent corporate insurance gaps, no ICU rate cards.",
       },
       {
         title: "Bringing your family with you",
-        body: "Spouse and children are included on the same skilled visa application. Parents qualify for subclass 143 (Contributory Parent) — long processing but a permanent outcome. CMG handles Indian marriage certificates, HRD-attested birth certificates and PCCs end-to-end.",
+        body: "Spouse and children are included on the same skilled visa application. Parents qualify for subclass 143 (Contributory Parent) - long processing but a permanent outcome. CMG handles Indian marriage certificates, HRD-attested birth certificates and PCCs end-to-end.",
       },
     ],
     pathways: [
@@ -398,7 +407,7 @@ export const countries: Record<string, CountryContent> = {
         name: "Skilled Independent",
         href: "/services/skilled-migration",
         whyPopular:
-          "The dominant pathway for Indian IT professionals — typically chosen by software engineers, business analysts and ICT security specialists with ACS skills assessment and IELTS 8+.",
+          "The dominant pathway for Indian IT professionals - typically chosen by software engineers, business analysts and ICT security specialists with ACS skills assessment and IELTS 8+.",
       },
       {
         number: "190",
@@ -412,7 +421,7 @@ export const countries: Record<string, CountryContent> = {
         name: "Temporary Graduate Visa",
         href: "/services/student",
         whyPopular:
-          "Indian masters and PhD graduates from Australian universities get 2–4 years of unrestricted post-study work rights — the most common bridge from student to PR via 189/190.",
+          "Indian masters and PhD graduates from Australian universities get 2–4 years of unrestricted post-study work rights - the most common bridge from student to PR via 189/190.",
       },
       {
         number: "482",
@@ -424,17 +433,17 @@ export const countries: Record<string, CountryContent> = {
     ],
     considerations: [
       {
-        title: "HRD attestation or MEA Apostille — choose carefully",
+        title: "HRD attestation or MEA Apostille - choose carefully",
         detail:
           "Educational documents (degrees, transcripts, mark sheets) must be authenticated by the State HRD or attested by India's Ministry of External Affairs (MEA) via Apostille. India is a Hague Apostille signatory, so Apostille via the MEA is the cleaner route for Australian visa applications. Allow 7–15 working days.",
       },
       {
         title: "PCC from the Passport Seva Kendra (PSK)",
         detail:
-          "Police Clearance Certificates must come from the PSK where your passport was issued (or the regional PSK matching your current address as per Aadhaar). Online appointment via passportindia.gov.in, fee ₹500, valid for 6 months. Recent address changes complicate this — apply for PCC at the address listed on your Aadhaar.",
+          "Police Clearance Certificates must come from the PSK where your passport was issued (or the regional PSK matching your current address as per Aadhaar). Online appointment via passportindia.gov.in, fee ₹500, valid for 6 months. Recent address changes complicate this - apply for PCC at the address listed on your Aadhaar.",
       },
       {
-        title: "Engineering qualifications — CDR vs Washington Accord",
+        title: "Engineering qualifications - CDR vs Washington Accord",
         detail:
           "Graduates from NBA-accredited engineering programs after 2014 are typically eligible for the Washington Accord stream at Engineers Australia (faster, fewer documents). Graduates from non-accredited programs or older years need a Competency Demonstration Report (CDR) with three career episodes plus a summary statement.",
       },
@@ -444,14 +453,14 @@ export const countries: Record<string, CountryContent> = {
           "IELTS Academic is delivered by British Council and IDP across 50+ Indian cities (Mumbai, Delhi, Bangalore, Hyderabad, Chennai, Pune, Kolkata, Ahmedabad, Chandigarh, Cochin). PTE Academic operates at Pearson VUE centres in 40+ cities. Most candidates prefer PTE for its quicker turnaround (results in 2 working days vs 13 for IELTS).",
       },
       {
-        title: "MBBS / nursing — AHPRA registration is the hurdle",
+        title: "MBBS / nursing - AHPRA registration is the hurdle",
         detail:
-          "Indian doctors must complete the AMC MCQ + clinical exams or qualify for competent authority pathways (rare for Indian graduates). Indian nurses pursue ANMAC skills assessment followed by AHPRA registration — typically a 12–24 month process. CMG works with AHPRA-experienced advisors throughout.",
+          "Indian doctors must complete the AMC MCQ + clinical exams or qualify for competent authority pathways (rare for Indian graduates). Indian nurses pursue ANMAC skills assessment followed by AHPRA registration - typically a 12–24 month process. CMG works with AHPRA-experienced advisors throughout.",
       },
       {
         title: "Common refusal reasons specific to Indian applicants",
         detail:
-          "Inflated work experience claims that don't match payslips/PF statements, missing HRD attestation on degrees, undisclosed visit visas to high-risk countries, mark sheets not matching transcript dates, and inconsistencies between ACS RPL submission and employer reference letters. Genuineness checks on Indian applicants are intense — every claim must be evidenced.",
+          "Inflated work experience claims that don't match payslips/PF statements, missing HRD attestation on degrees, undisclosed visit visas to high-risk countries, mark sheets not matching transcript dates, and inconsistencies between ACS RPL submission and employer reference letters. Genuineness checks on Indian applicants are intense - every claim must be evidenced.",
       },
     ],
     occupations: [
@@ -475,7 +484,7 @@ export const countries: Record<string, CountryContent> = {
         occupation: "Software Engineer",
         city: "Bangalore",
         visa: "189",
-        body: "TCS background, 7 years experience. CMG handled my ACS RPL because my degree wasn't ICT-major — they restructured my employment references to show 67% of my work was ANZSCO 261313. Final points: 95. Granted in 11 months.",
+        body: "TCS background, 7 years experience. CMG handled my ACS RPL because my degree wasn't ICT-major - they restructured my employment references to show 67% of my work was ANZSCO 261313. Final points: 95. Granted in 11 months.",
         timeline: "EOI to grant: 11 months",
       },
       {
@@ -492,47 +501,55 @@ export const countries: Record<string, CountryContent> = {
       {
         question: "Will my Indian engineering degree be recognised in Australia?",
         answer:
-          "Yes, in two ways. If your degree is from an NBA-accredited program completed under the Washington Accord (typically post-2014 graduates from IITs, NITs and accredited private universities), Engineers Australia provides a streamlined assessment with no CDR required. Otherwise, you submit a Competency Demonstration Report (CDR) — three career episodes plus a summary statement mapping your experience to the relevant ANZSCO occupation. CMG provides full CDR mentoring and turnaround typically takes 6–8 weeks at Engineers Australia.",
+          "Yes, in two ways. If your degree is from an NBA-accredited program completed under the Washington Accord (typically post-2014 graduates from IITs, NITs and accredited private universities), Engineers Australia provides a streamlined assessment with no CDR required. Otherwise, you submit a Competency Demonstration Report (CDR) - three career episodes plus a summary statement mapping your experience to the relevant ANZSCO occupation. CMG provides full CDR mentoring and turnaround typically takes 6–8 weeks at Engineers Australia.",
+        category: "Eligibility & Skills",
       },
       {
         question: "How long does the entire migration process take from India?",
         answer:
           "End-to-end you should expect 14–22 months. Breakdown: skills assessment (ACS 4–6 weeks, Engineers Australia 6–10 weeks), IELTS/PTE (1 month), EOI submission, wait for invitation (1–8 months depending on points and occupation), visa lodgement to grant (75% of subclass 189 cases are decided within 12 months). Higher points scores (95+) get invited in the first or second round after lodgement.",
+        category: "Process & Timeline",
       },
       {
         question: "What documents from India need HRD attestation or Apostille for Australia?",
         answer:
-          "Educational documents (degrees, mark sheets, transcripts), birth certificates, marriage certificates and any document used in your visa application. India is a Hague Apostille signatory, so Apostille from the Ministry of External Affairs (MEA) via authorised agencies is the standard route — typically 7–15 working days. Employment letters from Indian companies generally don't need Apostille but must be on letterhead with signature, designation and contact details.",
+          "Educational documents (degrees, mark sheets, transcripts), birth certificates, marriage certificates and any document used in your visa application. India is a Hague Apostille signatory, so Apostille from the Ministry of External Affairs (MEA) via authorised agencies is the standard route - typically 7–15 working days. Employment letters from Indian companies generally don't need Apostille but must be on letterhead with signature, designation and contact details.",
+        category: "Documents",
       },
       {
         question: "I have 7 years of TCS / Infosys / Wipro experience. Do I qualify for skilled migration?",
         answer:
-          "Almost certainly yes for ANZSCO 261313 (Software Engineer) or 261312 (Developer Programmer), provided your role descriptions match. ACS deducts 2 years from non-ICT bachelor degrees and 4 years from non-ICT diploma holders before counting experience. Strong reference letters showing the technical depth of your work — not just team management — are critical. CMG specifically restructures Indian IT services reference letters to meet ACS criteria.",
+          "Almost certainly yes for ANZSCO 261313 (Software Engineer) or 261312 (Developer Programmer), provided your role descriptions match. ACS deducts 2 years from non-ICT bachelor degrees and 4 years from non-ICT diploma holders before counting experience. Strong reference letters showing the technical depth of your work - not just team management - are critical. CMG specifically restructures Indian IT services reference letters to meet ACS criteria.",
+        category: "Eligibility & Skills",
       },
       {
         question: "Can my parents migrate with me from India?",
         answer:
-          "Parents need their own visa — they cannot be dependents on your skilled visa. The subclass 143 Contributory Parent visa costs around AUD $48,000 per parent (one-off) and has a 4–6 year queue, but results in permanent residency. The subclass 870 Sponsored Parent (Temporary) allows up to 5 years stay (renewable to 10) with no PR pathway. Most families pursue 143 once the child is established in Australia.",
+          "Parents need their own visa - they cannot be dependents on your skilled visa. The subclass 143 Contributory Parent visa costs around AUD $48,000 per parent (one-off) and has a 4–6 year queue, but results in permanent residency. The subclass 870 Sponsored Parent (Temporary) allows up to 5 years stay (renewable to 10) with no PR pathway. Most families pursue 143 once the child is established in Australia.",
+        category: "General",
       },
       {
         question: "What's the cheapest English test I can take in India for Australia?",
         answer:
           "PTE Academic costs ₹15,900 in India and results come in 2 working days. IELTS Academic costs ₹17,000 with results in 13 days. Both are accepted by all Australian visa subclasses. PTE is generally easier for Indian test-takers due to its computerised, accent-neutral scoring. Aim for at least 79+ in PTE (Proficient English = 10 points) or 65+ (Superior English = 20 points) on each band.",
+        category: "Eligibility & Skills",
       },
       {
         question: "Are CA Inter or CMA qualifications enough for accountant migration?",
         answer:
-          "No — CA Australia / CA ANZ and CPA Australia require a full Indian CA or B.Com / M.Com qualification plus their professional year or competency assessment program. ICAI CA is well-regarded but not directly recognised. The typical pathway is B.Com + post-study Australian masters in accounting + Professional Year + CPA Australia membership. ANZSCO 221111 (Accountant General) is on the MLTSSL — strong PR pathway.",
+          "No - CA Australia / CA ANZ and CPA Australia require a full Indian CA or B.Com / M.Com qualification plus their professional year or competency assessment program. ICAI CA is well-regarded but not directly recognised. The typical pathway is B.Com + post-study Australian masters in accounting + Professional Year + CPA Australia membership. ANZSCO 221111 (Accountant General) is on the MLTSSL - strong PR pathway.",
+        category: "Eligibility & Skills",
       },
       {
         question: "Can I apply from India or do I need to be in Australia first?",
         answer:
           "All three skilled subclasses (189, 190, 491) can be lodged offshore from India. You stay in India throughout processing, and only travel to Australia once your visa is granted. Most subclasses give you 12 months from grant to make your 'first entry' to validate the visa. Many of our Indian clients travel to Sydney or Melbourne for 2 weeks to activate the visa, then return to wind up affairs before the final move.",
+        category: "General",
       },
     ],
     cta: {
       headline: "Your Indian career, your Australian future",
-      body: "Whether you're a software engineer in Bangalore, an accountant in Mumbai or a nurse in Kerala — CMG's MARA-registered agents will assess your points, identify the right ANZSCO code and build your file to Australian Department standards. Free 30-minute consultation by video.",
+      body: "Whether you're a software engineer in Bangalore, an accountant in Mumbai or a nurse in Kerala - CMG's MARA-registered agents will assess your points, identify the right ANZSCO code and build your file to Australian Department standards. Free 30-minute consultation by video.",
     },
   },
 
@@ -547,7 +564,7 @@ export const countries: Record<string, CountryContent> = {
     demonym: "Pakistani",
     cardBlurb:
       "Engineers, doctors and IT professionals from Karachi, Lahore and Islamabad. CMG navigates NACES verification, PSV clearances and the realities of Pakistani document authentication.",
-    metaTitle: "Migrate to Australia from Pakistan — CMG MARA Agents",
+    metaTitle: "Migrate to Australia from Pakistan - CMG MARA Agents",
     metaDescription:
       "Pakistani engineers, doctors and IT professionals secure Australian PR with CMG. PSV, NACES, HEC attestation and IELTS guidance from MARA-registered agents.",
     keywords: [
@@ -563,7 +580,7 @@ export const countries: Record<string, CountryContent> = {
       eyebrow: "From Pakistan to Australia",
       headline: "Migrate to Australia from Pakistan",
       subheadline:
-        "Pakistani engineers, doctors, IT professionals and accountants form one of Australia's fastest-growing professional communities. CMG's MARA-registered agents guide applicants from Karachi, Lahore and Islamabad through subclass 189, 190, 482 and student pathways — with deep knowledge of HEC attestation, PSV clearances and Engineers Australia CDR for Pakistani graduates.",
+        "Pakistani engineers, doctors, IT professionals and accountants form one of Australia's fastest-growing professional communities. CMG's MARA-registered agents guide applicants from Karachi, Lahore and Islamabad through subclass 189, 190, 482 and student pathways - with deep knowledge of HEC attestation, PSV clearances and Engineers Australia CDR for Pakistani graduates.",
       bgImage:
         "https://images.unsplash.com/photo-1604871082903-5458d164167a?w=1920&q=80",
       gradient: "gradient-hero-warm",
@@ -591,11 +608,11 @@ export const countries: Record<string, CountryContent> = {
     whyAustralia: [
       {
         title: "A stable, prosperous future for your family",
-        body: "Australia offers economic stability, political certainty and personal safety — backed by world-class education, universal healthcare and PR-to-citizenship in 4 years.",
+        body: "Australia offers economic stability, political certainty and personal safety - backed by world-class education, universal healthcare and PR-to-citizenship in 4 years.",
       },
       {
         title: "Salary uplift for Pakistani engineers and IT professionals",
-        body: "A senior mechanical engineer earning PKR 250,000/month in Karachi can earn AUD $120,000+ in Perth or Brisbane — a 4–5× increase even after cost of living. Plus 11% super, paid leave and Medicare.",
+        body: "A senior mechanical engineer earning PKR 250,000/month in Karachi can earn AUD $120,000+ in Perth or Brisbane - a 4–5× increase even after cost of living. Plus 11% super, paid leave and Medicare.",
       },
       {
         title: "A growing Pakistani-Australian community",
@@ -606,8 +623,8 @@ export const countries: Record<string, CountryContent> = {
         body: "Pakistani MBBS graduates can pursue the AMC pathway, then AHPRA registration and eventually PR via subclass 189 or 482. We work with AMC-prep tutors and have placed Pakistani GPs in regional Victoria and rural Queensland.",
       },
       {
-        title: "Education for children — public schools and G8 universities",
-        body: "Free public schooling (often co-ed but quality varies — we advise on suburb-by-suburb). Australian permanent residents pay domestic university fees (1/3 of international rates) for tier-1 G8 universities like UNSW, Melbourne and ANU.",
+        title: "Education for children - public schools and G8 universities",
+        body: "Free public schooling (often co-ed but quality varies - we advise on suburb-by-suburb). Australian permanent residents pay domestic university fees (1/3 of international rates) for tier-1 G8 universities like UNSW, Melbourne and ANU.",
       },
       {
         title: "Halal lifestyle, prayer infrastructure, family-friendly",
@@ -620,7 +637,7 @@ export const countries: Record<string, CountryContent> = {
         name: "Skilled Independent",
         href: "/services/skilled-migration",
         whyPopular:
-          "Strongest pathway for Pakistani engineers and IT professionals with high IELTS / PTE scores. No state restriction — you can live in Sydney, Melbourne or Perth.",
+          "Strongest pathway for Pakistani engineers and IT professionals with high IELTS / PTE scores. No state restriction - you can live in Sydney, Melbourne or Perth.",
       },
       {
         number: "190",
@@ -634,7 +651,7 @@ export const countries: Record<string, CountryContent> = {
         name: "TSS Employer-Sponsored",
         href: "/services/employer-sponsored",
         whyPopular:
-          "Pakistani professionals with strong English and Gulf or UK experience are competitive for Australian employer sponsorship — particularly in mining engineering, IT security and healthcare.",
+          "Pakistani professionals with strong English and Gulf or UK experience are competitive for Australian employer sponsorship - particularly in mining engineering, IT security and healthcare.",
       },
       {
         number: "500",
@@ -648,12 +665,12 @@ export const countries: Record<string, CountryContent> = {
       {
         title: "HEC attestation is mandatory for Pakistani degrees",
         detail:
-          "The Higher Education Commission of Pakistan must attest every educational degree (matric, intermediate, bachelor, masters) before submission to Australian assessing authorities. HEC verifies the institution, then attests — usually 2–4 weeks. The original degree, attested transcript, and HEC stamp are all required.",
+          "The Higher Education Commission of Pakistan must attest every educational degree (matric, intermediate, bachelor, masters) before submission to Australian assessing authorities. HEC verifies the institution, then attests - usually 2–4 weeks. The original degree, attested transcript, and HEC stamp are all required.",
       },
       {
         title: "PSV (Police Clearance) via PSCA, NADRA or local Special Branch",
         detail:
-          "Police Verification certificates for Australian visa applications can come from the Punjab Safe Cities Authority (PSCA — Lahore, Faisalabad, Multan), NADRA-issued PSV, or the District Special Branch in your home district. Cost: PKR 1,200–2,500. Valid 6 months. Sindh and KP applicants typically use district SB or NADRA.",
+          "Police Verification certificates for Australian visa applications can come from the Punjab Safe Cities Authority (PSCA - Lahore, Faisalabad, Multan), NADRA-issued PSV, or the District Special Branch in your home district. Cost: PKR 1,200–2,500. Valid 6 months. Sindh and KP applicants typically use district SB or NADRA.",
       },
       {
         title: "NACES verification for medical and IT qualifications",
@@ -663,10 +680,10 @@ export const countries: Record<string, CountryContent> = {
       {
         title: "IELTS / PTE test centres in Pakistan",
         detail:
-          "British Council (Karachi, Lahore, Islamabad, Faisalabad) and IDP Education for IELTS. PTE Academic at Pearson VUE in Karachi, Lahore and Islamabad. Pakistani applicants typically achieve highest scores in writing — PTE often easier for spoken module.",
+          "British Council (Karachi, Lahore, Islamabad, Faisalabad) and IDP Education for IELTS. PTE Academic at Pearson VUE in Karachi, Lahore and Islamabad. Pakistani applicants typically achieve highest scores in writing - PTE often easier for spoken module.",
       },
       {
-        title: "Engineers Australia — CDR is the default for Pakistani graduates",
+        title: "Engineers Australia - CDR is the default for Pakistani graduates",
         detail:
           "Pakistan is not a Washington Accord signatory, so Pakistani engineering graduates submit a full Competency Demonstration Report (CDR) regardless of university. Three career episodes plus a summary statement. CMG provides full CDR drafting and mentoring.",
       },
@@ -714,47 +731,55 @@ export const countries: Record<string, CountryContent> = {
       {
         question: "Do Pakistani engineering degrees need a CDR for Engineers Australia?",
         answer:
-          "Yes — Pakistan is not a signatory to the Washington Accord, so Pakistani engineering degrees (even from UET, NUST, GIKI or other PEC-accredited institutions) require a Competency Demonstration Report (CDR) for Engineers Australia assessment. The CDR involves three career episodes, a summary statement, continuing professional development records and your PEC registration. CMG provides comprehensive CDR drafting, mentoring and review services — our CDRs have a >97% acceptance rate.",
+          "Yes - Pakistan is not a signatory to the Washington Accord, so Pakistani engineering degrees (even from UET, NUST, GIKI or other PEC-accredited institutions) require a Competency Demonstration Report (CDR) for Engineers Australia assessment. The CDR involves three career episodes, a summary statement, continuing professional development records and your PEC registration. CMG provides comprehensive CDR drafting, mentoring and review services - our CDRs have a >97% acceptance rate.",
+        category: "General",
       },
       {
         question: "How do I get my HEC attestation for an Australian visa application?",
         answer:
-          "Submit your original degree and transcripts to HEC headquarters in Islamabad or HEC regional offices (Karachi, Lahore, Peshawar, Quetta). Fee: PKR 800 per document. Processing: 7–14 working days. HEC verifies your institution and applies a tamper-evident attestation stamp. You then submit HEC-attested documents to Engineers Australia, ACS, CPA Australia or whichever assessing body applies. For Australian visa lodgement, no further attestation is needed — but HEC is the prerequisite for assessment.",
+          "Submit your original degree and transcripts to HEC headquarters in Islamabad or HEC regional offices (Karachi, Lahore, Peshawar, Quetta). Fee: PKR 800 per document. Processing: 7–14 working days. HEC verifies your institution and applies a tamper-evident attestation stamp. You then submit HEC-attested documents to Engineers Australia, ACS, CPA Australia or whichever assessing body applies. For Australian visa lodgement, no further attestation is needed - but HEC is the prerequisite for assessment.",
+        category: "Documents",
       },
       {
         question: "What's the best police clearance to submit for an Australian visa from Pakistan?",
         answer:
-          "Three options are widely accepted: (1) PSCA Police Character Certificate (Punjab Safe Cities Authority — fastest, available online, PKR 1,200), (2) NADRA-issued Police Clearance Certificate (recently introduced, available via NADRA centres), or (3) District Special Branch certificate (older route, used in Sindh and KP). All three are accepted by Australian Home Affairs. We typically recommend PSCA for Punjab residents (3-day turnaround) and NADRA for Sindh and KP residents. Valid 6 months from issue.",
+          "Three options are widely accepted: (1) PSCA Police Character Certificate (Punjab Safe Cities Authority - fastest, available online, PKR 1,200), (2) NADRA-issued Police Clearance Certificate (recently introduced, available via NADRA centres), or (3) District Special Branch certificate (older route, used in Sindh and KP). All three are accepted by Australian Home Affairs. We typically recommend PSCA for Punjab residents (3-day turnaround) and NADRA for Sindh and KP residents. Valid 6 months from issue.",
+        category: "Documents",
       },
       {
         question: "Can I migrate to Australia from Pakistan as a doctor?",
         answer:
-          "Yes, via the AMC (Australian Medical Council) pathway. Pakistani MBBS graduates: (1) verify your degree via PMC and have it ECFMG-certified, (2) sit AMC MCQ exam (offered globally including Karachi and Islamabad), (3) sit AMC clinical exam (offered only in Australia — usually Sydney or Melbourne), (4) apply for AHPRA registration and (5) secure a supervised position. Total timeline: 2–4 years. Alternatively, GPs with UK/Ireland/Canada specialist registration can use the Competent Authority Pathway (faster). CMG works with AMC-prep providers in Pakistan and Australia.",
+          "Yes, via the AMC (Australian Medical Council) pathway. Pakistani MBBS graduates: (1) verify your degree via PMC and have it ECFMG-certified, (2) sit AMC MCQ exam (offered globally including Karachi and Islamabad), (3) sit AMC clinical exam (offered only in Australia - usually Sydney or Melbourne), (4) apply for AHPRA registration and (5) secure a supervised position. Total timeline: 2–4 years. Alternatively, GPs with UK/Ireland/Canada specialist registration can use the Competent Authority Pathway (faster). CMG works with AMC-prep providers in Pakistan and Australia.",
+        category: "General",
       },
       {
         question: "How much money do I need to migrate from Pakistan to Australia?",
         answer:
-          "Government fees alone: AUD $4,770 for 189/190 primary, AUD $2,385 per adult dependent, AUD $1,195 per child. Skills assessment AUD $500–$900. IELTS/PTE AUD $385. Translations and attestations PKR 50,000–100,000 total. Settlement funds (officially recommended): AUD $40,000–$60,000 for a family of 4 to cover 3–6 months of Australian living costs. CMG professional fees are quoted on assessment — typically AUD $4,000–$7,000 for end-to-end skilled migration support.",
+          "Government fees alone: AUD $4,770 for 189/190 primary, AUD $2,385 per adult dependent, AUD $1,195 per child. Skills assessment AUD $500–$900. IELTS/PTE AUD $385. Translations and attestations PKR 50,000–100,000 total. Settlement funds (officially recommended): AUD $40,000–$60,000 for a family of 4 to cover 3–6 months of Australian living costs. CMG professional fees are quoted on assessment - typically AUD $4,000–$7,000 for end-to-end skilled migration support.",
+        category: "General",
       },
       {
         question: "Can my wife and children migrate with me from Pakistan?",
         answer:
-          "Yes — your spouse and dependent children (under 18, or 18–22 if financially dependent and studying full-time) are included as secondary applicants on your same visa application. Wife's nikah-nama and children's birth certificates must be translated by a NAATI-certified translator and submitted with HEC attestation (where applicable). Spouse can claim 10 partner points if they have a positive skills assessment and Competent English. CMG manages family file structuring routinely.",
+          "Yes - your spouse and dependent children (under 18, or 18–22 if financially dependent and studying full-time) are included as secondary applicants on your same visa application. Wife's nikah-nama and children's birth certificates must be translated by a NAATI-certified translator and submitted with HEC attestation (where applicable). Spouse can claim 10 partner points if they have a positive skills assessment and Competent English. CMG manages family file structuring routinely.",
+        category: "Family & Dependents",
       },
       {
         question: "Is it easier to migrate from Pakistan via student visa or directly via 189?",
         answer:
           "Direct via 189/190 is faster, cheaper and the preferred route for high-scoring engineers, IT specialists and doctors. The student pathway (Subclass 500 → 485 Graduate → 190/491) is the right choice if (a) your points score is below 80, (b) you want Australian work experience to earn 5–20 additional points, or (c) you're under 30 and can absorb the 2-year study cost. The student route typically costs AUD $60,000–$90,000 total but builds a much stronger PR application. CMG runs a free Pakistan-specific assessment to recommend the right path.",
+        category: "General",
       },
       {
         question: "What jobs are most in demand from Pakistani applicants right now?",
         answer:
           "Mechanical, electrical and civil engineers (especially with oil & gas or mining experience), GPs and specialist doctors, registered nurses, ICT security specialists, software engineers and accountants. The 2024 Core Skills Occupation List confirmed strong long-term demand in healthcare, construction, IT security and engineering. Demand for mining engineers is particularly strong in WA and Queensland.",
+        category: "General",
       },
     ],
     cta: {
-      headline: "From Lahore to Sydney — your Australian visa starts here",
-      body: "CMG's MARA-registered agents have guided hundreds of Pakistani engineers, doctors and IT professionals to Australian PR. Book a free consultation — we'll assess your points, your HEC documents and your realistic timeline to a visa grant.",
+      headline: "From Lahore to Sydney - your Australian visa starts here",
+      body: "CMG's MARA-registered agents have guided hundreds of Pakistani engineers, doctors and IT professionals to Australian PR. Book a free consultation - we'll assess your points, your HEC documents and your realistic timeline to a visa grant.",
     },
   },
 
@@ -769,7 +794,7 @@ export const countries: Record<string, CountryContent> = {
     demonym: "Filipino",
     cardBlurb:
       "Nurses, aged care workers, tradespeople and seafarers from Manila, Cebu and Davao. CMG handles AHPRA registration, NBI clearance and POEA-PSA red-ribbon authentication.",
-    metaTitle: "Migrate to Australia from the Philippines — CMG MARA",
+    metaTitle: "Migrate to Australia from the Philippines - CMG MARA",
     metaDescription:
       "Filipino nurses, carers and tradespeople secure Australian PR with CMG. AHPRA, NBI clearance, PSA and red-ribbon document guidance from Dubai-based MARA agents.",
     keywords: [
@@ -817,7 +842,7 @@ export const countries: Record<string, CountryContent> = {
       },
       {
         title: "Healthcare workforce desperately needed",
-        body: "Australian healthcare faces a chronic shortage of nurses, aged care workers and disability support workers. Aged Care Worker (ANZSCO 423111) is on the priority migration list — many Filipino applicants secure 482 sponsorship within 6 months.",
+        body: "Australian healthcare faces a chronic shortage of nurses, aged care workers and disability support workers. Aged Care Worker (ANZSCO 423111) is on the priority migration list - many Filipino applicants secure 482 sponsorship within 6 months.",
       },
       {
         title: "Higher pay, better conditions than KSA / UAE nursing contracts",
@@ -863,34 +888,34 @@ export const countries: Record<string, CountryContent> = {
         name: "Employer Nomination Scheme (PR)",
         href: "/services/employer-sponsored",
         whyPopular:
-          "Filipino nurses on 482 visas convert to 186 PR via the Temporary Residence Transition stream after 3 years with the same sponsor — a well-trodden path.",
+          "Filipino nurses on 482 visas convert to 186 PR via the Temporary Residence Transition stream after 3 years with the same sponsor - a well-trodden path.",
       },
     ],
     considerations: [
       {
         title: "PSA documents must come with the red ribbon",
         detail:
-          "Birth certificates, marriage certificates and CENOMAR (Certificate of No Marriage) issued by the Philippine Statistics Authority (PSA) must be on PSA security paper. The 'red ribbon' authentication by DFA has been replaced by the Apostille (Philippines joined the Hague Convention in 2019) — PSA documents are now Apostilled by the Department of Foreign Affairs.",
+          "Birth certificates, marriage certificates and CENOMAR (Certificate of No Marriage) issued by the Philippine Statistics Authority (PSA) must be on PSA security paper. The 'red ribbon' authentication by DFA has been replaced by the Apostille (Philippines joined the Hague Convention in 2019) - PSA documents are now Apostilled by the Department of Foreign Affairs.",
       },
       {
-        title: "NBI Clearance — valid for 6 months, available online",
+        title: "NBI Clearance - valid for 6 months, available online",
         detail:
           "The National Bureau of Investigation Clearance is your police certificate. Apply at nbi-clearance.com or visit any NBI satellite office (SM Malls, Robinsons). Fee: PHP 175. Issued in 1–3 days; valid 6 months. Australian Home Affairs accepts NBI Clearance for residents and former residents of the Philippines.",
       },
       {
-        title: "AHPRA registration for nurses — the 3 main routes",
+        title: "AHPRA registration for nurses - the 3 main routes",
         detail:
-          "Filipino RNs typically pursue one of three routes: (1) Outcomes-Based Assessment (OBA) — knowledge test plus an OSCE in Adelaide, (2) the new Modified Pathway introduced March 2024 for nurses with 1,800+ hours of equivalent practice, or (3) full Bachelor of Nursing top-up at an Australian university. AHPRA registration is the prerequisite for ANMAC skills assessment, which feeds into the 189/190/491 application.",
+          "Filipino RNs typically pursue one of three routes: (1) Outcomes-Based Assessment (OBA) - knowledge test plus an OSCE in Adelaide, (2) the new Modified Pathway introduced March 2024 for nurses with 1,800+ hours of equivalent practice, or (3) full Bachelor of Nursing top-up at an Australian university. AHPRA registration is the prerequisite for ANMAC skills assessment, which feeds into the 189/190/491 application.",
       },
       {
-        title: "IELTS / PTE / OET — OET is often best for nurses",
+        title: "IELTS / PTE / OET - OET is often best for nurses",
         detail:
           "Nurses, midwives and doctors can use the Occupational English Test (OET) instead of IELTS Academic. OET is healthcare-specific and Filipino RNs often score higher on it. Test centres in Manila, Cebu and Davao. Required: Grade B (350+) in each section for AHPRA registration.",
       },
       {
-        title: "Migration agent fraud is rampant — verify MARA status",
+        title: "Migration agent fraud is rampant - verify MARA status",
         detail:
-          "Many illegal 'recruiters' in the Philippines charge huge upfront fees for fake job offers. Always verify your migration agent's MARA registration at mara.gov.au. CMG is fully MARA-authorised and never charges fees against future jobs — we charge transparent professional fees for migration services only.",
+          "Many illegal 'recruiters' in the Philippines charge huge upfront fees for fake job offers. Always verify your migration agent's MARA registration at mara.gov.au. CMG is fully MARA-authorised and never charges fees against future jobs - we charge transparent professional fees for migration services only.",
       },
       {
         title: "POEA / Department of Migrant Workers compliance",
@@ -936,47 +961,55 @@ export const countries: Record<string, CountryContent> = {
       {
         question: "How do I get AHPRA registration as a Filipino nurse?",
         answer:
-          "Three pathways are available: (1) Outcomes-Based Assessment (OBA) — a multiple-choice cognitive exam plus an OSCE (Objective Structured Clinical Examination) held in Adelaide; (2) Modified Pathway (introduced March 2024) — for nurses with substantial recent practice equivalent to Australian standards, no OSCE required; or (3) Bridging program — a 6-month nursing top-up course at an Australian university for nurses needing additional clinical training. You also need OET Grade B (350+) or IELTS 7.0 each band. CMG works with all three routes and AMC-AHPRA prep providers.",
+          "Three pathways are available: (1) Outcomes-Based Assessment (OBA) - a multiple-choice cognitive exam plus an OSCE (Objective Structured Clinical Examination) held in Adelaide; (2) Modified Pathway (introduced March 2024) - for nurses with substantial recent practice equivalent to Australian standards, no OSCE required; or (3) Bridging program - a 6-month nursing top-up course at an Australian university for nurses needing additional clinical training. You also need OET Grade B (350+) or IELTS 7.0 each band. CMG works with all three routes and AMC-AHPRA prep providers.",
+        category: "General",
       },
       {
         question: "What's the difference between an employer-sponsored (482) and skilled (189/190) visa for Filipino nurses?",
         answer:
-          "Subclass 482 (TSS) is sponsor-dependent — you must work for the sponsoring employer, typically a hospital or aged care provider, for 3 years before you can apply for 186 PR. It's faster to obtain (3–6 months) but ties you to one employer. Subclass 189/190 is independent skilled migration — you can work for any employer anywhere in Australia from day one as a permanent resident, but it requires a higher points score (typically 80+) and takes 14–22 months. CMG recommends 482 for nurses who want a fast start, 190 for those with strong English and points.",
+          "Subclass 482 (TSS) is sponsor-dependent - you must work for the sponsoring employer, typically a hospital or aged care provider, for 3 years before you can apply for 186 PR. It's faster to obtain (3–6 months) but ties you to one employer. Subclass 189/190 is independent skilled migration - you can work for any employer anywhere in Australia from day one as a permanent resident, but it requires a higher points score (typically 80+) and takes 14–22 months. CMG recommends 482 for nurses who want a fast start, 190 for those with strong English and points.",
+        category: "General",
       },
       {
         question: "Do I need PSA red-ribbon documents or Apostille for an Australian visa?",
         answer:
           "Apostille has replaced red ribbon since the Philippines joined the Hague Convention in 2019. Your PSA-issued documents (birth certificate, marriage certificate, CENOMAR) must be Apostilled by the DFA Office of Consular Affairs (Aseana) or any DFA Consular Office (Cebu, Davao, Bacolod, etc.). Apostille fee: PHP 200. Processing: 1–3 working days. PSA documents printed within 6 months of submission are required.",
+        category: "Documents",
       },
       {
         question: "How do Filipino aged care workers get sponsored to Australia?",
         answer:
           "Aged Care Worker (ANZSCO 423111) is on the Core Skills Occupation List for the 482 visa. Australian aged care providers (Regis, Estia, Bupa, RFBI, Uniting) actively sponsor Filipino workers with a Certificate III in Individual Support or equivalent Philippine qualifications. Pathway: TRA skills assessment, IELTS 5.0 each band minimum, 482 visa for 4 years, then 186 ENS PR via the TRT stream. CMG matches qualified candidates with accredited Australian sponsors.",
+        category: "General",
       },
       {
         question: "Can my family migrate with me from the Philippines?",
         answer:
-          "Yes — your spouse and dependent children (under 18, or 18–22 if dependent and studying) are included as secondary applicants. PSA-issued marriage certificate and children's birth certificates (Apostilled) are required. Children must meet health requirements. If your spouse has a separate skills assessment, they can claim 10 partner points to boost your EOI score. CMG manages family files end-to-end.",
+          "Yes - your spouse and dependent children (under 18, or 18–22 if dependent and studying) are included as secondary applicants. PSA-issued marriage certificate and children's birth certificates (Apostilled) are required. Children must meet health requirements. If your spouse has a separate skills assessment, they can claim 10 partner points to boost your EOI score. CMG manages family files end-to-end.",
+        category: "Family & Dependents",
       },
       {
         question: "Is it true that Filipino welders, carpenters and tradespeople are in demand in Australia?",
         answer:
-          "Yes — Welder, Carpenter, Plumber, Electrician and Bricklayer are all on the Core Skills Occupation List with strong long-term demand. The trades pathway typically goes via TRA (Trades Recognition Australia) skills assessment, which involves a paper-based qualification review plus a technical interview or practical assessment. Filipino tradespeople with 5+ years of equivalent experience and OEC-compliant employment records have strong PR pathways via subclass 189, 190 and 491.",
+          "Yes - Welder, Carpenter, Plumber, Electrician and Bricklayer are all on the Core Skills Occupation List with strong long-term demand. The trades pathway typically goes via TRA (Trades Recognition Australia) skills assessment, which involves a paper-based qualification review plus a technical interview or practical assessment. Filipino tradespeople with 5+ years of equivalent experience and OEC-compliant employment records have strong PR pathways via subclass 189, 190 and 491.",
+        category: "General",
       },
       {
         question: "How much will the migration process cost me from the Philippines?",
         answer:
-          "Government fees: AUD $4,770 for 189/190 primary, AUD $2,385 per adult dependent. Skills assessment AUD $500–$900. AHPRA registration AUD $1,500–$3,000 (nurses). IELTS/OET AUD $385. Total settlement funds recommended: AUD $25,000–$40,000 for a family of 4. CMG professional fees are quoted transparently after free assessment — typically AUD $4,000–$7,000 for end-to-end skilled migration support. Never pay a 'recruiter' upfront for a job offer.",
+          "Government fees: AUD $4,770 for 189/190 primary, AUD $2,385 per adult dependent. Skills assessment AUD $500–$900. AHPRA registration AUD $1,500–$3,000 (nurses). IELTS/OET AUD $385. Total settlement funds recommended: AUD $25,000–$40,000 for a family of 4. CMG professional fees are quoted transparently after free assessment - typically AUD $4,000–$7,000 for end-to-end skilled migration support. Never pay a 'recruiter' upfront for a job offer.",
+        category: "Costs & Fees",
       },
       {
         question: "Can I bring my parents from the Philippines once I'm in Australia?",
         answer:
-          "Yes — once you're an Australian permanent resident or citizen, you can sponsor your parents via the Contributory Parent visa (subclass 143). Fee: ~AUD $48,000 per parent (one-off). Processing: 4–6 years. The Sponsored Parent Temporary visa (subclass 870) is a non-PR option allowing 5–10 years of stay. Many Filipino families pursue 143 once their children are established and they've bought a home in Australia.",
+          "Yes - once you're an Australian permanent resident or citizen, you can sponsor your parents via the Contributory Parent visa (subclass 143). Fee: ~AUD $48,000 per parent (one-off). Processing: 4–6 years. The Sponsored Parent Temporary visa (subclass 870) is a non-PR option allowing 5–10 years of stay. Many Filipino families pursue 143 once their children are established and they've bought a home in Australia.",
+        category: "General",
       },
     ],
     cta: {
-      headline: "From Manila to Melbourne — let CMG handle your visa",
-      body: "Whether you're a registered nurse from St. Luke's, a welder from Cebu or an aged care worker from Davao — CMG's MARA-registered agents have placed Filipino professionals in NSW Health, Victorian aged care and Tasmanian regional employers. Book a free consultation.",
+      headline: "From Manila to Melbourne - let CMG handle your visa",
+      body: "Whether you're a registered nurse from St. Luke's, a welder from Cebu or an aged care worker from Davao - CMG's MARA-registered agents have placed Filipino professionals in NSW Health, Victorian aged care and Tasmanian regional employers. Book a free consultation.",
     },
   },
 
@@ -991,7 +1024,7 @@ export const countries: Record<string, CountryContent> = {
     demonym: "Egyptian",
     cardBlurb:
       "Engineers, doctors and teachers from Cairo, Alexandria and Giza. CMG navigates Ministry of Foreign Affairs attestation, Egyptian police clearance and Arabic document translation.",
-    metaTitle: "Migrate to Australia from Egypt — CMG MARA Agents",
+    metaTitle: "Migrate to Australia from Egypt - CMG MARA Agents",
     metaDescription:
       "Egyptian engineers, doctors and IT professionals migrate to Australia with CMG. MOFA attestation, Arabic translation and MARA agent guidance from Dubai.",
     keywords: [
@@ -1007,7 +1040,7 @@ export const countries: Record<string, CountryContent> = {
       eyebrow: "From Egypt to Australia",
       headline: "Migrate to Australia from Egypt",
       subheadline:
-        "Egyptian engineers, doctors, teachers and IT professionals are increasingly choosing Australia for its stability, salary uplift and clear pathway to citizenship. CMG's MARA-registered agents guide applicants from Cairo, Alexandria and Giza through subclass 189, 190 and 482 visas — with expertise in Egyptian Ministry of Foreign Affairs attestation, Arabic NAATI translation and engineering qualification recognition.",
+        "Egyptian engineers, doctors, teachers and IT professionals are increasingly choosing Australia for its stability, salary uplift and clear pathway to citizenship. CMG's MARA-registered agents guide applicants from Cairo, Alexandria and Giza through subclass 189, 190 and 482 visas - with expertise in Egyptian Ministry of Foreign Affairs attestation, Arabic NAATI translation and engineering qualification recognition.",
       bgImage:
         "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=1920&q=80",
       gradient: "gradient-hero-warm",
@@ -1035,7 +1068,7 @@ export const countries: Record<string, CountryContent> = {
     whyAustralia: [
       {
         title: "Stability and a future for your children",
-        body: "Australia offers political stability, a strong currency and decades of consistent economic growth. Egyptian families consistently cite their children's future as the #1 driver for migration — Australian PR delivers exactly that.",
+        body: "Australia offers political stability, a strong currency and decades of consistent economic growth. Egyptian families consistently cite their children's future as the #1 driver for migration - Australian PR delivers exactly that.",
       },
       {
         title: "Massive salary uplift in engineering and medicine",
@@ -1064,7 +1097,7 @@ export const countries: Record<string, CountryContent> = {
         name: "Skilled Independent",
         href: "/services/skilled-migration",
         whyPopular:
-          "Strongest pathway for Egyptian petroleum, chemical and civil engineers with high English scores. No state restriction — you can settle anywhere from Sydney to Perth.",
+          "Strongest pathway for Egyptian petroleum, chemical and civil engineers with high English scores. No state restriction - you can settle anywhere from Sydney to Perth.",
       },
       {
         number: "190",
@@ -1078,7 +1111,7 @@ export const countries: Record<string, CountryContent> = {
         name: "TSS Employer-Sponsored",
         href: "/services/employer-sponsored",
         whyPopular:
-          "Egyptian engineers with Gulf experience (Saudi Aramco, ADNOC, Kuwait Oil) are actively recruited by Australian mining and energy companies — particularly in WA's Pilbara and Queensland's Surat Basin.",
+          "Egyptian engineers with Gulf experience (Saudi Aramco, ADNOC, Kuwait Oil) are actively recruited by Australian mining and energy companies - particularly in WA's Pilbara and Queensland's Surat Basin.",
       },
       {
         number: "186",
@@ -1105,7 +1138,7 @@ export const countries: Record<string, CountryContent> = {
           "All Arabic-language documents (birth certificates, marriage certificates, military service records, police certificates) must be translated by NAATI-certified translators. CMG works with NAATI-accredited Arabic translators in Dubai and Australia. Allow 5–7 working days; cost AUD $50–$120 per document.",
       },
       {
-        title: "Engineering qualifications — CDR via Engineers Australia",
+        title: "Engineering qualifications - CDR via Engineers Australia",
         detail:
           "Egypt is not a Washington Accord signatory, so Egyptian engineering graduates submit a full Competency Demonstration Report (CDR). Three career episodes plus a summary statement mapping experience to ANZSCO. CMG provides full CDR drafting and review services.",
       },
@@ -1115,7 +1148,7 @@ export const countries: Record<string, CountryContent> = {
           "British Council and IDP Education deliver IELTS in Cairo (Maadi, Dokki) and Alexandria. PTE Academic at Pearson VUE in Cairo. Egyptian candidates often choose PTE due to its faster turnaround (results in 2 working days vs 13 days for IELTS). AUC alumni typically score IELTS 7.5+ without issue.",
       },
       {
-        title: "Military service — declaration is mandatory",
+        title: "Military service - declaration is mandatory",
         detail:
           "Egyptian male applicants must declare their military service status (completed, exempted, or deferred) in their visa application. Military service exemption certificates (نموذج 6) issued by the Egyptian Ministry of Defence must be translated, MOFA-attested and submitted. Omitting this is a common cause of refusal.",
       },
@@ -1159,46 +1192,54 @@ export const countries: Record<string, CountryContent> = {
         question: "How do I get my Egyptian engineering degree recognised in Australia?",
         answer:
           "Via a Competency Demonstration Report (CDR) submitted to Engineers Australia. Egypt is not a Washington Accord signatory, so even degrees from Cairo University, Ain Shams, AUC and Alexandria require a CDR. The CDR includes three career episodes (detailed engineering project narratives), a summary statement mapping your experience to ANZSCO competency elements, and CPD records. Processing at Engineers Australia takes 6–10 weeks; CMG provides full CDR drafting and mentoring with a >97% acceptance rate.",
+        category: "Eligibility & Skills",
       },
       {
         question: "What documents need attestation from Egypt for an Australian visa?",
         answer:
-          "Educational degrees, transcripts, birth certificates, marriage certificates, military service certificates and police clearance certificates. The attestation chain is: (1) issuing authority (e.g., Egyptian Supreme Council of Universities for degrees), (2) Egyptian Ministry of Foreign Affairs (MOFA), and optionally (3) the Australian Embassy in Cairo. All Arabic documents must then be NAATI-translated for visa lodgement. CMG manages the full chain — typically 4–6 weeks for a complete document set.",
+          "Educational degrees, transcripts, birth certificates, marriage certificates, military service certificates and police clearance certificates. The attestation chain is: (1) issuing authority (e.g., Egyptian Supreme Council of Universities for degrees), (2) Egyptian Ministry of Foreign Affairs (MOFA), and optionally (3) the Australian Embassy in Cairo. All Arabic documents must then be NAATI-translated for visa lodgement. CMG manages the full chain - typically 4–6 weeks for a complete document set.",
+        category: "Documents",
       },
       {
         question: "Can Egyptian doctors practise medicine in Australia?",
         answer:
           "Yes, via the AMC (Australian Medical Council) pathway. Steps: (1) verify your Egyptian MBBS degree via the Egyptian Medical Syndicate and have it ECFMG-certified, (2) sit the AMC MCQ exam in Cairo or Dubai, (3) sit the AMC clinical exam in Australia (Sydney/Melbourne/Adelaide), (4) apply for AHPRA registration and (5) secure a supervised position. Total timeline: 2–4 years. Alternatively, GPs with UK, Ireland, Canada or New Zealand specialist registration can use the Competent Authority Pathway (much faster). CMG works with AMC-prep providers in Cairo and Australia.",
+        category: "General",
       },
       {
         question: "Do I need to provide my Egyptian military service record?",
         answer:
-          "Yes — Egyptian male applicants must declare their military service status. You'll need to provide either: (a) military service completion certificate (شهادة أداء الخدمة), (b) exemption certificate (نموذج 6 — exemption form), or (c) deferral evidence (if still studying or working abroad). Documents must be MOFA-attested and NAATI-translated. Failing to declare or providing inconsistent military service information is a common cause of visa refusal.",
+          "Yes - Egyptian male applicants must declare their military service status. You'll need to provide either: (a) military service completion certificate (شهادة أداء الخدمة), (b) exemption certificate (نموذج 6 - exemption form), or (c) deferral evidence (if still studying or working abroad). Documents must be MOFA-attested and NAATI-translated. Failing to declare or providing inconsistent military service information is a common cause of visa refusal.",
+        category: "General",
       },
       {
         question: "How long does the Australian visa process take from Egypt?",
         answer:
           "Realistically 14–22 months end-to-end: skills assessment (CDR 6–10 weeks for engineers, AMC 12–24 months for doctors), IELTS/PTE preparation (1–3 months), EOI submission, wait for invitation (typically 3–8 months for engineers at 85+ points), visa lodgement to grant (75% of 189 cases decided within 12 months). Higher points scores get invited faster. Egyptian applicants typically achieve strong English scores, which significantly speeds up the invitation process.",
+        category: "Process & Timeline",
       },
       {
         question: "Can my family migrate with me from Egypt?",
         answer:
-          "Yes — your spouse and dependent children (under 18, or 18–22 if financially dependent) are included as secondary applicants on the same visa application. Marriage certificate and children's birth certificates require MOFA attestation and NAATI Arabic translation. Spouse can earn 10 partner points with a positive skills assessment and Competent English. Spouse and children inherit all visa work and study rights upon grant.",
+          "Yes - your spouse and dependent children (under 18, or 18–22 if financially dependent) are included as secondary applicants on the same visa application. Marriage certificate and children's birth certificates require MOFA attestation and NAATI Arabic translation. Spouse can earn 10 partner points with a positive skills assessment and Competent English. Spouse and children inherit all visa work and study rights upon grant.",
+        category: "Family & Dependents",
       },
       {
         question: "How much will the migration process cost from Egypt?",
         answer:
-          "Government fees: AUD $4,770 for 189/190 primary applicant, AUD $2,385 per adult dependent, AUD $1,195 per child. Engineers Australia CDR: AUD $850. IELTS/PTE: AUD $385. MOFA attestations and NAATI translations: EGP 8,000–15,000 (approx AUD $400–$700). Recommended settlement funds: AUD $30,000–$50,000 for a family of 4. CMG professional fees are quoted transparently after free consultation — typically AUD $4,000–$7,000 for full end-to-end skilled migration support.",
+          "Government fees: AUD $4,770 for 189/190 primary applicant, AUD $2,385 per adult dependent, AUD $1,195 per child. Engineers Australia CDR: AUD $850. IELTS/PTE: AUD $385. MOFA attestations and NAATI translations: EGP 8,000–15,000 (approx AUD $400–$700). Recommended settlement funds: AUD $30,000–$50,000 for a family of 4. CMG professional fees are quoted transparently after free consultation - typically AUD $4,000–$7,000 for full end-to-end skilled migration support.",
+        category: "Costs & Fees",
       },
       {
         question: "Are Egyptian Coptic Christian families well-supported in Australia?",
         answer:
-          "Yes — Australia has an established Coptic Orthodox community of 80,000+ members concentrated in Sydney (Glenwood, Donvale), Melbourne (Coburg, Knoxfield) and Brisbane. Multiple Coptic Orthodox churches, Coptic schools (e.g., St Mark's Coptic Orthodox College in Wattle Grove), Coptic festivals and Arabic-Coptic Sunday schools provide a strong cultural home for Egyptian Christian families.",
+          "Yes - Australia has an established Coptic Orthodox community of 80,000+ members concentrated in Sydney (Glenwood, Donvale), Melbourne (Coburg, Knoxfield) and Brisbane. Multiple Coptic Orthodox churches, Coptic schools (e.g., St Mark's Coptic Orthodox College in Wattle Grove), Coptic festivals and Arabic-Coptic Sunday schools provide a strong cultural home for Egyptian Christian families.",
+        category: "General",
       },
     ],
     cta: {
-      headline: "From Cairo to Sydney — your Australian future awaits",
-      body: "Whether you're an engineer at Schlumberger, a GP in Alexandria or a teacher at AUC — CMG's MARA-registered agents have placed Egyptian professionals across Australia. Book a free consultation and we'll map your realistic 12–18 month path to PR.",
+      headline: "From Cairo to Sydney - your Australian future awaits",
+      body: "Whether you're an engineer at Schlumberger, a GP in Alexandria or a teacher at AUC - CMG's MARA-registered agents have placed Egyptian professionals across Australia. Book a free consultation and we'll map your realistic 12–18 month path to PR.",
     },
   },
 
@@ -1213,9 +1254,9 @@ export const countries: Record<string, CountryContent> = {
     demonym: "Saudi resident",
     cardBlurb:
       "Expat engineers, doctors, IT and finance professionals in Riyadh, Jeddah and Dammam. CMG handles Saudi MOFA authentication, Absher clearance and Iqama-based document verification.",
-    metaTitle: "Migrate to Australia from Saudi Arabia — CMG MARA",
+    metaTitle: "Migrate to Australia from Saudi Arabia - CMG MARA",
     metaDescription:
-      "Saudi residents — Saudi nationals and expat workers — secure Australian PR with CMG. MOFA attestation, Iqama-based documents and MARA agent guidance.",
+      "Saudi residents - Saudi nationals and expat workers - secure Australian PR with CMG. MOFA attestation, Iqama-based documents and MARA agent guidance.",
     keywords: [
       "migrate to Australia from Saudi Arabia",
       "Australia visa from Riyadh",
@@ -1229,7 +1270,7 @@ export const countries: Record<string, CountryContent> = {
       eyebrow: "From Saudi Arabia to Australia",
       headline: "Migrate to Australia from Saudi Arabia",
       subheadline:
-        "Whether you're a Saudi national, an expat engineer at Aramco, or a healthcare professional working in Riyadh — Australia offers what Saudi residency cannot: permanent settlement, citizenship in 4 years and a future built for your family. CMG's MARA-registered agents handle Saudi MOFA attestation, Absher clearance, Iqama-based document verification and the realities of leaving the Kingdom.",
+        "Whether you're a Saudi national, an expat engineer at Aramco, or a healthcare professional working in Riyadh - Australia offers what Saudi residency cannot: permanent settlement, citizenship in 4 years and a future built for your family. CMG's MARA-registered agents handle Saudi MOFA attestation, Absher clearance, Iqama-based document verification and the realities of leaving the Kingdom.",
       bgImage:
         "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?w=1920&q=80",
       gradient: "gradient-hero-deep",
@@ -1257,7 +1298,7 @@ export const countries: Record<string, CountryContent> = {
     whyAustralia: [
       {
         title: "Permanent settlement vs perpetual Iqama renewal",
-        body: "Saudi Iqama-based residency is conditional on employment and renewable every 1–3 years. Saudi Premium Residency exists but is expensive and limited. Australia grants permanent residency from day one — no employer dependency, no renewal anxiety.",
+        body: "Saudi Iqama-based residency is conditional on employment and renewable every 1–3 years. Saudi Premium Residency exists but is expensive and limited. Australia grants permanent residency from day one - no employer dependency, no renewal anxiety.",
       },
       {
         title: "Children grow up with citizenship rights",
@@ -1273,7 +1314,7 @@ export const countries: Record<string, CountryContent> = {
       },
       {
         title: "Lifestyle for families",
-        body: "Free-mixing public life, beaches, cinema, music — for many Saudi-resident families, particularly those with daughters, Australia delivers the everyday freedoms that Saudi residency cannot. Plus world-class public schools and universities.",
+        body: "Free-mixing public life, beaches, cinema, music - for many Saudi-resident families, particularly those with daughters, Australia delivers the everyday freedoms that Saudi residency cannot. Plus world-class public schools and universities.",
       },
       {
         title: "Pathway for high-net-worth Saudi nationals",
@@ -1286,7 +1327,7 @@ export const countries: Record<string, CountryContent> = {
         name: "Skilled Independent",
         href: "/services/skilled-migration",
         whyPopular:
-          "The dominant pathway for Saudi-based expat engineers, IT professionals and accountants with high points scores. No state restriction — settle anywhere in Australia.",
+          "The dominant pathway for Saudi-based expat engineers, IT professionals and accountants with high points scores. No state restriction - settle anywhere in Australia.",
       },
       {
         number: "190",
@@ -1319,7 +1360,7 @@ export const countries: Record<string, CountryContent> = {
       {
         title: "Home-country document authentication remains separate",
         detail:
-          "Documents from your home country (Indian degrees, Pakistani degrees, Egyptian degrees, etc.) must be authenticated in that country (HRD/MEA Apostille, HEC attestation, Egyptian MOFA) — they cannot be authenticated via Saudi MOFA. You'll need either a return trip or a power of attorney for someone in your home country.",
+          "Documents from your home country (Indian degrees, Pakistani degrees, Egyptian degrees, etc.) must be authenticated in that country (HRD/MEA Apostille, HEC attestation, Egyptian MOFA) - they cannot be authenticated via Saudi MOFA. You'll need either a return trip or a power of attorney for someone in your home country.",
       },
       {
         title: "Absher / Police clearance from Saudi Ministry of Interior",
@@ -1332,7 +1373,7 @@ export const countries: Record<string, CountryContent> = {
           "IELTS Academic is delivered by the British Council (Riyadh, Jeddah, Khobar, Al Khobar) and IDP Education. PTE Academic operates at Pearson VUE in Riyadh, Jeddah and Dammam. Both genders welcome at all centres post-2019 reforms. Slots typically book 2–3 weeks ahead.",
       },
       {
-        title: "Aramco employment evidence — special handling",
+        title: "Aramco employment evidence - special handling",
         detail:
           "Saudi Aramco, Sabic and similar major employers issue employment letters in specific formats. Australian assessors (Engineers Australia, ACS, CPA Australia) sometimes need supplementary detail on roles and responsibilities. CMG knows exactly how to structure Aramco reference letters for ANZSCO mapping.",
       },
@@ -1380,47 +1421,55 @@ export const countries: Record<string, CountryContent> = {
       {
         question: "Can I count my Saudi Arabia work experience toward Australian skilled migration points?",
         answer:
-          "Yes — overseas work experience earns up to 15 points (5 points for 3 years, 10 for 5 years, 15 for 8+ years) provided it's in your nominated ANZSCO occupation. Saudi-based expat workers at Aramco, Sabic, SAGIA companies and similar all qualify, provided you have detailed reference letters on company letterhead with dates, salary, duties and full-time/part-time confirmation. CMG specifically structures Saudi employment evidence for ACS, Engineers Australia and CPA Australia standards.",
+          "Yes - overseas work experience earns up to 15 points (5 points for 3 years, 10 for 5 years, 15 for 8+ years) provided it's in your nominated ANZSCO occupation. Saudi-based expat workers at Aramco, Sabic, SAGIA companies and similar all qualify, provided you have detailed reference letters on company letterhead with dates, salary, duties and full-time/part-time confirmation. CMG specifically structures Saudi employment evidence for ACS, Engineers Australia and CPA Australia standards.",
+        category: "Costs & Fees",
       },
       {
         question: "What documents from Saudi Arabia need MOFA attestation for Australia?",
         answer:
-          "Documents issued in Saudi Arabia: employment letters from your KSA employer, salary certificates, marriage certificates issued by Saudi authorities, and any commercial documents (for business visa applicants). The chain is: employer or Chamber of Commerce → Saudi Ministry of Foreign Affairs in Riyadh → optionally the Australian Embassy. Documents issued in your home country (degrees, your birth certificate, your home-country marriage certificate) need authentication in that country — Saudi MOFA cannot certify them.",
+          "Documents issued in Saudi Arabia: employment letters from your KSA employer, salary certificates, marriage certificates issued by Saudi authorities, and any commercial documents (for business visa applicants). The chain is: employer or Chamber of Commerce → Saudi Ministry of Foreign Affairs in Riyadh → optionally the Australian Embassy. Documents issued in your home country (degrees, your birth certificate, your home-country marriage certificate) need authentication in that country - Saudi MOFA cannot certify them.",
+        category: "Costs & Fees",
       },
       {
-        question: "I'm a Saudi national — can I get Australian PR?",
+        question: "I'm a Saudi national - can I get Australian PR?",
         answer:
-          "Yes. Saudi nationals qualify for all Australian visa subclasses on the same terms as any other applicant. Saudi citizenship is not a barrier to Australian PR or citizenship — Australia recognises dual citizenship, though Saudi Arabia generally does not (you'll need to consult Saudi authorities on your domestic position). High-net-worth Saudi nationals may also qualify for the upcoming National Innovation visa and subclass 188C Significant Investor stream.",
+          "Yes. Saudi nationals qualify for all Australian visa subclasses on the same terms as any other applicant. Saudi citizenship is not a barrier to Australian PR or citizenship - Australia recognises dual citizenship, though Saudi Arabia generally does not (you'll need to consult Saudi authorities on your domestic position). High-net-worth Saudi nationals may also qualify for the upcoming National Innovation visa and subclass 188C Significant Investor stream.",
+        category: "Costs & Fees",
       },
       {
         question: "Can I migrate from Saudi Arabia without going back to my home country first?",
         answer:
-          "Generally yes — but it requires careful planning. Home-country documents (your degree, your birth certificate) need authentication in your home country, which can be done via a Power of Attorney. Your Saudi MOFA attestation is done locally. Police clearances are required from every country you've lived in for 12+ months in the last 10 years — typically that means Saudi (via Absher) and your home country. CMG manages the parallel attestation chains and PCC timing routinely.",
+          "Generally yes - but it requires careful planning. Home-country documents (your degree, your birth certificate) need authentication in your home country, which can be done via a Power of Attorney. Your Saudi MOFA attestation is done locally. Police clearances are required from every country you've lived in for 12+ months in the last 10 years - typically that means Saudi (via Absher) and your home country. CMG manages the parallel attestation chains and PCC timing routinely.",
+        category: "Costs & Fees",
       },
       {
         question: "How do I get my Saudi police clearance for an Australian visa?",
         answer:
-          "Apply via the Absher portal (absher.sa) — log in with your Iqama, request a Criminal Record Certificate / Police Clearance, and pay SAR 80–200. Document is issued in Arabic, typically within 1–3 working days. You'll then need it MOFA-attested and NAATI-translated to English for submission to Australia. The certificate is valid 6 months from issue. If you're no longer in Saudi Arabia, you can request via the Saudi Embassy in your current country.",
+          "Apply via the Absher portal (absher.sa) - log in with your Iqama, request a Criminal Record Certificate / Police Clearance, and pay SAR 80–200. Document is issued in Arabic, typically within 1–3 working days. You'll then need it MOFA-attested and NAATI-translated to English for submission to Australia. The certificate is valid 6 months from issue. If you're no longer in Saudi Arabia, you can request via the Saudi Embassy in your current country.",
+        category: "Costs & Fees",
       },
       {
-        question: "I work for Aramco — does CMG handle my visa?",
+        question: "I work for Aramco - does CMG handle my visa?",
         answer:
-          "Yes. CMG has guided many Saudi Aramco engineers, IT professionals and finance staff through Australian visa applications. Aramco employment letters need specific structuring to map to ANZSCO competency standards for Engineers Australia, ACS or CPA Australia — we know exactly how. We also advise on the timing of your Aramco exit relative to your Australian visa grant to avoid contract breach penalties or repatriation flight obligations.",
+          "Yes. CMG has guided many Saudi Aramco engineers, IT professionals and finance staff through Australian visa applications. Aramco employment letters need specific structuring to map to ANZSCO competency standards for Engineers Australia, ACS or CPA Australia - we know exactly how. We also advise on the timing of your Aramco exit relative to your Australian visa grant to avoid contract breach penalties or repatriation flight obligations.",
+        category: "General",
       },
       {
         question: "How long does the Australian visa process take from Saudi Arabia?",
         answer:
           "Realistically 14–20 months end-to-end. Breakdown: skills assessment (6–10 weeks for engineers via CDR, 4–6 weeks for ACS), IELTS/PTE (1 month), parallel MOFA chains for Saudi and home-country documents (3–4 weeks), EOI submission, wait for invitation (1–8 months depending on points), visa lodgement to grant (typically 8–14 months for 189/190 at 85+ points). Saudi-based applicants with strong English scores and clear ANZSCO mapping tend to be invited in the first or second SkillSelect round.",
+        category: "Costs & Fees",
       },
       {
         question: "Can my family migrate from Saudi Arabia with me?",
         answer:
           "Yes. Your spouse and dependent children (under 18, or 18–22 if financially dependent) are included as secondary applicants on the same visa application. Marriage certificate and children's birth certificates may need authentication from either Saudi MOFA (if issued in KSA) or your home country (if issued there). All Arabic documents need NAATI-certified English translation. Spouses with their own skills assessment can earn 10 partner points to boost your EOI score. Children inherit all study and Medicare rights on grant.",
+        category: "Costs & Fees",
       },
     ],
     cta: {
       headline: "From the Kingdom to your Australian future",
-      body: "Whether you're an Aramco engineer, a Sabic professional, a Riyadh-based GP or a Saudi business owner — CMG's MARA-registered agents will assess your points, map your dual-country document chain and build your file to Australian Department standards. Free 30-minute consultation by video or in person at our Dubai office.",
+      body: "Whether you're an Aramco engineer, a Sabic professional, a Riyadh-based GP or a Saudi business owner - CMG's MARA-registered agents will assess your points, map your dual-country document chain and build your file to Australian Department standards. Free 30-minute consultation by video or in person at our Dubai office.",
     },
   },
 }

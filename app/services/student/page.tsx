@@ -4,7 +4,7 @@ import { visaContent } from "@/lib/visa-content"
 import JsonLd from "@/components/JsonLd"
 
 export const metadata: Metadata = {
-  title: "Student & Graduate Visas Australia — 500 & 485 | CMG",
+  title: "Student & Graduate Visas Australia - 500 & 485 | CMG",
   description: "Student visa (500) and temporary graduate visa (485) specialists. CMG guides international students from enrolment through post-study work rights and skilled migration.",
 }
 

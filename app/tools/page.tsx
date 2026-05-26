@@ -7,7 +7,7 @@ import CTABanner from "@/components/CTABanner"
 import { Calculator, DollarSign, Clock } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Australian Visa Tools — Points Calculator, Fee Estimator & Processing Times | CMG",
+  title: "Australian Visa Tools - Points Calculator, Fee Estimator & Processing Times | CMG",
   description: "Free Australian visa tools: points test calculator, government fee estimator, and current processing times for all major visa subclasses.",
 }
 
@@ -39,7 +39,7 @@ export default function ToolsPage() {
                 </div>
                 <div>
                   <h2 className="font-heading text-2xl font-bold text-cmg-text mb-1">Points Test Calculator</h2>
-                  <p className="text-cmg-slate">Estimate your skilled migration score across all categories — select one option per category.</p>
+                  <p className="text-cmg-slate">Estimate your skilled migration score across all categories - select one option per category.</p>
                 </div>
               </div>
               <div className="border border-gray-100 rounded-2xl p-6 md:p-8 bg-cmg-warm-white">
@@ -84,7 +84,7 @@ export default function ToolsPage() {
 
       <CTABanner
         headline="Want a Professional Assessment?"
-        body="Our calculators give you an estimate — our MARA-registered agents give you a definitive answer. Book your free 30-minute consultation."
+        body="Our calculators give you an estimate - our MARA-registered agents give you a definitive answer. Book your free 30-minute consultation."
         primaryCTA={{ label: "Book Free Consultation", href: "/contact" }}
         secondaryCTA={{ label: "View Services", href: "/services" }}
         variant="navy-gold"

@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 import { comparisonSummaries } from "@/lib/comparisons"
 
 export const metadata: Metadata = {
-  title: "Compare Australian Visas Side-by-Side — 189, 190, 491, 482, 186 | CMG",
+  title: "Compare Australian Visas Side-by-Side - 189, 190, 491, 482, 186 | CMG",
   description:
     "Side-by-side visa comparisons for the most-asked Australian migration choices: 189 vs 190, 189 vs 491, 482 vs 186. Points, costs, processing and pathways compared.",
   keywords: [
@@ -63,7 +63,7 @@ export default function CompareIndexPage() {
 
       <HeroBanner
         eyebrow="Visa Comparisons"
-        headline="Compare Australian Visas — Side-by-Side"
+        headline="Compare Australian Visas - Side-by-Side"
         subheadline="When you're stuck between two pathways, an honest comparison beats a thousand brochure pages. Here are the three choices we explain on every consultation call."
         gradient="gradient-hero-deep"
         texture="grid"
@@ -86,7 +86,7 @@ export default function CompareIndexPage() {
             The Most-Asked Australian Visa Questions
           </h2>
           <p className="text-cmg-slate text-lg leading-relaxed">
-            Every week we receive the same three questions: <em>189 or 190?</em>, <em>189 or 491?</em>, <em>482 or 186?</em>. The answer always depends on points, occupation, employer relationship and willingness to relocate. These guides give you the framework — a 30-minute consultation gives you the answer for your specific case.
+            Every week we receive the same three questions: <em>189 or 190?</em>, <em>189 or 491?</em>, <em>482 or 186?</em>. The answer always depends on points, occupation, employer relationship and willingness to relocate. These guides give you the framework - a 30-minute consultation gives you the answer for your specific case.
           </p>
         </div>
       </section>
@@ -143,7 +143,7 @@ export default function CompareIndexPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { icon: Sparkles, title: "Quick Verdict", text: "Two-sentence answer for skim-readers — who picks which, and why." },
+              { icon: Sparkles, title: "Quick Verdict", text: "Two-sentence answer for skim-readers - who picks which, and why." },
               { icon: Scale, title: "Spec Comparison", text: "12+ row side-by-side table covering points, costs, processing, work rights." },
               { icon: MessageCircle, title: "3 Real Personas", text: "Composite client cases showing how the right choice depends on profile." },
               { icon: ShieldCheck, title: "Mistakes & FAQs", text: "Common traps to avoid plus 6–7 specific FAQs answered by MARA agents." },
@@ -165,7 +165,7 @@ export default function CompareIndexPage() {
 
       <CTABanner
         headline="Need a comparison that isn't listed?"
-        body="Book a free 30-minute consultation — we'll walk you through the trade-offs for your specific situation, occupation and points score."
+        body="Book a free 30-minute consultation - we'll walk you through the trade-offs for your specific situation, occupation and points score."
         primaryCTA={{ label: "Book Free Consultation", href: "/contact" }}
         secondaryCTA={{ label: "Use Our Points Calculator", href: "/tools" }}
         variant="navy-gold"

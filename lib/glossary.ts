@@ -58,7 +58,7 @@ export const glossary: GlossaryTerm[] = [
     abbr: "Expression of Interest",
     category: "Skilled Migration",
     definition:
-      "Your formal expression of interest for skilled migration submitted through SkillSelect. An EOI is not a visa application — it's a claim of your circumstances. You must be invited before you can apply.",
+      "Your formal expression of interest for skilled migration submitted through SkillSelect. An EOI is not a visa application - it's a claim of your circumstances. You must be invited before you can apply.",
     relatedTerms: ["SkillSelect", "ITA"],
   },
   {

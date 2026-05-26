@@ -7,7 +7,7 @@ import { Phone } from "lucide-react"
 import { site } from "@/lib/site"
 
 /**
- * Slim sticky CTA bar — mobile only, appears after the user scrolls past the hero.
+ * Slim sticky CTA bar - mobile only, appears after the user scrolls past the hero.
  * Sits ABOVE the floating WhatsApp/Chat buttons (which pin to right corner).
  * Hidden on the contact page itself and on policy pages.
  */
@@ -30,12 +30,12 @@ export default function StickyMobileCTA() {
 
   return (
     <div
-      className={`fixed bottom-0 inset-x-0 z-30 lg:hidden transition-transform duration-300 ${
+      className={`fixed bottom-28 inset-x-0 z-30 lg:hidden px-3 transition-transform duration-300 ${
         visible ? "translate-y-0" : "translate-y-full"
       }`}
       aria-hidden={!visible}
     >
-      <div className="bg-white border-t border-cmg-border shadow-[0_-8px_24px_rgba(0,13,58,0.10)] pl-4 pr-20 py-2.5 flex gap-2 items-center">
+      <div className="bg-white border border-cmg-border rounded-xl shadow-[0_-2px_16px_rgba(0,13,58,0.12)] px-3 py-2.5 flex gap-2 items-center">
         <a
           href={`tel:${site.phone}`}
           className="flex items-center justify-center gap-1.5 px-3 h-11 border-2 border-cmg-blue text-cmg-blue rounded-lg font-bold text-[13px] shrink-0"

@@ -6,7 +6,7 @@ interface Step {
 export default function ProcessSteps({ steps }: { steps: Step[] }) {
   return (
     <div className="relative">
-      {/* Connector line — desktop only */}
+      {/* Connector line - desktop only */}
       <div
         className="absolute top-8 hidden lg:block h-px bg-cmg-border"
         style={{ left: "calc(12.5% + 2rem)", right: "calc(12.5% + 2rem)" }}

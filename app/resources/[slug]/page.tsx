@@ -176,7 +176,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       <CTABanner
         headline="Have questions about your visa situation?"
-        body="Book a free 30-minute consultation with a MARA-registered CMG agent — no obligation, no jargon."
+        body="Book a free 30-minute consultation with a MARA-registered CMG agent - no obligation, no jargon."
         primaryCTA={{ label: "Book Free Consultation", href: "/contact" }}
         secondaryCTA={{ label: "Use Our Tools", href: "/tools" }}
         variant="navy-gold"

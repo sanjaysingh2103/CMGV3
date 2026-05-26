@@ -37,7 +37,7 @@ export default function PolicyPage({ title, intro, effectiveDate, sections, bgIm
         height="medium"
       />
 
-      {/* Info strip — effective date, version, contact */}
+      {/* Info strip - effective date, version, contact */}
       <section className="bg-section-alt border-b border-cmg-border py-7 px-4">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {[
@@ -59,7 +59,7 @@ export default function PolicyPage({ title, intro, effectiveDate, sections, bgIm
         </div>
       </section>
 
-      {/* Main — sticky TOC + sectioned content */}
+      {/* Main - sticky TOC + sectioned content */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[280px_1fr] gap-10 lg:gap-16">
 
@@ -144,7 +144,7 @@ export default function PolicyPage({ title, intro, effectiveDate, sections, bgIm
               ))}
             </div>
 
-            {/* Mobile section index — shows below content on small screens */}
+            {/* Mobile section index - shows below content on small screens */}
             <div className="lg:hidden mt-16 bg-section-alt border border-cmg-border rounded-xl p-6">
               <p className="eyebrow text-cmg-red mb-3">All sections</p>
               <ol className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
@@ -165,7 +165,7 @@ export default function PolicyPage({ title, intro, effectiveDate, sections, bgIm
         </div>
       </section>
 
-      {/* CTA — questions about this policy */}
+      {/* CTA - questions about this policy */}
       <section className="relative bg-cmg-navy overflow-hidden">
         <div className="absolute inset-0 hero-premium-deep" aria-hidden />
         <div className="absolute inset-0 hero-tex-noise pointer-events-none" aria-hidden />
@@ -182,7 +182,7 @@ export default function PolicyPage({ title, intro, effectiveDate, sections, bgIm
           </h2>
           <p className="text-white/65 leading-relaxed mb-8 max-w-xl mx-auto">
             For privacy enquiries, data subject access requests, or clarification on how we
-            handle your information — reach out to us directly.
+            handle your information - reach out to us directly.
           </p>
           <a
             href="mailto:support@commonwealthmigration.ae"

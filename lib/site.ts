@@ -3,7 +3,7 @@ export const site = {
   shortName: "CMG",
   tagline: "Australia Migration Simplified",
   description:
-    "MARA-authorised Australia migration consultancy based in Dubai — supporting skilled professionals, families, and students across the GCC and Middle East.",
+    "MARA-authorised Australia migration consultancy based in Dubai - supporting skilled professionals, families, and students across the GCC and Middle East.",
   url: "https://commonwealthmigration.ae",
   email: "support@commonwealthmigration.ae",
   phone: "+971 50 491 6720",
@@ -157,7 +157,7 @@ export const values = [
   {
     title: "Australia-Focused Expertise",
     description:
-      "CMG specialises exclusively in Australia migration pathways — focused, up-to-date, and strategic guidance across skilled, family, student, and regional visas.",
+      "CMG specialises exclusively in Australia migration pathways - focused, up-to-date, and strategic guidance across skilled, family, student, and regional visas.",
     icon: "Award",
   },
   {
@@ -175,7 +175,7 @@ export const values = [
   {
     title: "End-to-End Case Management",
     description:
-      "From eligibility assessment and skills assessment through to EOI submission, documentation, and visa lodgement — complete assistance under one roof.",
+      "From eligibility assessment and skills assessment through to EOI submission, documentation, and visa lodgement - complete assistance under one roof.",
     icon: "TrendingUp",
   },
   {

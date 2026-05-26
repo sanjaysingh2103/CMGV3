@@ -77,7 +77,7 @@ const categories = [
     title: "Australian Study Requirement",
     description: "At least 1 academic year of study in Australia leading to a qualification.",
     options: [
-      { label: "Yes — studied in Australia", points: 5 },
+      { label: "Yes - studied in Australia", points: 5 },
       { label: "No", points: 0 },
     ],
   },
@@ -86,7 +86,7 @@ const categories = [
     title: "Specialist Education Qualification",
     description: "Master's by research or Doctoral degree in STEM, ICT, finance or specific fields.",
     options: [
-      { label: "Yes — qualifying specialist degree", points: 10 },
+      { label: "Yes - qualifying specialist degree", points: 10 },
       { label: "No", points: 0 },
     ],
   },
@@ -106,7 +106,7 @@ const categories = [
     title: "Community Language",
     description: "NAATI-accredited translator in a language relevant to Australia's needs.",
     options: [
-      { label: "Yes — NAATI accredited translator", points: 5 },
+      { label: "Yes - NAATI accredited translator", points: 5 },
       { label: "No", points: 0 },
     ],
   },
@@ -115,7 +115,7 @@ const categories = [
     title: "Regional Study Bonus",
     description: "At least 2 academic years of study at a regional Australian institution.",
     options: [
-      { label: "Yes — 2+ years regional study", points: 5 },
+      { label: "Yes - 2+ years regional study", points: 5 },
       { label: "No", points: 0 },
     ],
   },
@@ -124,7 +124,7 @@ const categories = [
     title: "Professional Year in Australia",
     description: "Completed a professional year in accounting, computing, or engineering in Australia.",
     options: [
-      { label: "Yes — completed professional year", points: 5 },
+      { label: "Yes - completed professional year", points: 5 },
       { label: "No", points: 0 },
     ],
   },
@@ -210,7 +210,7 @@ export default function PointsCalculator() {
           Calculate Your Points Score
         </h2>
         <p className="text-cmg-slate text-base md:text-lg max-w-2xl leading-relaxed mb-6">
-          A minimum of <span className="font-semibold text-cmg-text">65 points</span> is required to lodge an Expression of Interest for subclass 189, 190 or 491. Higher scores receive invitations sooner — typical successful applicants score 85–105.
+          A minimum of <span className="font-semibold text-cmg-text">65 points</span> is required to lodge an Expression of Interest for subclass 189, 190 or 491. Higher scores receive invitations sooner - typical successful applicants score 85–105.
         </p>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
           <div className="flex items-center gap-2">
@@ -245,7 +245,7 @@ export default function PointsCalculator() {
         </div>
       </div>
 
-      {/* Progress Bar — top */}
+      {/* Progress Bar - top */}
       <div className="mb-8 p-4 rounded-2xl bg-white border border-cmg-border shadow-card">
         <div className="flex items-center justify-between mb-3">
           <p className="text-sm font-semibold text-cmg-text">
@@ -373,7 +373,7 @@ export default function PointsCalculator() {
             )
           })}
 
-          {/* CTA card at bottom — appears when score is meaningful */}
+          {/* CTA card at bottom - appears when score is meaningful */}
           <AnimatePresence>
             {total > 0 && (
               <motion.div
@@ -423,7 +423,7 @@ export default function PointsCalculator() {
                   <p className="text-white/80 text-sm md:text-base leading-relaxed mb-6 max-w-2xl">
                     {qualifyingVisas.length > 0
                       ? "A MARA-registered agent can verify your assessment, confirm occupation eligibility, and build a strategy to maximise your invitation chances."
-                      : "There are still options — state nomination, regional pathways, and partner inclusion can boost your score significantly. Speak to an agent to map your route."}
+                      : "There are still options - state nomination, regional pathways, and partner inclusion can boost your score significantly. Speak to an agent to map your route."}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <a
@@ -628,7 +628,7 @@ export default function PointsCalculator() {
             <p className="font-heading font-bold text-cmg-blue text-sm">
               {qualifyingVisas.length > 0
                 ? qualifyingVisas.map((v) => v.code).join(", ")
-                : "—"}
+                : "-"}
             </p>
           </div>
         </div>

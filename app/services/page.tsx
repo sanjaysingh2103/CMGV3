@@ -13,13 +13,13 @@ import CTABanner from "@/components/CTABanner"
 import JsonLd from "@/components/JsonLd"
 
 export const metadata: Metadata = {
-  title: "Australian Visa Services — CMG Migration Group",
+  title: "Australian Visa Services - CMG Migration Group",
   description:
     "Skilled migration, employer sponsorship, family visas, student visas & business investor pathways. Expert CMG agents guide every step.",
 }
 
 const services = [
-  { icon: Briefcase, title: "Skilled Migration", description: "Points-tested pathways to permanent residency — subclass 189, 190, and 491.", href: "/services/skilled-migration" },
+  { icon: Briefcase, title: "Skilled Migration", description: "Points-tested pathways to permanent residency - subclass 189, 190, and 491.", href: "/services/skilled-migration" },
   { icon: Building2, title: "Employer Sponsored", description: "Connect with Australian employers through TSS 482 and ENS 186 visa pathways.", href: "/services/employer-sponsored" },
   { icon: Heart, title: "Family & Partner", description: "Reunite with loved ones through Australia's family and partner visa programs.", href: "/services/family-partner" },
   { icon: GraduationCap, title: "Student Visas", description: "Study in Australia and explore post-study work rights and migration pathways.", href: "/services/student" },
@@ -48,7 +48,7 @@ export default function ServicesPage() {
       <HeroBanner
         eyebrow="MARA-Registered · 5 Pathways · 30+ Visa Subclasses"
         headline="Comprehensive Australian Migration Services"
-        subheadline="From skilled migration to family reunions — we handle every aspect of your Australian visa journey."
+        subheadline="From skilled migration to family reunions - we handle every aspect of your Australian visa journey."
         bgImage="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80"
         gradient="gradient-hero-deep"
         texture="grid"
@@ -68,10 +68,10 @@ export default function ServicesPage() {
               Australia Is Open for the World&apos;s Best Talent
             </h2>
             <p className="text-cmg-slate leading-relaxed text-lg">
-              Australia&apos;s migration program is built on selective merit — but navigating it requires expert knowledge, strategic timing, and meticulous preparation. CMG offers comprehensive migration services across every major visa category, ensuring you&apos;re matched with the right pathway and supported at every step.
+              Australia&apos;s migration program is built on selective merit - but navigating it requires expert knowledge, strategic timing, and meticulous preparation. CMG offers comprehensive migration services across every major visa category, ensuring you&apos;re matched with the right pathway and supported at every step.
             </p>
             <p className="text-cmg-slate leading-relaxed text-lg mt-4">
-              Whether you&apos;re a skilled professional targeting permanent residency, an employer looking to fill critical roles, a family seeking reunification, a student planning your study pathway, or a business investor exploring Australia&apos;s opportunities — CMG has the expertise you need.
+              Whether you&apos;re a skilled professional targeting permanent residency, an employer looking to fill critical roles, a family seeking reunification, a student planning your study pathway, or a business investor exploring Australia&apos;s opportunities - CMG has the expertise you need.
             </p>
           </div>
 

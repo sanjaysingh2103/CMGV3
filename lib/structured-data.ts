@@ -79,7 +79,7 @@ export const localBusinessSchema = {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
-   BreadcrumbList — call with the path segments to get a schema object
+   BreadcrumbList - call with the path segments to get a schema object
    ───────────────────────────────────────────────────────────────────────── */
 export function breadcrumbSchema(items: { name: string; href: string }[]) {
   return {
@@ -95,7 +95,7 @@ export function breadcrumbSchema(items: { name: string; href: string }[]) {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
-   Service schema — for each visa offering
+   Service schema - for each visa offering
    ───────────────────────────────────────────────────────────────────────── */
 export function serviceSchema(params: {
   name: string
@@ -130,7 +130,7 @@ export function serviceSchema(params: {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
-   Article schema — for blog posts
+   Article schema - for blog posts
    ───────────────────────────────────────────────────────────────────────── */
 export function articleSchema(params: {
   title: string

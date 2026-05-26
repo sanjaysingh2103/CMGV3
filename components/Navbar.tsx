@@ -13,9 +13,9 @@ import { Sheet, SheetContent } from "@/components/ui/sheet"
 function HummingbirdMark({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 100 88" fill="currentColor" className={className} xmlns="http://www.w3.org/2000/svg">
-      {/* Wing — blade sweeping upper-right */}
+      {/* Wing - blade sweeping upper-right */}
       <path d="M50 30 L96 6 L80 50 Z" />
-      {/* Body — large C-curve from beak to tail */}
+      {/* Body - large C-curve from beak to tail */}
       <path d="
         M6 48
         C1 38 2 26 14 26
@@ -40,7 +40,7 @@ function HummingbirdMark({ className }: { className?: string }) {
 function CMGLogo() {
   return (
     <Link href="/" className="flex items-center gap-3 shrink-0 group">
-      {/* Icon mark — red square with hummingbird */}
+      {/* Icon mark - red square with hummingbird */}
       <div className="w-11 h-11 rounded-xl bg-cmg-red flex items-center justify-center shadow-sm">
         <HummingbirdMark className="w-6 h-6 text-white" />
       </div>

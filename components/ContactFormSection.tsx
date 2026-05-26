@@ -115,7 +115,7 @@ export default function ContactFormSection() {
                       <SelectItem value="Family & Partner">Family & Partner Visas</SelectItem>
                       <SelectItem value="Student Visa">Student Visa (500/485)</SelectItem>
                       <SelectItem value="Business & Investor">Business & Investor Visas</SelectItem>
-                      <SelectItem value="Not Sure">Not Sure — Need Advice</SelectItem>
+                      <SelectItem value="Not Sure">Not Sure - Need Advice</SelectItem>
                     </SelectContent>
                   </Select>
                   {errors.visaType && <p className="text-cmg-red text-sm mt-1">{errors.visaType.message}</p>}
@@ -166,7 +166,7 @@ export default function ContactFormSection() {
           {/* Office details */}
           <div>
             <h2 className="font-heading text-3xl font-bold text-cmg-ink mb-3">Our Office</h2>
-            <p className="text-cmg-slate mb-8">Visit us or reach out anytime — we serve clients worldwide.</p>
+            <p className="text-cmg-slate mb-8">Visit us or reach out anytime - we serve clients worldwide.</p>
             <div className="space-y-4 mb-8">
               {[
                 { icon: MapPin, label: "Address", value: site.address },

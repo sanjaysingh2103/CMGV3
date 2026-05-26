@@ -64,7 +64,7 @@ export default function NewsletterSignup({ variant = "boxed", className }: Props
         </div>
         {status === "success" && (
           <p className="text-xs text-green-400 flex items-center gap-1 mt-2">
-            <CheckCircle2 className="h-3 w-3" /> Subscribed — check your inbox
+            <CheckCircle2 className="h-3 w-3" /> Subscribed - check your inbox
           </p>
         )}
         {status === "error" && (
@@ -86,7 +86,7 @@ export default function NewsletterSignup({ variant = "boxed", className }: Props
           <div className="flex-1 min-w-0">
             <p className="font-heading text-lg font-bold text-cmg-text mb-1">Get weekly migration updates</p>
             <p className="text-sm text-cmg-slate mb-4">
-              SkillSelect round results, occupation list changes, policy updates — straight to your inbox.
+              SkillSelect round results, occupation list changes, policy updates - straight to your inbox.
             </p>
             <form onSubmit={handleSubmit} className="flex gap-2 flex-col sm:flex-row">
               <input
@@ -129,7 +129,7 @@ export default function NewsletterSignup({ variant = "boxed", className }: Props
           Australia Migration Weekly
         </h3>
         <p className="text-sm text-cmg-slate mb-5 max-w-md mx-auto">
-          Visa policy changes, SkillSelect round results, occupation list updates — every Sunday. No spam, unsubscribe anytime.
+          Visa policy changes, SkillSelect round results, occupation list updates - every Sunday. No spam, unsubscribe anytime.
         </p>
         <form onSubmit={handleSubmit} className="flex gap-2 max-w-md mx-auto flex-col sm:flex-row">
           <input
