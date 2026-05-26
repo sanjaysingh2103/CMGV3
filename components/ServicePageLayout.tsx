@@ -186,16 +186,20 @@ export default function ServicePageLayout({ content }: ServicePageLayoutProps) {
         </div>
       </section>
 
-      {/* 7. FAQ */}
+      {/* 7. FAQ - full-width with two-column accordion on desktop */}
       <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <p className="eyebrow text-cmg-red mb-3">FAQ</p>
+            <div className="inline-flex items-center gap-2 mb-3">
+              <span className="h-px w-6 bg-cmg-red" />
+              <p className="eyebrow text-cmg-red">FAQ</p>
+              <span className="h-px w-6 bg-cmg-red" />
+            </div>
             <h2 className="font-heading text-3xl lg:text-4xl font-bold text-cmg-text">
               Frequently Asked Questions
             </h2>
           </div>
-          <FAQAccordion faqs={content.faqs} />
+          <FAQAccordion faqs={content.faqs} columns={2} />
         </div>
       </section>
 
