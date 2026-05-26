@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import HeroBanner from "@/components/HeroBanner"
+import NewsletterSignup from "@/components/NewsletterSignup"
 import BlogCard from "@/components/BlogCard"
 import { blogPosts, blogCategories } from "@/lib/blog-data"
 import { cn } from "@/lib/utils"
@@ -102,22 +103,10 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* Newsletter / CTA */}
-      <section className="py-16 px-4 bg-cmg-light-blue">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-cmg-red mb-3">Stay Informed</p>
-          <h2 className="font-heading text-3xl font-bold text-cmg-text mb-4">
-            Never Miss an Immigration Update
-          </h2>
-          <p className="text-cmg-slate mb-8 max-w-xl mx-auto">
-            Australian visa rules change frequently. Book a free consultation and we&apos;ll keep you informed on the changes that matter to your application.
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center justify-center rounded-full bg-cmg-blue text-white font-semibold px-8 py-4 text-sm hover:bg-cmg-navy transition-colors shadow-md"
-          >
-            Book a Free Consultation →
-          </a>
+      {/* Newsletter signup */}
+      <section className="py-16 px-4 bg-section-alt">
+        <div className="max-w-2xl mx-auto">
+          <NewsletterSignup />
         </div>
       </section>
     </>
