@@ -66,8 +66,8 @@ export default function Navbar() {
     servicesTimer.current = setTimeout(() => setServicesOpen(false), 180)
   }, [])
 
-  const navLinkClass = "px-4 py-2.5 rounded-md text-[15px] font-bold text-cmg-text hover:text-cmg-blue hover:bg-cmg-light-blue transition-all duration-150"
-  const dropdownBtnClass = "flex items-center gap-1 px-4 py-2.5 rounded-md text-[15px] font-bold text-cmg-text hover:text-cmg-blue hover:bg-cmg-light-blue transition-all duration-150"
+  const navLinkClass = "px-4 py-2.5 rounded-md text-[15px] font-semibold text-cmg-text hover:text-cmg-blue hover:bg-cmg-light-blue transition-all duration-150"
+  const dropdownBtnClass = "flex items-center gap-1 px-4 py-2.5 rounded-md text-[15px] font-semibold text-cmg-text hover:text-cmg-blue hover:bg-cmg-light-blue transition-all duration-150"
 
   return (
     <header className="sticky top-0 inset-x-0 z-50 bg-white border-b-2 border-cmg-border shadow-sm">
@@ -192,11 +192,11 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-5">
             <a
               href={`tel:${site.phone}`}
-              className="flex items-center gap-1.5 text-[13px] font-bold text-cmg-slate hover:text-cmg-blue transition-colors"
+              className="flex items-center gap-1.5 text-[13px] font-semibold text-cmg-slate hover:text-cmg-blue transition-colors"
             >
               <Phone className="h-3.5 w-3.5" />{site.phone}
             </a>
-            <ConsultationModal triggerClassName="rounded-md bg-cmg-red text-white font-bold px-5 py-2.5 text-sm hover:bg-red-700 transition-colors shadow-md" />
+            <ConsultationModal triggerClassName="rounded-md bg-cmg-red text-white font-semibold px-5 py-2.5 text-sm hover:bg-red-700 transition-colors shadow-md" />
           </div>
 
           {/* Mobile hamburger */}
