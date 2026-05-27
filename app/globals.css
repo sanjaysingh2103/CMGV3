@@ -46,7 +46,7 @@
   /* ── Typography ─────────────────────────────────────────────── */
   --font-sans:    var(--font-figtree);
   --font-body:    var(--font-figtree);
-  --font-heading: var(--font-baskerville);
+  --font-heading: var(--font-figtree);
 
   /* ── Radius ─────────────────────────────────────────────────── */
   --radius-lg: var(--radius);
@@ -95,8 +95,9 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-baskerville, 'Libre Baskerville', Georgia, serif);
-    line-height: 1.25;
+    font-family: var(--font-figtree, 'Figtree', system-ui, sans-serif);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
     color: #1A2744;
   }
 }

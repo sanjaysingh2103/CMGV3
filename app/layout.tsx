@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Figtree, Libre_Baskerville } from "next/font/google"
+import { Figtree } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
@@ -13,14 +13,6 @@ const figtree = Figtree({
   variable: "--font-figtree",
   display: "swap",
   weight: ["300", "400", "500", "600", "700", "800"],
-})
-
-const baskerville = Libre_Baskerville({
-  subsets: ["latin"],
-  variable: "--font-baskerville",
-  display: "swap",
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
 })
 
 export const metadata: Metadata = {
@@ -56,7 +48,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${figtree.variable} ${baskerville.variable}`}>
+    <html lang="en" className={figtree.variable}>
       <body className="font-body antialiased min-h-screen flex flex-col bg-white text-cmg-text">
         <Navbar />
         <main className="flex-1">{children}</main>

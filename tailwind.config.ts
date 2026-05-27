@@ -29,7 +29,7 @@ const config: Config = {
         'cmg-warm-white': '#F8FAFC',
       },
       fontFamily: {
-        heading: ['"Libre Baskerville"', 'Georgia', 'serif'],
+        heading: ['Figtree', 'system-ui', 'sans-serif'],
         body:    ['Figtree', 'system-ui', 'sans-serif'],
         sans:    ['Figtree', 'system-ui', 'sans-serif'],
       },
