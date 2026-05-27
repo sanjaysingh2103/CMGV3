@@ -6,7 +6,6 @@ import {
   ArrowRight, ShieldCheck, Award, Clock, Phone,
 } from "lucide-react"
 import HeroCarousel from "@/components/HeroCarousel"
-import StatsBand from "@/components/StatsBand"
 import ServiceCard from "@/components/ServiceCard"
 import ImageTextRow from "@/components/ImageTextRow"
 import ProcessSteps from "@/components/ProcessSteps"
@@ -152,10 +151,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 2. STATS BAND ────────────────────────────────────────────── */}
-      <StatsBand />
-
-      {/* ── 3. SERVICES ──────────────────────────────────────────────── */}
+      {/* ── 2. SERVICES ──────────────────────────────────────────────── */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
