@@ -183,6 +183,7 @@ export default function Navbar() {
               )}
             </div>
 
+            <Link href="/from" className={navLinkClass}>By Country</Link>
             {["About", "Resources", "Tools", "Contact"].map((label) => (
               <Link key={label} href={`/${label.toLowerCase()}`} className={navLinkClass}>{label}</Link>
             ))}
@@ -292,10 +293,16 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         )}
 
         <div className="pt-1 border-t border-gray-100 mt-2 space-y-0.5">
-          {["About", "Resources", "Tools", "Contact"].map((label) => (
+          {[
+            { label: "By Country", href: "/from" },
+            { label: "About",      href: "/about" },
+            { label: "Resources",  href: "/resources" },
+            { label: "Tools",      href: "/tools" },
+            { label: "Contact",    href: "/contact" },
+          ].map(({ label, href }) => (
             <Link
-              key={label}
-              href={`/${label.toLowerCase()}`}
+              key={href}
+              href={href}
               onClick={onClose}
               className="flex items-center px-4 py-3.5 rounded-xl text-cmg-text font-semibold hover:bg-cmg-light-blue hover:text-cmg-blue transition-all text-sm"
             >
