@@ -76,8 +76,8 @@ export default function HomePage() {
       <section className="relative flex min-h-[calc(100vh-5rem)] items-center justify-center overflow-hidden">
         {/* Background photo */}
         <Image
-          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80"
-          alt="Sydney Harbour Bridge, Australia"
+          src="/sydney-skyline.png"
+          alt="Sydney Opera House and Harbour Bridge at golden hour - Commonwealth Migration Group"
           fill
           priority
           className="object-cover object-center"
