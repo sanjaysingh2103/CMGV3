@@ -1,37 +1,58 @@
 import { stats } from "@/lib/site"
 
+/**
+ * Soft credibility strip — replaces the previous harsh navy stats block.
+ * Uses the brand cream/white palette to flow smoothly from the warm hero
+ * into the rest of the page. Large editorial numerals in cmg-blue, with
+ * subtle red micro-accents for the brand flag colours.
+ */
 export default function StatsBand() {
   return (
-    <section className="relative bg-cmg-blue py-16 px-4 overflow-hidden">
-      {/* Subtle red light leak top-right for premium feel */}
+    <section className="relative bg-white border-y border-cmg-border py-14 md:py-16 px-4 overflow-hidden">
+      {/* Very faint diagonal flag-stripe at top + bottom for premium accent */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute top-0 left-0 right-0 h-px"
         style={{
-          background: "radial-gradient(ellipse 50% 70% at 95% 10%, rgba(200,16,46,0.20) 0%, transparent 60%)",
+          background:
+            "linear-gradient(to right, transparent 0%, #003399 25%, #003399 45%, #D52B1E 55%, #D52B1E 75%, transparent 100%)",
         }}
         aria-hidden
       />
-      {/* Fine grain */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-[0.05]"
+        className="absolute bottom-0 left-0 right-0 h-px"
         style={{
-          backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E\")",
+          background:
+            "linear-gradient(to right, transparent 0%, #D52B1E 25%, #D52B1E 45%, #003399 55%, #003399 75%, transparent 100%)",
         }}
         aria-hidden
       />
 
       <div className="relative max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x md:divide-white/15">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0 md:divide-x md:divide-cmg-border">
           {stats.map((stat, i) => (
-            <div key={stat.label} className="text-center px-4 py-2 relative">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                {i === 0 && <span className="w-1.5 h-1.5 rounded-full bg-cmg-red-light" />}
-                <div className="font-heading text-4xl md:text-5xl font-bold text-white">
-                  {stat.value}
-                </div>
-                {i === stats.length - 1 && <span className="w-1.5 h-1.5 rounded-full bg-cmg-red-light" />}
+            <div key={stat.label} className="text-center px-4 md:px-6">
+              {/* Red top-dot accent */}
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-cmg-red mb-3" />
+
+              {/* Large editorial numeral */}
+              <div className="font-heading text-5xl md:text-6xl font-bold text-cmg-blue leading-none tracking-tight tabular-nums">
+                {stat.value}
+                <span className="text-cmg-red text-3xl md:text-4xl ml-0.5 align-top">
+                  {stat.suffix}
+                </span>
               </div>
-              <div className="text-white/65 text-sm font-medium tracking-wide">{stat.label}</div>
+
+              {/* Label */}
+              <div className="text-cmg-slate text-xs md:text-[13px] font-semibold tracking-wide uppercase mt-3">
+                {stat.label}
+              </div>
+
+              {/* Subtle decoration line under label - only on hover or always faint */}
+              <span
+                className="block mx-auto mt-3 h-px bg-cmg-border"
+                style={{ width: i % 2 === 0 ? "32px" : "24px" }}
+                aria-hidden
+              />
             </div>
           ))}
         </div>
