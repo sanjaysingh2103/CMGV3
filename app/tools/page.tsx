@@ -18,7 +18,7 @@ export default function ToolsPage() {
         eyebrow="Points Calculator · Fee Estimator · Processing Times"
         headline="Australian Visa Tools"
         subheadline="Free calculators to help you understand your options, estimate costs, and set realistic timelines."
-        bgImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80"
+        bgImage="/hero-tools.png"
         gradient="gradient-hero-deep"
         texture="grid"
         height="medium"

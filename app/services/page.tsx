@@ -49,7 +49,7 @@ export default function ServicesPage() {
         eyebrow="MARA-Registered · 5 Pathways · 30+ Visa Subclasses"
         headline="Comprehensive Australian Migration Services"
         subheadline="From skilled migration to family reunions - we handle every aspect of your Australian visa journey."
-        bgImage="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80"
+        bgImage="/hero-tools.png"
         gradient="gradient-hero-deep"
         texture="grid"
         ctaButtons={[

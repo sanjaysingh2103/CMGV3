@@ -74,7 +74,7 @@ export default function ContactPage() {
         eyebrow="Sydney · Online · Available Worldwide"
         headline="Let's Start Your Australian Journey"
         subheadline="Book a free 30-minute consultation with a MARA-registered CMG agent. Available online worldwide - no obligation."
-        bgImage="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=1920&q=80"
+        bgImage="/hero-contact.png"
         gradient="gradient-hero-blue"
         texture="dots"
         height="medium"

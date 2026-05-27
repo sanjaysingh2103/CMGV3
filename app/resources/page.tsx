@@ -33,7 +33,7 @@ export default function ResourcesPage() {
         eyebrow="Articles · Visa Updates · Migration Guides"
         headline="Australian Immigration Insights"
         subheadline="Expert articles, visa updates and migration guides from CMG's MARA-registered agents - helping you stay informed and make confident decisions."
-        bgImage="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=1920&q=80"
+        bgImage="/hero-resources.png"
         gradient="gradient-hero-warm"
         texture="noise"
         height="medium"

@@ -51,7 +51,7 @@ export default function AboutPage() {
         eyebrow="MARA-Registered · Sydney-Based · Est. 2009"
         headline="Experts Who Make Australia Possible"
         subheadline="Commonwealth Migration Group is a team of MARA-registered agents passionate about connecting people with Australia's extraordinary opportunities."
-        bgImage="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80"
+        bgImage="/hero-about.png"
         gradient="gradient-hero-blue"
         texture="dots"
         ctaButtons={[

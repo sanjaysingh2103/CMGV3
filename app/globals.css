@@ -36,12 +36,12 @@
   --color-cmg-text:       #1A2744;
   --color-cmg-ink:        #1A2744;
   --color-cmg-slate:      #4B5975;
-  --color-cmg-light:      #F5F5F4;
-  --color-cmg-light-blue: #F5F5F4;
-  --color-cmg-cream:      #FAFAF9;
-  --color-cmg-cream-dark: #EFEEEB;
-  --color-cmg-border:     #E4E4E0;
-  --color-cmg-warm-white: #FAFAF9;
+  --color-cmg-light:      #FBF7EE;
+  --color-cmg-light-blue: #FBF7EE;
+  --color-cmg-cream:      #FDFAF3;
+  --color-cmg-cream-dark: #F5EBD3;
+  --color-cmg-border:     #EADFC4;
+  --color-cmg-warm-white: #FDFAF3;
 
   /* ── Typography ─────────────────────────────────────────────── */
   --font-sans:    var(--font-figtree);
@@ -270,9 +270,9 @@
 ═══════════════════════════════════════════════════ */
 
 .trust-band {
-  background: linear-gradient(180deg, #FAFAF9 0%, #F5F5F4 100%);
-  border-top: 1px solid #E4E4E0;
-  border-bottom: 1px solid #E4E4E0;
+  background: linear-gradient(180deg, #FDFAF3 0%, #FBF7EE 100%);
+  border-top: 1px solid #EADFC4;
+  border-bottom: 1px solid #EADFC4;
 }
 
 /* ═══════════════════════════════════════════════════
@@ -319,14 +319,14 @@
    SECTION BACKGROUNDS
 ═══════════════════════════════════════════════════ */
 
-/* Soft neutral light-grey alternating section */
+/* Warm cream alternating section */
 .bg-section-alt {
-  background-color: #F5F5F4;
+  background-color: #FBF7EE;
 }
 
-/* Lightest near-white section */
+/* Lightest warm-white section */
 .bg-section-lines {
-  background-color: #FAFAF9;
+  background-color: #FDFAF3;
 }
 
 /* ═══════════════════════════════════════════════════

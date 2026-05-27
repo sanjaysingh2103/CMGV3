@@ -87,7 +87,7 @@ export default function GlossaryPage() {
         eyebrow="Glossary · 50+ terms explained"
         headline="Australian Immigration Glossary"
         subheadline="Every visa term, acronym, and process step - explained in plain English. From MARA to MLTSSL, from EOI to AHPRA."
-        bgImage="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=1920&q=80"
+        bgImage="/hero-resources.png"
         gradient="gradient-hero-blue"
         texture="dots"
         height="medium"

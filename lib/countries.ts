@@ -122,7 +122,7 @@ export const countries: Record<string, CountryContent> = {
       subheadline:
         "From Dubai's skyline to Sydney Harbour - CMG is the only MARA-registered consultancy headquartered in the UAE. We've guided hundreds of Emirati residents through subclass 189, 190, 482 and 186 visa pathways, with deep knowledge of MOFA attestation, UAE police clearance and how to convert GCC work experience into Australian skilled points.",
       bgImage:
-        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80",
+        "/hero-uae.png",
       gradient: "gradient-hero-deep",
       texture: "grid",
       trustBadges: ["MARA-Authorised", "Dubai-Based", "GCC Specialists"],
@@ -352,7 +352,7 @@ export const countries: Record<string, CountryContent> = {
       subheadline:
         "Indian nationals are now the single largest source of skilled migration to Australia - overtaking the UK. CMG guides engineers, IT professionals, accountants and nurses from Bangalore, Hyderabad, Mumbai and Delhi through subclass 189, 190 and 482 visas. We know exactly what ACS, Engineers Australia and AHPRA expect from Indian qualifications.",
       bgImage:
-        "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1920&q=80",
+        "/hero-india.png",
       gradient: "gradient-hero-warm",
       texture: "noise",
       trustBadges: ["MARA-Authorised", "Dubai-Based", "South Asia Specialists"],
@@ -582,7 +582,7 @@ export const countries: Record<string, CountryContent> = {
       subheadline:
         "Pakistani engineers, doctors, IT professionals and accountants form one of Australia's fastest-growing professional communities. CMG's MARA-registered agents guide applicants from Karachi, Lahore and Islamabad through subclass 189, 190, 482 and student pathways - with deep knowledge of HEC attestation, PSV clearances and Engineers Australia CDR for Pakistani graduates.",
       bgImage:
-        "https://images.unsplash.com/photo-1604871082903-5458d164167a?w=1920&q=80",
+        "/hero-pakistan.png",
       gradient: "gradient-hero-warm",
       texture: "diagonal",
       trustBadges: ["MARA-Authorised", "Dubai-Based", "South Asia Specialists"],
@@ -812,7 +812,7 @@ export const countries: Record<string, CountryContent> = {
       subheadline:
         "Filipino nurses, aged care workers, tradespeople and seafarers form one of Australia's most valued migrant communities. CMG guides applicants from Manila, Cebu, Davao and beyond through AHPRA registration, ANMAC skills assessment, PSA red-ribbon authentication and the realities of NBI clearance. We've placed nurses in NSW Health, Victorian aged care and Queensland regional hospitals.",
       bgImage:
-        "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=1920&q=80",
+        "/hero-philippines.png",
       gradient: "gradient-hero-blue",
       texture: "dots",
       trustBadges: ["MARA-Authorised", "Healthcare Specialists", "Dubai-Based"],
@@ -1042,7 +1042,7 @@ export const countries: Record<string, CountryContent> = {
       subheadline:
         "Egyptian engineers, doctors, teachers and IT professionals are increasingly choosing Australia for its stability, salary uplift and clear pathway to citizenship. CMG's MARA-registered agents guide applicants from Cairo, Alexandria and Giza through subclass 189, 190 and 482 visas - with expertise in Egyptian Ministry of Foreign Affairs attestation, Arabic NAATI translation and engineering qualification recognition.",
       bgImage:
-        "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=1920&q=80",
+        "/hero-egypt.png",
       gradient: "gradient-hero-warm",
       texture: "diagonal",
       trustBadges: ["MARA-Authorised", "Dubai-Based", "Middle East Specialists"],
@@ -1272,7 +1272,7 @@ export const countries: Record<string, CountryContent> = {
       subheadline:
         "Whether you're a Saudi national, an expat engineer at Aramco, or a healthcare professional working in Riyadh - Australia offers what Saudi residency cannot: permanent settlement, citizenship in 4 years and a future built for your family. CMG's MARA-registered agents handle Saudi MOFA attestation, Absher clearance, Iqama-based document verification and the realities of leaving the Kingdom.",
       bgImage:
-        "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?w=1920&q=80",
+        "/hero-saudi-arabia.png",
       gradient: "gradient-hero-deep",
       texture: "grid",
       trustBadges: ["MARA-Authorised", "Dubai-Based", "GCC Specialists"],
