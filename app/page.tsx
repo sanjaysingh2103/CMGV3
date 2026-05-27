@@ -5,6 +5,7 @@ import {
   Briefcase, Users, GraduationCap, Building2, Star, CheckCircle,
   ArrowRight, ShieldCheck, Award, Clock, Phone,
 } from "lucide-react"
+import HeroCarousel from "@/components/HeroCarousel"
 import StatsBand from "@/components/StatsBand"
 import ServiceCard from "@/components/ServiceCard"
 import ImageTextRow from "@/components/ImageTextRow"
@@ -72,28 +73,17 @@ const services = [
 export default function HomePage() {
   return (
     <>
-      {/* ── 1. HERO - premium layered banner ───────────────────────── */}
+      {/* ── 1. HERO - auto-rotating skyline carousel (no blue tint) ──── */}
       <section className="relative flex min-h-[calc(100vh-5rem)] items-center justify-center overflow-hidden">
-        {/* Background photo */}
-        <Image
-          src="/sydney-skyline.png"
-          alt="Sydney Opera House and Harbour Bridge at golden hour - Commonwealth Migration Group"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-        {/* Premium multi-layer gradient: navy + red light-leak top-right */}
-        <div className="absolute inset-0 hero-premium" aria-hidden />
-        {/* Architectural grid texture */}
-        <div className="absolute inset-0 hero-tex-grid pointer-events-none" aria-hidden />
-        {/* Fine grain for richness */}
-        <div className="absolute inset-0 hero-tex-noise pointer-events-none" aria-hidden />
-        {/* Vignette */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 120% 100% at 50% 50%, transparent 50%, rgba(0,13,58,0.45) 100%)" }}
-          aria-hidden
+        {/* Carousel background - cross-fades between 4 Australian skylines every 6s */}
+        <HeroCarousel
+          slides={[
+            { src: "/hero-1.png", alt: "Sydney Opera House and Harbour Bridge at golden hour" },
+            { src: "/hero-2.png", alt: "Sydney Harbour Bridge arches at sunset" },
+            { src: "/hero-3.png", alt: "Bondi Beach with Sydney skyline at sunrise" },
+            { src: "/hero-4.png", alt: "Melbourne CBD skyline reflected in the Yarra River at dusk" },
+          ]}
+          interval={6000}
         />
 
         {/* Content */}
