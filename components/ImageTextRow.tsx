@@ -31,7 +31,7 @@ export default function ImageTextRow({
 }: ImageTextRowProps) {
   return (
     <section className={cn("py-20 px-4", bgClass)}>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 lg:gap-20 items-center">
 
         {/* Image */}
         <div className={cn("relative rounded-2xl overflow-hidden aspect-[4/3] shadow-premium", !imageLeft && "lg:order-2")}>

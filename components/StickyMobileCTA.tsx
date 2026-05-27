@@ -30,7 +30,7 @@ export default function StickyMobileCTA() {
 
   return (
     <div
-      className={`fixed bottom-28 inset-x-0 z-30 lg:hidden px-3 transition-transform duration-300 ${
+      className={`fixed bottom-28 inset-x-0 z-30 md:hidden px-3 transition-transform duration-300 ${
         visible ? "translate-y-0" : "translate-y-full"
       }`}
       aria-hidden={!visible}

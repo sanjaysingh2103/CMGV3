@@ -98,7 +98,7 @@ export default function FAQAccordion({ faqs, className, columns = 1 }: FAQAccord
       )}
 
       {columns === 2 && rightCol.length > 0 ? (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           {renderAccordion(leftCol, "L")}
           {renderAccordion(rightCol, "R")}
         </div>

@@ -63,7 +63,7 @@ export default function AboutPage() {
 
       {/* Our Story */}
       <section className="py-24 px-4 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
             <div className="inline-flex items-center gap-2 mb-4">
               <span className="h-px w-6 bg-cmg-red" />
@@ -123,7 +123,7 @@ export default function AboutPage() {
 
       {/* Vision & Mission */}
       <section className="py-24 px-4 bg-section-alt">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
           {/* Vision */}
           <div className="relative bg-white rounded-2xl border border-cmg-border border-t-[3px] border-t-cmg-blue p-10 shadow-card">
             <div className="inline-flex items-center gap-2 mb-4">
@@ -246,7 +246,7 @@ export default function AboutPage() {
 
       {/* MARA Registration */}
       <section className="py-24 px-4 bg-section-alt">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
             <p className="eyebrow text-cmg-red mb-3">Your Protection</p>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-cmg-ink mb-6">

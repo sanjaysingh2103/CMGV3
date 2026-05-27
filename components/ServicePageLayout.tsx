@@ -68,7 +68,7 @@ export default function ServicePageLayout({ content }: ServicePageLayoutProps) {
 
       {/* 2. Overview + Key Facts */}
       <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 items-start">
           <div className="lg:col-span-2">
             <p className="eyebrow text-cmg-red mb-4">Overview</p>
             <h2 className="font-heading text-3xl lg:text-4xl font-bold text-cmg-text mb-6">
@@ -161,7 +161,7 @@ export default function ServicePageLayout({ content }: ServicePageLayoutProps) {
 
       {/* 6. Fees & Documents */}
       <section className="py-20 px-4 bg-section-alt">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-start">
           <div>
             <p className="eyebrow text-cmg-red mb-4">Fees</p>
             <h2 className="font-heading text-3xl font-bold text-cmg-text mb-6">Government Fees &amp; Costs</h2>
